@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d1f2e" />
+      <stop offset="100%" stop-color="#394275" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#g2)" />
+  <rect x="120" y="120" width="960" height="480" rx="30" fill="#ffffff" fill-opacity="0.1" />
+  <circle cx="360" cy="360" r="130" fill="#7a8fff" fill-opacity="0.3" />
+  <circle cx="560" cy="360" r="130" fill="#40c8b6" fill-opacity="0.3" />
+  <circle cx="760" cy="360" r="130" fill="#f7ffb4" fill-opacity="0.25" />
+  <text x="160" y="238" fill="#f6f7ff" font-size="62" font-family="Sora, Segoe UI, sans-serif" font-weight="700">Byzanlink</text>
+  <text x="160" y="303" fill="#d5d9ff" font-size="34" font-family="Manrope, Segoe UI, sans-serif">Web3 Dashboard</text>
+</svg>

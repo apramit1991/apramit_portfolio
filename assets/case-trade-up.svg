@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f2d52" />
+      <stop offset="100%" stop-color="#0d7c66" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#g1)" />
+  <rect x="110" y="130" width="980" height="460" rx="28" fill="#ffffff" fill-opacity="0.1" />
+  <path d="M200 460 C330 360, 460 420, 590 300 S840 240, 990 180" stroke="#d6ffe9" stroke-width="12" fill="none" stroke-linecap="round" />
+  <text x="160" y="250" fill="#f4fffb" font-size="62" font-family="Sora, Segoe UI, sans-serif" font-weight="700">Trade Up</text>
+  <text x="160" y="315" fill="#d4e9e0" font-size="34" font-family="Manrope, Segoe UI, sans-serif">Stock Trading App</text>
+</svg>

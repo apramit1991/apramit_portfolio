@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#173229" />
+      <stop offset="100%" stop-color="#375748" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#g3)" />
+  <rect x="130" y="128" width="940" height="464" rx="30" fill="#ffffff" fill-opacity="0.1" />
+  <rect x="230" y="220" width="190" height="250" rx="20" fill="#d7fff3" fill-opacity="0.45" />
+  <rect x="450" y="260" width="190" height="210" rx="20" fill="#e8ffe2" fill-opacity="0.38" />
+  <rect x="670" y="300" width="190" height="170" rx="20" fill="#ffffff" fill-opacity="0.3" />
+  <text x="170" y="230" fill="#f2fff9" font-size="62" font-family="Sora, Segoe UI, sans-serif" font-weight="700">Fitlyn</text>
+  <text x="170" y="295" fill="#daf5ea" font-size="34" font-family="Manrope, Segoe UI, sans-serif">Gym SaaS Platform</text>
+</svg>

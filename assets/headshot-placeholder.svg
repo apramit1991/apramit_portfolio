@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 900">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#11141a" />
+      <stop offset="100%" stop-color="#1a4b43" />
+    </linearGradient>
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.36" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.04" />
+    </linearGradient>
+  </defs>
+  <rect width="720" height="900" fill="url(#bg)" />
+  <circle cx="560" cy="140" r="180" fill="#ffffff" fill-opacity="0.08" />
+  <circle cx="130" cy="700" r="150" fill="#ffffff" fill-opacity="0.05" />
+  <rect x="80" y="80" width="560" height="740" rx="60" fill="none" stroke="url(#ring)" stroke-width="2" />
+  <ellipse cx="360" cy="410" rx="170" ry="185" fill="#d8dde2" fill-opacity="0.88" />
+  <ellipse cx="360" cy="360" rx="78" ry="88" fill="#fcfcfd" />
+  <rect x="255" y="468" width="210" height="210" rx="92" fill="#fcfcfd" />
+  <text
+    x="360"
+    y="785"
+    text-anchor="middle"
+    fill="#eaf8f3"
+    font-size="38"
+    font-family="Sora, Segoe UI, sans-serif"
+    font-weight="600"
+  >
+    Headshot Placeholder
+  </text>
+</svg>
