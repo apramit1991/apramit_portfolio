@@ -1,0 +1,505 @@
+
+
+===== PAGE 1 =====
+
+UX Case Study
+T r a d e u p  
+S t o c k  T r a d i n g  A p p
+Trades
+A p r a m i t  P r a d h a n
+1 T h e  P r o b l e m
+P r o j e c t  O v e r v i e w
+In an industry dominated by complex tools and intimidating interfaces, TradeUp set out 
+to reimagine stock trading for everyday users — without sacrificing depth for active 
+traders. I led the UX efforts to design a platform that’s not just functional, but also 
+frictionless and confidence-inspiring.
+ B u s i n e s s  G o a l s  +  U X  R o l e
+My Role: UX Designer — responsible for user research, user flows, 
+wireframes, high-fidelity UI, and UAT.
+KPIs: Improve onboarding completion rate, increase trade execution 
+speed, and boost user retention.
+I m p a c t  o f  o u r  W o r k
+T h e  p r o d u c t  h a d  a  s i g n i f i c a n t  i m p a c t  i n  t h e  m a r k e t ,  w i t h  1 5 0 +  b r o k e r a g e s  a d o p t i n g  i t  a n d  
+a c h i e v i n g  o v e r  1  m i l l i o n  d o w n l o a d s .  T h i s  h i g h l i g h t s  i t s  w i d e  a c c e p t a n c e  a n d  t r u s t  a m o n g  
+f i n a n c i a l  i n s t i t u t i o n s ,  a s  w e l l  a s  i t s  p o p u l a r i t y  w i t h  e n d  u s e r s .  L e t  m e  k n o w  i f  y o u ’ d  l i k e  t o  f r a m e  
+t h i s  d a t a  i n t o  a  m o r e  v i s u a l l y  a p p e a l i n g  s t o r y !
+1 5 0 + 1 m + 4 . 2
+B r o k e r a g e s D o w n l o a d s  A v e r a g e  
+r a t i n g
+2 R e s e a r c h
+D e s i g n  P r o c e s s
+S tart Research Design F inal
+Q uantitative &  Q ualitative Research
+Wireframe Design Sy stem
+Userflow F inal Design for Production
+UI / UX Design T esting
+1 WEEK 2  WEEK 8  WEEK 2  WEEK 4  WEEK
+Q u a n t i t a t i v e  R e s e a r c h
+Before diving into user interviews, we grounded ourselves in secondary research using 
+published studies and market journals on stock trading behavior.
+This helped us establish a data-backed foundation before validating with our own user 
+interviews and prototype testing.
+8 5 %
+of new users successfully complete the 
+onboarding process.
+4  T a p s
+is re q uired to successfully execute a 
+trade order.
+1 0  m i n s
+Average time spent in the app, out of 
+which time spent viewing portfolio was 
+4 minutes.
+5 %
+Indicates occasional issues in final 
+steps )
+7 0 %
+of new users place a trade within the 
+first week.
+E x i s t i n g  B u s i n e s s  C h a l l e n g e s
+📈  M e t r i c
+⌛  4 +  t a p s  t o  e x e c u t e  a  t r a d e
+👥  7 0 %  o f  n e w  u s e r s  p l a c e  a  t r a d e
+ w i t h i n  f i r s t  w e e k
+⏱️  1 0  m i n  a v g .  s e s s i o n  t i m e
+📉  5 %  r e p o r t  t r a d e  a b a n d o n m e n t
+W h a t  I t  M e a n s
+I n d u s t r y  a v e r a g e  a c r o s s  t o p  t r a d i n g  a p p s
+I n d i c a t e s  e a r l y  i n t e r e s t  b u t  p o s s i b l e  h e s i t a t i o n
+U s e r s  s p e n d  4 0 %  o f  t i m e  i n  P o r t f o l i o  s e c t i o n
+O c c a s i o n a l  f a i l u r e  o r  h e s i t a t i o n  a t  t h e  l a s t  s t e p
+D e s i g n  I m p l i c a t i o n
+I n t r o d u c e d  Q u i c k  T r a d e  M o d e  t o  c u t  s t e p s  d o w n  t o  2
+S t r e a m l i n e d  o n b o a r d i n g  t o  b o o s t  c o n v e r s i o n
+b e y o n d  7 0 %
+S i m p l i f i e d  p o r t f o l i o  d a s h b o a r d  w i t h  h i g h - p r i o r i t y
+d a t a  u p f r o n t
+A d d e d  t r a d e  p r e v i e w  +  c o n f i r m a t i o n  f e e d b a c k  U I
+Q u a l i t a t i v e  R e s e a r c h
+User Research T echni q ue Used  
+-  Interview &  C onte x tual in q uir y  
+Define Objectiv es C onduct 
+Int erviews
+I conducted interviews and conte x tual in q uiries with 10  traders —  ranging from 
+first - time investors to dail y  traders .
+Analyze Insights  S ynthesize F indings
+I n t e r v i e w  S c r i p t
+Ob jecti v e  & R esearch  
+Go al  :  U nderstand  
+user  needs , pain  
+p o ints , & w o rkfl o ws  
+Summary
+T h e o bj e cti ve o f  u ser and  c o nt e xtual  
+s tudi es i s t o und ers tand  t r ad ers ’  n ee d s ,  
+b e ha v i ors ,  and  pain  p o int s in  re al-w or ld  
+se tting s .  T h ese int erv i e w s unc over 
+chall e ng es with  e xi s ting  t r ading  app s ,  
+id e ntif y k ey u ser g o al s lik e q uick  t r ad e 
+e x e cuti o n  and  re al-tim e in s ight s ,  and  
+anal yze th e c o nt e xt  in  which  u sers 
+int er act  with  s uch  platf or m s .  
+Questions
+1. Background & Motivation:
+Can you tell me a bit about yourself 
+and your experience with investing or 
+trading stocks?
+How do you usually trade or manage 
+your investments today (e.g., mobile 
+apps, websites, brokers)?
+What motivates you to trade or invest 
+in the stock market?
+🔍 2. Current Experience & Pain Points:
+What apps or platforms do you 
+currently use for trading? Why did you 
+choose them?
+Can you walk me through your typical 
+process when making a trade?
+Are there any challenges you face 
+while trading or managing your 
+portfolio?
+Have you ever felt frustrated or stuck 
+while using trading apps? What 
+caused that?
+🏗 3. Needs & Expectations:
+If you could design the perfect trading 
+app, what would be the most 
+important features for you?
+How important is speed and ease of 
+access when placing trades?
+Do you prefer quick actions, or do you 
+value detailed analysis before making 
+a trade?
+Would you like personalized insights, 
+alerts, or educational content within 
+the app?
+📌 4. Decision-Making & Trust
+What factors help you decide whether 
+to trust a trading platform?
+How do you typically research stocks 
+or markets before trading?
+Would you rely on in-app tools like 
+charts, market news, or analyst 
+ratings?
+💬 5. Final Thoughts:
+What’s one thing that would make 
+trading easier or more enjoyable for 
+you?
+Is there anything you feel existing apps 
+are missing or could improve upon?
+Would you be interested in testing new 
+trading features or prototypes in the 
+future?
+3 I n s i g h t s
+W h a t  I  L e a r n e d  F r o m  T a l k i n g  t o  U s e r s
+F r o m  t h e s e  c o n v e r s a t i o n s ,  I  l e a r n e d :
+N ew users are  an x i ous d ur ing  the i r f i rst tr ad e  — unsure whether they’ve done it right.
+Active traders wan t spee d , re al -t im e al erts, and  ch a rt ing  po w er  — but don’t want to 
+dig to find them.
+Most users don’t trust  apps that look “ too flashy ”  or lack clear feedback on actions .
+
+These insights pushed me to design clear visual hierarchies, confirmation moments, 
+and an adaptive dashboard that scales with experience.
+One quote stood out: 
+“ I want to feel in control, but not overwhelmed. ”
+P r o d u c t  E n d  U s e r s
+R e t a i l  I n v e s t o r s
+Profile : Individual investors managing their own portfolios who buy and sell 
+stocks, E T F s, and other securities.
+Needs : They need user-friendly tools for placing trades, tracking portfolios, and 
+accessing real-time market data, often without complex institutional features.
+A c t i v e  T r a d e r s
+Profile: Traders who make fre q uent trades to capitali z e on short-term market 
+movements, often on a daily or weekly basis.
+Needs : Advanced charting tools, real-time alerts, q uick order execution, and 
+customi z able watchlists to stay updated on specific stocks or trends.
+U s e r  P e r s o n a
+Alexa
+Software Developer
+I n f o
+A g e
+S tatu s
+B a c k g r o u n d
+A l ex a  i s  a  full - tim e  so ft w a re  e ngin eer  w h o  s ta r t e d  
+in ves ting  th ree  ye a rs  ag o  t o  b uild  we alth  o ut s id e  h er  t e ch  
+job .  S h e  s p e nd s  a  f ew  h o u rs  e ach  wee k  rese a r ching  
+s t o ck s  and  acti ve l y  manag es  h er  in ves tm e nt  p or tf o li o ,  
+f o cu s ing  p r ima r il y  o n  t e ch  and  re n ew a b l e  e n er g y  se ct ors .  
+Her  in ves tm e nt  s t y l e  i s  a  mi x  o f  l o ng - t er m  h o ld s  and  
+s h or t - t er m  t r ad es  w h e n  o pp or tuniti es  a r i se .
+G o a l s F r u s t r a t i o n
+Grow  h er  p or tf o li o  w ith  a  mi x  
+o f  l o ng - t er m  and  s h or t - t er m  
+in ves tm e nt s.
+A cc ess  re al - tim e  data  and  
+in s ight s  t o  mak e  q uick  t r ading  
+d e ci s i o n s.
+S implif y  th e  manag e m e nt  o f  
+hi s  p or tf o li o  o n  th e  g o.
+S ta y  updat e d  w ith  s t o ck  p r ic e  
+al er t s  and  ma r k e t  n ews .
+C o mpl ex  
+O n bo a r din g
+N a v igati o n  
+O ver l o a d
+S l ow  U pdat e s
+O verw h e lming  
+D ata
+Single
+2 7 E ducati o n
+L o cati o n
+B . E in CSE
+Mu m bai
+U s e r  f l o w
+U s e r  J o u r n e y  M a p
+ST A GES
+THINKING
+Onboarding
+“I hope this is 
+simple.”
+Alexa
+S o ftwa re D eve l o p er
+T radingExploring
+“Where do I st art?” “Is this the right 
+trade?”
+T racking
+“Ho w are m y trades 
+perf orming?”
+R e viewing
+“Ho w did I do?”
+DOING
+P AIN POINTS
+FEELING
+OPPOR TUNITIES
+D o wnloading the 
+app, signing u p, 
+e x ploring 
+f e a t u res.
+L ength y 
+registra tion, 
+c omple x  f orms.
+Hopef u l bu t c a u tio u s.
+S implify sign -u p, 
+o ff er g u ided 
+t u t orials, and u se 
+t ooltips.
+N a viga ting the 
+dash b oard, 
+c he c king 
+portf olio, 
+e x ploring mark et 
+da t a.
+Inf orma tion 
+o v erload, 
+u nf amiliar 
+t erminology .
+O v erwhelmed
+P ersonali z e the 
+dash b oard, o ff er 
+qu i c k tips, and 
+highlight k ey 
+f e a t u res.
+A naly z ing st o c ks, 
+pla c ing bu y / sell 
+orders.
+ S lo w e x e cu tion, 
+la c k o f trade 
+c on fi rma tion.
+A n x io u s
+O ff er re al - time 
+f eed b a c k, qu i c k 
+trade op tions, &  
+vis u al 
+c on fi rma tion.
+C he c king 
+portf olio, setting 
+alerts, 
+monit oring 
+perf orman c e.
+N o personali z ed 
+alerts, hard - t o -
+re ad da t a.
+ Cu rio u s or an x io u s.
+P ro vide 
+perf orman c e 
+s u mmaries, 
+personali z ed 
+alerts
+R e viewing past 
+trades, le arning 
+f rom mist ak es.
+L a c k o f trade 
+hist ory insights.
+R e fl e c tiv e
+O ff er trade 
+insights, s u ggest 
+le arning 
+reso u r c es
+4 S o l u t i o n
+F e a t u r e s  i n t r o d u c e d  i n  B e t a  L a u n c h
+After uncovering that most users want to act fast on known stocks — and not dig 
+through menus — I introduced a feature called Quick Trade .
+W ith just a swipe, users could confirm trades without navigating to a separate screen.
+F or active traders, I built in  Smart Alerts  that notify them about price triggers they 
+define — directly on their lock screen .
+
+These ideas weren’t just about cool features . 
+ They came directly from user frustrations around slow workflows, missed opportunities, 
+and the anxiety of “ missing the trade ! ”
+D e s i g n i n g  f o r  R e a l  B e h a v i o r
+Adv an c e d  C h a rt ing w i th  Cu sto m i z able I n d i c a tors
+S m a rt  A le rts  an d  Tr igge rs
+I n st an t  Portfo li o  D i v e rs i f i c a t i o n Sugge st i o n s
+Q ui ck  Tr a d e M od e
+W i r e f r a m e s
+M a j o r  S c r e e n s
+Q u o t e  S c r e e n  -  O v e r v i e w
+Scrip N ame T A T A  CON S UL T A NC Y  S E RVI C E S
+TCS N SE
+Add To 
+W atchlist
+4105 . 2 54 1 . 45( 1 . 5%)
+Charts
+Main CTA
+Home P or tf olio W at chlist Account
+P o r t f o l i o
+Portfolio 
+O verview
+Main CTAs
+Main H oldings 
+Info
+T r a d e
+Trades
+Swipe to 
+execute feature
+Main CTAs
+Home P or tf olio W at chlist Account
+S c r e e n s
+4 : 21  P M 4 : 21  P M 4 : 21  P M
+M arket
+Welc o me  t o Trade  U p
+Tr ad e U p  i s a  m o bil e s t o ck  t r ading  a pplicati o n  
+d es ign e d  t o c at er t o b o th  b e ginn ers a nd  s e a so n e d  
+i n ves t ors .
+Get  started
+S i g n  i n  t o  y o u r  A c c o u n t
+E n t e r  y o u r  e m a i l  a n d  p a s s w o r d  t o  l o g  i n  
+U s e r  I D
+Z C 2 6 1 4
+P a s s w o r d
+* * * * * * *
+F o r g o t  P a s s w o r d  ?
+L O G  I N
+N I F T Y 50 sensex I N DIA V IX
+20 7 8 1. 38 7 14 8 1. 38 15. 9 0
++ 50  ( + 0 . 66 % ) + 1 6 7  ( + 0 . 96 % ) - 1 . 2 6  ( - 5 . 4 6 % )
+A ll G ainer L oser 5 2  WEEK H I GH  5 2  WEEK H I GH  
+A M Z N ₹  113 . 22
+A ma z on I nc +9 . 77%
+T SL A ₹  681 . 79
+Tesla I nc - 0 . 3 4 %
+GOOG L ₹  2 , 17 4 . 7 5
+A lpha b et I nc - 0 . 21 %
+AA PL ₹  138 . 93
+A pple I nc + 1 . 6 2 %
+M A R A ₹  5 . 54
+M arathon D igital - 0 . 4 1%
+A M Z N ₹  113 . 22
+A ma z on I nc +9 . 77%
+D o n ’ t  h a v e  a n  a c c o u n t ? S i g n  U p
+O nboarding L ogin
+Home
+XRP 
+XRP P or tf olio W at chlist
+H ome
++ 2 1 . 0 0 %
+₹61 . 7 6 Account
+Alex  S h a r m a
+ZC261 4
++91 9 444 977118
+H i s t ory
+B ank  D e tail s
+N o tificati o n s
+S e cu r it y
+H e lp  and  S upp or t
+Ter m s and  C o nditi o n s
+Home P or tf olio W at chlist Account
+L o g o ut
+Account
+4 : 21  P M
+A cc o unt
+Y o u r  H o l d ing s
+A M Z N
+Q t y  1 0    Av g.  11 0
+TS L A
+Q t y  1 0    Av g.  11 0
+GOOG L
+Q t y  1 0    Av g.  11 0
+AAP L
+Q t y  1 0    Av g.  11 0
+Home P or tf olio
+Portfolio
+P o r tf o li o
+H o l d ing  v alue
+₹ 2 , 5 0 9 . 7 5
+I n v e s t e d  v alue
+₹ 1 , 6 1 8 . 7 5
+D e p os it  I N R
+₹ 1 0 2  +9 . 77%  Today
+₹891 +90.77%
+4 : 21  P M
+P o rtf o li o
+W ithd r aw  I N R
++ ₹  1 3 . 22
++ 9 . 77%
+- ₹  6 1 . 7 9
+- 0 . 3 4 %
++ ₹  174 . 75
+- 0 . 21%
++ ₹  1 3 8 . 9 3
++ 1 . 6 2%
+W at chlist Account
+4 : 21  P M
+D ep o sit  I N R
+E n t e r A m o un t  in  I NR
+₹  1 00
+Min  ₹ 1 00  -  Max  ₹ 1 0,00000
+C u rre nt  B alanc e :   ₹ 1 0 , 000
+0  % 1 0  % 2 5  % 50  % 75  % 1 00  %
+1
+4
+7
+.
+D e po sit  I N R
+Deposit
+2
+5
+8
+0
+3
+6
+9
+T A T A  CON S UL T A NC Y  S E RVI C E S
+TCS
+4105 . 2 54 1 . 45( 1 . 5%)
+N SE
+4 : 21  P M
+Watchlist
+M y  watchlist
+A M Z N
+A ma z on I nc
+T SL A
+Tesla I nc
+GOOG L
+A lpha b et I nc
+AA PL
+A pple I nc
+M A R A
+M arathon D igital
+₹  113 . 22
++9 . 77%
+₹  681 . 79
+- 0 . 3 4 %
+₹  2 , 17 4 . 7 5
+- 0 . 21 %
+₹  138 . 93
++ 1 . 6 2 %
+₹  5 . 54
+- 0 . 4 1 %
+Refer  and  Earn
+R e f er yo u  F r i e nd  
+and  W in  C ry pt o c o in s
+Refer  Now
+Reward s
+L ik e ,  S ha re  
+&  g e t  f ree c o up o n s
+Sh are  Now
+4 : 21  P M
+R ewards
+Reward s
+S pin  W h ee l  
+&  W in  F ree To k e n s !
+G e t  T o k en s
+Home P or tf olio W at chlist Account Home P or tf olio W at chlist Account Home P or tf olio W at chlist Account
+Q uote W atchlist Rewards
+K e y  Le arning s  &  Ne x t  S t ep s
+🧠 User beha vior is nuanced
+ By le v eraging quantit a tiv e da t a f rom financial beha vior journals & qualit a tiv e insights, I could align UI 
+decisions with ho w users actually think and act under pressure.
+
+⚙️ Micro-f eedback is essential
+ Smoo th anima tions and sub tle transitions helped users f eel re assured their trade actions w ere being 
+processed correctly .
+
+👥 Designing f or multiple personas requires finesse
+New in v est ors and se asoned traders ha v e diff erent e xpect a tions, so cre a ting fle xible int erf aces w as 
+k ey .
+Wh a t  W e A dded ( Ne x t  S t ep s)
+🌗 Theme personaliza tion 
+Users c an no w choose betw een light mode, dark mode, or s yst em def ault based on their comf or t.
+🧭 P ersonalize d  on b oar d in g   
+W e introduced an adap tiv e w alkthrough tha t adjusts guidance depending on whether the user is a 
+beginner or e xperienced trader .
+🦾  A cc essi b ilit y  u p g ra d es   
+Including high - contrast color modes, impro v ed t ouch t argets, and v oice se arch suppor t t o mak e 
+trading more inclusiv e.
+F o r  W a t c h i n g
+T h a n k  o u
