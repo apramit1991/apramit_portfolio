@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitlyn Case Study | AI-Driven Product and UX Design</title>
+    <meta
+      name="description"
+      content="Recruiter-facing Fitlyn case study showing how AI-assisted product design was used to shape a gym management SaaS for renewals, dues collection, communication, and reporting."
+    />
+    <meta
+      name="keywords"
+      content="Fitlyn case study, AI product design portfolio, gym management SaaS UX, AI-assisted UX workflow, product designer portfolio, Apramit Pradhan"
+    />
+    <meta name="author" content="Apramit Pradhan" />
+    <meta name="theme-color" content="#07111d" />
+    <meta property="og:title" content="Fitlyn Case Study | AI-Driven Product and UX Design" />
+    <meta
+      property="og:description"
+      content="A premium case study on Fitlyn, a gym management SaaS shaped through AI-assisted exploration, product strategy, and high-fidelity UX execution."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://apramit.in/case-study/fitlyn" />
+    <meta property="og:image" content="https://apramit.in/assets/case-fitlyn.svg" />
+    <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="fitlyn-case-study.css?v=20260411-screenplaceholders1" />
+  </head>
+  <body>
+    <header class="top-nav" id="top">
+      <div class="container nav-inner">
+        <a href="../../index.html" class="brand" aria-label="Back to portfolio home">Apramit.</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle page menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="top-links" id="topLinks" aria-label="Case study actions">
+          <a href="../../index.html#case-studies">More Case Studies</a>
+          <a href="../../assets/Apramit-Pradhan-Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+          <a href="../../index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <nav class="case-nav" aria-label="Case study section navigation">
+      <div class="container case-nav-wrap" id="caseNav">
+        <a href="#overview">Overview</a>
+        <a href="#problem">Problem</a>
+        <a href="#user-insights">User Insights</a>
+        <a href="#role">Role</a>
+        <a href="#ai-workflow">AI Workflow</a>
+        <a href="#validation">Validation</a>
+        <a href="#iteration">Iteration</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#exploration">Exploration</a>
+        <a href="#final-outcome">Outcome</a>
+        <a href="#impact-outcomes">Impact</a>
+        <a href="#reflections">Reflections</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="section hero" id="hero">
+        <div class="container">
+          <div class="hero-shell">
+            <div class="hero-stage">
+              <div class="hero-display-word" aria-hidden="true">FITLYN</div>
+
+              <div class="hero-copy reveal">
+                <p class="hero-kicker">GYM MANAGEMENT SAAS CASE STUDY</p>
+                <div class="fitlyn-logo-wrap" aria-label="Fitlyn brand logo">
+                  <img src="../../assets/fitlyn/fitlyn-logo.png" alt="Fitlyn logo" class="fitlyn-logo" loading="eager" decoding="async" />
+                </div>
+                <h1 class="hero-heading">
+                  <span>Gym Management</span>
+                  <span>Software for</span>
+                  <span>Indian Gyms</span>
+                </h1>
+                <p class="hero-value hero-value-lead">
+                  How I designed an action-first platform to simplify dues, renewals,
+                  communication, and reporting — using real user insights and AI-assisted workflows.
+                </p>
+              </div>
+
+              <figure class="hero-visual media-frame reveal">
+                <div class="hero-visual-stage" aria-hidden="true"></div>
+                <img
+                  src="../../assets/fitlyn/dashboard-laptop.png"
+                  alt="Fitlyn dashboard preview on a laptop-style presentation"
+                  loading="eager"
+                  decoding="async"
+                />
+                <div
+                  class="media-fallback dashboard-stage"
+                  role="img"
+                  aria-label="Fitlyn dashboard preview on a laptop-style presentation"
+                >
+                  <div class="stage-frame">
+                    <div class="stage-topbar">
+                      <span></span><span></span><span></span>
+                      <b>Fitlyn OS</b>
+                    </div>
+                    <div class="stage-body">
+                      <aside class="stage-sidebar">
+                        <i></i><i></i><i></i><i></i><i></i>
+                      </aside>
+                      <div class="stage-main">
+                        <div class="stage-headline">
+                          <div>
+                            <small>Operations snapshot</small>
+                            <strong>Monday, peak renewal cycle</strong>
+                          </div>
+                          <em>Automation health: stable</em>
+                        </div>
+                        <div class="stage-kpis">
+                          <article>
+                            <span>Pending dues</span>
+                            <strong>42 members</strong>
+                          </article>
+                          <article>
+                            <span>Renewals this week</span>
+                            <strong>18 expiring</strong>
+                          </article>
+                          <article>
+                            <span>Messages queued</span>
+                            <strong>63 reminders</strong>
+                          </article>
+                        </div>
+                        <div class="stage-grid">
+                          <section class="stage-chart">
+                            <header>
+                              <span>Collection visibility</span>
+                              <b>30-day view</b>
+                            </header>
+                            <div class="bars">
+                              <i style="--h: 48%"></i><i style="--h: 63%"></i><i style="--h: 58%"></i>
+                              <i style="--h: 74%"></i><i style="--h: 69%"></i><i style="--h: 83%"></i>
+                              <i style="--h: 76%"></i>
+                            </div>
+                          </section>
+                          <section class="stage-queue">
+                            <header>
+                              <span>Action queue</span>
+                              <b>High-priority tasks</b>
+                            </header>
+                            <ul>
+                              <li>Due reminders awaiting WhatsApp send</li>
+                              <li>Renewal leakage risk flagged for 7-day cohort</li>
+                              <li>Inactive members require follow-up campaign</li>
+                            </ul>
+                          </section>
+                        </div>
+                        <div class="stage-foot">
+                          <article>
+                            <span>Reports</span>
+                            <strong>Daily summary ready</strong>
+                          </article>
+                          <article>
+                            <span>Attendance</span>
+                            <strong>Drop-off trend detected</strong>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <figcaption>Fitlyn dashboard UI snapshot from the live product direction.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="overview">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Project Overview</p>
+            <h2>A product story framed around business friction, UX judgment, and AI-assisted speed</h2>
+            <p>
+              Fitlyn was designed to reduce manual gym operations and create a more reliable system
+              for renewals, dues, communication, and reporting. This case study is built to help a
+              recruiter understand the product challenge, the decisions I made, and how AI was used
+              as an accelerator rather than a substitute for product thinking.
+            </p>
+          </div>
+          <div class="overview-grid">
+            <article class="overview-card reveal">
+              <span class="card-label">Product</span>
+              <h3>Fitlyn</h3>
+              <p>A gym operations platform built around daily admin workflows.</p>
+            </article>
+            <article class="overview-card reveal">
+              <span class="card-label">Category</span>
+              <h3>Gym Management SaaS</h3>
+              <p>Operational software for memberships, payments, attendance, and reporting.</p>
+            </article>
+            <article class="overview-card reveal">
+              <span class="card-label">Users</span>
+              <h3>Owners / Managers / Staff</h3>
+              <p>Designed for busy operators who need fast access to revenue-critical tasks.</p>
+            </article>
+            <article class="overview-card reveal">
+              <span class="card-label">Problem</span>
+              <h3>Manual and scattered ops</h3>
+              <p>Spreadsheets, chats, and follow-up gaps were creating friction and leakage.</p>
+            </article>
+            <article class="overview-card reveal">
+              <span class="card-label">My Role</span>
+              <h3>End-to-end UX / Product Designer</h3>
+              <p>I shaped the problem framing, IA, interaction direction, and high-fidelity system.</p>
+            </article>
+            <article class="overview-card reveal">
+              <span class="card-label">Outcome</span>
+              <h3>AI-assisted product direction</h3>
+              <p>Faster exploration with product-ready screens grounded in operational usability.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="problem">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">The Business Problem</p>
+            <h2>Gym operations were still being managed through fragmented tools and reactive follow-up</h2>
+            <p>
+              Many Indian gyms still rely on spreadsheets, WhatsApp chats, notebooks, and manual
+              renewal handling. That creates missed dues, weak follow-up, poor reporting visibility,
+              and inconsistent day-to-day operations. Fitlyn was designed to simplify these
+              workflows and make gym management feel structured, trackable, and more reliable.
+            </p>
+          </div>
+          <div class="problem-layout">
+            <article class="problem-summary reveal">
+              <h3>What was breaking down</h3>
+              <p>
+                Operators had to remember who was due, who needed a reminder, which members had
+                dropped off, and whether reporting matched actual business activity. The product
+                challenge was not just visual polish. It was about making recurring operational
+                work easier to see, prioritize, and execute.
+              </p>
+              <p class="problem-quote">
+                Fitlyn was designed to reduce manual gym operations and create a more reliable
+                system for renewals, dues, communication, and reporting.
+              </p>
+            </article>
+            <div class="pain-grid">
+              <article class="pain-card reveal">
+                <span class="pain-icon">01</span>
+                <h3>Membership tracking chaos</h3>
+                <p>Member status, plan validity, and renewals often lived in disconnected trackers.</p>
+              </article>
+              <article class="pain-card reveal">
+                <span class="pain-icon">02</span>
+                <h3>Payment due follow-ups</h3>
+                <p>Reminder workflows depended on memory and manual outreach instead of clear queues.</p>
+              </article>
+              <article class="pain-card reveal">
+                <span class="pain-icon">03</span>
+                <h3>Renewal leakage</h3>
+                <p>Expiring members slipped through the cracks when no structured system surfaced risk early.</p>
+              </article>
+              <article class="pain-card reveal">
+                <span class="pain-icon">04</span>
+                <h3>Scattered communication</h3>
+                <p>WhatsApp and ad hoc messaging created inconsistent follow-through and low auditability.</p>
+              </article>
+              <article class="pain-card reveal">
+                <span class="pain-icon">05</span>
+                <h3>Lack of reporting visibility</h3>
+                <p>Owners struggled to connect collections, attendance patterns, and retention behavior.</p>
+              </article>
+            </div>
+          </div>
+
+          <article class="grounded-insight reveal" aria-label="Observed research signal">
+            <header>
+              <p class="eyebrow">Grounded Insight - What We Observed</p>
+              <h3>Operational decisions were being made from memory and chat history, not a system.</h3>
+            </header>
+            <div class="grounded-grid">
+              <div class="grounded-copy">
+                <p>
+                  In early conversations, gym owners and staff repeatedly described relying on memory,
+                  WhatsApp follow-ups, Excel sheets, and physical registers to track dues and renewals.
+                  This decision was shaped by operational reality.
+                </p>
+                <p>
+                  Many tools in the category feel feature-heavy and analytics-heavy. Fitlyn was
+                  positioned deliberately as less dashboard noise and more operational clarity.
+                </p>
+              </div>
+              <blockquote class="quote-card">
+                <p>"I just need to know who has not paid today - everything else is secondary."</p>
+              </blockquote>
+            </div>
+            <div class="insight-strip">
+              <span>What this changed</span>
+              <p>
+                Dues visibility became priority one, dashboard design shifted to action-first
+                workflows, and the product strategy emphasized clarity and speed over feature depth.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="user-insights">
+        <div class="container">
+          <article class="user-insights-board reveal" aria-labelledby="userInsightsTitle">
+            <aside class="insights-persona">
+              <figure class="insights-persona-visual">
+                <img
+                  src="../../assets/fitlyn/persona-owner.png"
+                  alt="Persona portrait representing a gym owner or manager"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <div class="insights-persona-copy">
+                <p class="role-eyebrow">Primary User Persona</p>
+                <h3 id="personaTitle">Gym Owner / Manager</h3>
+                <p class="persona-role">
+                  Runs daily gym operations, tracks memberships, collects payments, and manages
+                  staff coordination.
+                </p>
+              </div>
+              <div class="insights-persona-traits" aria-label="Persona traits">
+                <article>
+                  <span>01</span>
+                  <strong>Daily Operator</strong>
+                </article>
+                <article>
+                  <span>02</span>
+                  <strong>Revenue-Focused</strong>
+                </article>
+                <article>
+                  <span>03</span>
+                  <strong>Low Admin Bandwidth</strong>
+                </article>
+              </div>
+            </aside>
+
+            <div class="insights-main">
+              <header class="insights-main-head">
+                <p class="eyebrow">User Insights & Persona</p>
+                <h2 id="userInsightsTitle">What we learned from real gym operators</h2>
+                <p>
+                  Early conversations and informal interviews with gym owners and staff revealed
+                  consistent challenges that shape how gyms run every day.
+                </p>
+              </header>
+
+              <div class="insight-findings-grid">
+                <article class="insight-finding-card">
+                  <span class="insight-icon">01</span>
+                  <h3>Manual Tracking Everywhere</h3>
+                  <p>Memberships and payments are tracked in Excel, registers, or memory.</p>
+                </article>
+
+                <article class="insight-finding-card">
+                  <span class="insight-icon">02</span>
+                  <h3>Manual Follow-ups</h3>
+                  <p>Dues and renewals are followed up through WhatsApp messages or calls.</p>
+                </article>
+
+                <article class="insight-finding-card">
+                  <span class="insight-icon">03</span>
+                  <h3>Action Over Reports</h3>
+                  <p>Staff need to know what's pending today, not just see reports after the fact.</p>
+                </article>
+
+                <article class="insight-finding-card">
+                  <span class="insight-icon">04</span>
+                  <h3>Simplicity Wins</h3>
+                  <p>Ease of use matters more in daily operations than feature-heavy complexity.</p>
+                </article>
+              </div>
+
+              <div class="insights-bottom-grid">
+                <article class="persona-block">
+                  <span class="persona-label">Goals</span>
+                  <ul class="persona-list">
+                    <li>Know who has unpaid dues</li>
+                    <li>Track memberships and renewals easily</li>
+                    <li>Reduce manual follow-ups</li>
+                    <li>Run gym operations from one system</li>
+                  </ul>
+                </article>
+
+                <article class="persona-block persona-block-accent">
+                  <span class="persona-label">Pain Points</span>
+                  <ul class="persona-list">
+                    <li>Missed renewals due to lack of reminders</li>
+                    <li>Payment tracking spread across multiple tools</li>
+                    <li>No single dashboard for daily priorities</li>
+                    <li>Time wasted in repetitive admin work</li>
+                  </ul>
+                </article>
+
+                <aside class="insights-quote-card" aria-label="Key operator quote">
+                  <div class="user-insights-quote-mark" aria-hidden="true">"</div>
+                  <blockquote class="quote-card quote-card-strong">
+                    <p>"I just need to know who has not paid today - everything else is secondary."</p>
+                  </blockquote>
+                  <p class="insights-quote-copy">
+                    This insight directly shaped the product direction: Fitlyn was designed to
+                    prioritize action-first visibility around dues, renewals, and reminders instead
+                    of analytics-heavy complexity.
+                  </p>
+                </aside>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="role">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">My Role and Responsibility</p>
+            <h2>Positioning myself as the designer who turns product ambiguity into executable structure</h2>
+            <p>
+              My contribution went beyond interface design. I translated business friction into a
+              usable product shape, decided where AI could speed up exploration, and refined the
+              final direction so it felt credible, practical, and implementation-ready.
+            </p>
+          </div>
+          <div class="role-grid">
+            <article class="role-panel reveal">
+              <p class="role-eyebrow">Core contribution</p>
+              <h3>I owned the end-to-end product design direction</h3>
+              <ul class="check-list">
+                <li>Identified the user and business problems shaping Fitlyn's core workflows.</li>
+                <li>Structured product flows and information architecture around operational frequency.</li>
+                <li>Explored multiple UI directions using AI-assisted iteration and comparison.</li>
+                <li>Designed recruiter-worthy high-fidelity interfaces with a product-first lens.</li>
+                <li>Translated design thinking into a dev-ready structure and visual system.</li>
+              </ul>
+            </article>
+            <article class="role-panel role-panel-accent reveal">
+              <p class="role-eyebrow">Decision-making lens</p>
+              <h3>How I framed the work</h3>
+              <div class="decision-points">
+                <article>
+                  <span>Business practicality</span>
+                  <p>Prioritized flows tied directly to collections, renewals, and operational consistency.</p>
+                </article>
+                <article>
+                  <span>User reality</span>
+                  <p>Designed for non-technical operators who need clarity more than feature density.</p>
+                </article>
+                <article>
+                  <span>Execution velocity</span>
+                  <p>Used AI where it reduced cycle time, then applied human judgment to converge responsibly.</p>
+                </article>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="process">
+        <div class="container">
+          <div id="ai-workflow" class="anchor-target" aria-hidden="true"></div>
+          <div class="section-head reveal">
+            <p class="eyebrow">AI-Driven Design Workflow</p>
+            <h2>The design lifecycle was accelerated by AI, but guided by product and UX judgment</h2>
+            <p>
+              AI accelerated exploration, but final decisions were grounded in usability and
+              product thinking. This workflow let me move faster without turning the process into a
+              generic prompt-to-UI shortcut.
+            </p>
+          </div>
+          <div class="workflow-intro reveal">
+            <p>
+              Instead of treating AI as a novelty layer, I used it as an accelerator across problem
+              discovery, feature expansion, high-fidelity exploration, and handoff. Each stage still
+              required curation, prioritization, and product judgment from me.
+            </p>
+          </div>
+
+          <article class="ai-proof-block reveal" aria-label="Concrete AI workflow example">
+            <div class="ai-proof-head">
+              <p class="eyebrow">AI in Action - From Exploration to Decision</p>
+              <h3>A concrete example from the Fitlyn dashboard workflow</h3>
+            </div>
+            <div class="ai-proof-grid">
+              <article class="ai-proof-card ai-proof-generated">
+                <h4>What AI generated first</h4>
+                <p>
+                  Context: I was designing the gym-owner dashboard to surface pending payments,
+                  expiring memberships, and daily operational tasks. AI quickly generated multiple
+                  feature-heavy layouts.
+                </p>
+                <ul>
+                  <li>Dense chart panels and many widgets competing for attention.</li>
+                  <li>Strong visual variety, but weak task prioritization for daily admin use.</li>
+                  <li>Impressive exploration speed, but not practical for non-technical operators.</li>
+                </ul>
+              </article>
+              <article class="ai-proof-card ai-proof-final">
+                <h4>How I changed it</h4>
+                <p>
+                  AI expanded the solution space, but did not make the final design decisions. I
+                  shifted the layout from analysis-heavy to action-first clarity.
+                </p>
+                <ul>
+                  <li>Prioritized pending payments, expiring memberships, and quick actions.</li>
+                  <li>Reduced visual noise by removing secondary charts from first view.</li>
+                  <li>Made the strongest direction the one that reduced friction for daily admin work.</li>
+                </ul>
+              </article>
+            </div>
+            <div class="ai-proof-takeaway">
+              <span>Key takeaway</span>
+              <p>
+                AI accelerated exploration. Product judgment, user context, and usability reasoning
+                determined the final product direction.
+              </p>
+            </div>
+          </article>
+
+          <div class="workflow-timeline">
+            <article class="workflow-step reveal">
+              <span class="step-no">01</span>
+              <div class="workflow-copy">
+                <h3>Problem Discovery</h3>
+                <p>
+                  AI was used to accelerate early thinking around user pain points, competitor
+                  patterns, and opportunity areas. I filtered and validated what was relevant to the
+                  actual business problem.
+                </p>
+              </div>
+            </article>
+            <article class="workflow-step reveal">
+              <span class="step-no">02</span>
+              <div class="workflow-copy">
+                <h3>UX Strategy and Feature Prioritization</h3>
+                <p>
+                  AI helped expand the solution space, but I made the final prioritization based on
+                  business need, user value, and MVP constraints.
+                </p>
+              </div>
+            </article>
+            <article class="workflow-step reveal">
+              <span class="step-no">03</span>
+              <div class="workflow-copy">
+                <h3>Information Architecture</h3>
+                <p>
+                  AI-supported exploration made it faster to test module groupings and navigation
+                  logic. I refined the final structure around task frequency and operational usability.
+                </p>
+              </div>
+            </article>
+            <article class="workflow-step reveal">
+              <span class="step-no">04</span>
+              <div class="workflow-copy">
+                <h3>Direct High-Fidelity Exploration</h3>
+                <p>
+                  Instead of traditional wireframing, I moved directly into high-fidelity
+                  exploration using AI-assisted iteration. This approach helped validate layout,
+                  hierarchy, and business workflows in a more realistic context.
+                </p>
+              </div>
+            </article>
+            <article class="workflow-step reveal">
+              <span class="step-no">05</span>
+              <div class="workflow-copy">
+                <h3>Final UI Refinement</h3>
+                <p>
+                  I selected and refined the strongest direction. Final decisions were based on
+                  clarity, usability, business practicality, and brand fit.
+                </p>
+              </div>
+            </article>
+            <article class="workflow-step reveal">
+              <span class="step-no">06</span>
+              <div class="workflow-copy">
+                <h3>AI to Development Handoff</h3>
+                <p>
+                  Structured prompts and AI-assisted generation helped accelerate the transition
+                  from design thinking into implementation-ready output without losing intent.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="no-wireframes">
+        <div class="container">
+          <article class="insight-banner reveal">
+            <div>
+              <p class="eyebrow">Why I Skipped Wireframing</p>
+              <h2>This was a conscious workflow decision, not a missing deliverable</h2>
+            </div>
+            <p>
+              In this project, I intentionally skipped traditional wireframing. AI-assisted design
+              workflows allowed me to generate and evaluate multiple high-fidelity UI directions
+              much faster. This made it possible to validate layout, hierarchy, and usability
+              directly in a realistic product context, reducing redundancy and accelerating
+              decision-making.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="validation">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Validation & Feedback</p>
+            <h2>Fitlyn was shaped by operator context, not design assumptions alone</h2>
+            <p>
+              Target users were gym owners and staff with low technical familiarity, high daily
+              admin pressure, and limited time for analysis. The strongest direction was the one
+              that reduced friction for daily admin work.
+            </p>
+          </div>
+          <div class="validation-layout">
+            <article class="validation-card reveal">
+              <h3>Observed in early conversations</h3>
+              <ul>
+                <li>Teams relied on memory for dues and renewals.</li>
+                <li>Follow-ups were mostly done through WhatsApp threads.</li>
+                <li>Excel sheets and physical registers were still common.</li>
+              </ul>
+            </article>
+            <article class="validation-card reveal">
+              <h3>Operational gaps identified</h3>
+              <ul>
+                <li>No structured dues tracking across members and plans.</li>
+                <li>Renewals were frequently missed during busy periods.</li>
+                <li>Communication history was scattered and hard to audit.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="early-signals reveal">
+            <div class="early-signals-head">
+              <p class="eyebrow">Early User Signals</p>
+              <h3>Feedback that anchored the product direction</h3>
+            </div>
+            <blockquote class="quote-card quote-card-strong">
+              <p>"I just need to know who has not paid today - everything else is secondary."</p>
+            </blockquote>
+          </div>
+
+          <article class="validation-impact reveal">
+            <h3>How this influenced the design</h3>
+            <ul>
+              <li>Dues visibility was prioritized ahead of deeper analytics.</li>
+              <li>The dashboard became action-first, not analysis-first.</li>
+              <li>Reminders and renewals were elevated into primary workflows.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="iteration">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Iteration & Design Decisions</p>
+            <h2>Showing tradeoff thinking from exploration to practical product decisions</h2>
+            <p>
+              This helped shift the product from visually polished to operationally useful. AI
+              expanded possibilities, but iteration quality came from critical filtering.
+            </p>
+          </div>
+
+          <div class="iteration-stack">
+            <article class="iteration-card reveal">
+              <h3>Iteration 1: Feature Overload vs Simplicity</h3>
+              <div class="decision-flow">
+                <p><span>Initial direction</span>Feature-rich dashboard with many widgets and charts.</p>
+                <p><span>Problem</span>Too overwhelming for non-technical gym owners under daily pressure.</p>
+                <p><span>Final decision</span>Reduced complexity and focused on high-frequency operational flows.</p>
+                <p><span>Outcome</span>Cleaner screens, faster scanning, and clearer next actions.</p>
+              </div>
+            </article>
+
+            <article class="iteration-card reveal">
+              <h3>Iteration 2: Navigation Structure</h3>
+              <div class="decision-flow">
+                <p><span>Initial direction</span>Feature-based module grouping.</p>
+                <p><span>Problem</span>Did not match the user mental model for daily gym work.</p>
+                <p><span>Final decision</span>Shifted to task-based navigation tied to operator routines.</p>
+                <p><span>Outcome</span>Quicker access to dues, renewals, attendance, and reminders.</p>
+              </div>
+            </article>
+
+            <article class="iteration-card reveal">
+              <h3>Iteration 3: AI Usage vs Product Judgment</h3>
+              <div class="decision-flow">
+                <p><span>Initial direction</span>AI-generated multiple layouts and feature directions quickly.</p>
+                <p><span>Problem</span>Some outputs looked impressive but were impractical in real operations.</p>
+                <p><span>Final decision</span>Used AI for expansion and speed, then filtered with business logic and usability.</p>
+                <p><span>Outcome</span>Balanced exploration velocity with realistic, implementation-ready UX.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="architecture">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Information Architecture</p>
+            <h2>A structure optimized for fast operational access instead of feature sprawl</h2>
+            <p>
+              Gym owners and staff need quick access to the tasks that affect renewals, dues, and
+              communication. The navigation was organized around recurring operational intent rather
+              than departmental silos.
+            </p>
+          </div>
+          <div class="architecture-layout">
+            <article class="architecture-copy reveal">
+              <h3>IA rationale</h3>
+              <p>
+                The product starts with a dashboard for daily monitoring, then moves into members,
+                plans, payments, attendance, messaging, reports, and settings. Messaging is kept as
+                a parent area so channels like WhatsApp and SMS can scale under a single communication
+                system later.
+              </p>
+            </article>
+            <div class="architecture-map reveal" role="img" aria-label="Fitlyn information architecture diagram">
+              <div class="ia-root">Fitlyn Platform</div>
+              <div class="ia-branches">
+                <article class="ia-node">Dashboard</article>
+                <article class="ia-node">Members</article>
+                <article class="ia-node">Plans</article>
+                <article class="ia-node">Payments</article>
+                <article class="ia-node">Attendance</article>
+                <article class="ia-node ia-node-parent">
+                  Messaging
+                  <div class="ia-children">
+                    <span>WhatsApp</span>
+                    <span>SMS</span>
+                  </div>
+                </article>
+                <article class="ia-node">Reports</article>
+                <article class="ia-node">Settings</article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="exploration">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">UI Exploration and Design Direction</p>
+            <h2>Exploring polished interface directions instead of abstract low-fidelity frames</h2>
+            <p>
+              The goal was to reduce cognitive load, prioritize common gym-owner tasks, balance
+              business metrics with usability, and design for non-technical users who need clarity
+              at a glance.
+            </p>
+          </div>
+          <div class="exploration-grid">
+            <article class="exploration-card reveal">
+              <div class="exploration-visual visual-compact" role="img" aria-label="Compact dashboard exploration placeholder">
+                <div class="visual-shell">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="visual-body">
+                  <i></i><i></i><i></i><i></i>
+                </div>
+              </div>
+              <div class="exploration-copy">
+                <h3>Direction A: Metric-heavy dashboard</h3>
+                <p>
+                  Useful for visibility, but too dense for fast action. It risked overwhelming
+                  owners with numbers before surfacing what needed attention first.
+                </p>
+              </div>
+            </article>
+            <article class="exploration-card reveal">
+              <div class="exploration-visual visual-balanced" role="img" aria-label="Balanced dashboard exploration placeholder">
+                <div class="visual-shell">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="visual-body">
+                  <i></i><i></i><i></i>
+                </div>
+              </div>
+              <div class="exploration-copy">
+                <h3>Direction B: Action-first hierarchy</h3>
+                <p>
+                  This direction created a better balance between operational priorities and
+                  business metrics. It reduced cognitive load while keeping revenue-critical actions visible.
+                </p>
+              </div>
+            </article>
+            <article class="exploration-card reveal">
+              <div class="exploration-visual visual-minimal" role="img" aria-label="Minimal dashboard exploration placeholder">
+                <div class="visual-shell">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="visual-body">
+                  <i></i><i></i>
+                </div>
+              </div>
+              <div class="exploration-copy">
+                <h3>Direction C: Minimal admin shell</h3>
+                <p>
+                  Cleaner at first glance, but too shallow for a product that needs quick access to
+                  reporting, attendance, and messaging workflows in the same ecosystem.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="exploration-notes">
+            <article class="note-card reveal">
+              <h3>What improved</h3>
+              <p>Action queues were made more visible so dues and renewals could not be missed easily.</p>
+            </article>
+            <article class="note-card reveal">
+              <h3>Why it mattered</h3>
+              <p>Business metrics stayed visible, but they no longer competed with the primary daily tasks.</p>
+            </article>
+            <article class="note-card reveal">
+              <h3>Design lens</h3>
+              <p>The final direction was tuned for operators who need confidence and speed, not product training.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="final-outcome">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Final Design Showcase</p>
+            <h2>A gallery of the final product direction and the rationale behind each screen</h2>
+            <p>
+              The final system was designed to feel operationally calm, clear, and scalable. Each
+              screen below is presented with the decision logic that shaped it.
+            </p>
+          </div>
+          <article class="screen-gallery-hero reveal" aria-label="Large Fitlyn app screen gallery">
+            <div class="screen-gallery-copy">
+              <p class="eyebrow">Large Screen Preview</p>
+              <h3>Big app visuals make the case study feel closer to a real product walkthrough</h3>
+              <p>
+                These are actual product screens from the Fitlyn case-study flow. They help ground
+                the narrative in the interface direction that shaped the final product story.
+              </p>
+              <div class="gallery-note">
+                <span>Live screen set</span>
+                <p>Using exported screens from <code>assets/fitlyn/</code> to make the case study feel like a real walkthrough.</p>
+              </div>
+            </div>
+            <div class="screen-gallery-stack">
+              <figure class="screen-shot screen-shot-main">
+                <img
+                  src="../../assets/fitlyn/dashboard.PNG"
+                  alt="Fitlyn dashboard app screen"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <figure class="screen-shot screen-shot-left">
+                <img
+                  src="../../assets/fitlyn/memberships.PNG"
+                  alt="Fitlyn memberships app screen"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <figure class="screen-shot screen-shot-right">
+                <img
+                  src="../../assets/fitlyn/payment.PNG"
+                  alt="Fitlyn payment app screen"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+            </div>
+          </article>
+          <div class="showcase-grid">
+            <article class="showcase-card reveal">
+              <figure class="showcase-screen-frame">
+                <img
+                  src="../../assets/fitlyn/dashboard.PNG"
+                  alt="Fitlyn dashboard screen"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="showcase-screen-chip">Final screen</span>
+              </figure>
+              <div class="showcase-copy">
+                <h3>Dashboard</h3>
+                <p><strong>Rationale:</strong> Designed as a command center for action-first clarity.</p>
+                <p><strong>Solves:</strong> Removes uncertainty around pending dues and expiring memberships.</p>
+                <p><strong>Changed from earlier:</strong> Reduced chart density so critical tasks are visible first.</p>
+              </div>
+            </article>
+            <article class="showcase-card reveal">
+              <figure class="showcase-screen-frame">
+                <img
+                  src="../../assets/fitlyn/memberships.PNG"
+                  alt="Fitlyn memberships screen"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="showcase-screen-chip">Final screen</span>
+              </figure>
+              <div class="showcase-copy">
+                <h3>Member Management</h3>
+                <p><strong>Rationale:</strong> Keeps payment, plan, and status context close to each member record.</p>
+                <p><strong>Solves:</strong> Cuts lookup friction during high-volume front desk operations.</p>
+                <p><strong>Changed from earlier:</strong> Shifted from generic tables to action-oriented member states.</p>
+              </div>
+            </article>
+            <article class="showcase-card reveal">
+              <figure class="showcase-screen-frame">
+                <img
+                  src="../../assets/fitlyn/payment.PNG"
+                  alt="Fitlyn payment flow screen"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="showcase-screen-chip">Final screen</span>
+              </figure>
+              <div class="showcase-copy">
+                <h3>Plan Assignment and Payment Flow</h3>
+                <p><strong>Rationale:</strong> Built for trust with clear payment states and renewal context.</p>
+                <p><strong>Solves:</strong> Prevents missed collections by surfacing due and expiry states early.</p>
+                <p><strong>Changed from earlier:</strong> Moved from form-heavy flow to faster guided actions.</p>
+              </div>
+            </article>
+            <article class="showcase-card reveal">
+              <figure class="showcase-screen-frame">
+                <img
+                  src="../../assets/fitlyn/plans.PNG"
+                  alt="Fitlyn plans screen"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="showcase-screen-chip">Final screen</span>
+              </figure>
+              <div class="showcase-copy">
+                <h3>Plans</h3>
+                <p><strong>Rationale:</strong> Keeps package structure, pricing, and duration choices easy to compare and assign.</p>
+                <p><strong>Solves:</strong> Reduces confusion during plan selection and helps staff map the right offer to the right member.</p>
+                <p><strong>Changed from earlier:</strong> Shifted from a generic admin list to a clearer plan hierarchy with faster decision support.</p>
+              </div>
+            </article>
+            <article class="showcase-card reveal">
+              <figure class="showcase-screen-frame">
+                <img
+                  src="../../assets/fitlyn/reports.PNG"
+                  alt="Fitlyn reports screen"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="showcase-screen-chip">Final screen</span>
+              </figure>
+              <div class="showcase-copy">
+                <h3>Reports</h3>
+                <p><strong>Rationale:</strong> Reporting focuses on operational signals linked to revenue and retention.</p>
+                <p><strong>Solves:</strong> Improves visibility into collections, attendance, and follow-up health.</p>
+                <p><strong>Changed from earlier:</strong> Simplified analytics to support faster decisions, not data overload.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="impact-outcomes">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Impact & Outcomes</p>
+            <h2>From design direction to operational, business, and product value</h2>
+            <p>
+              This section uses directional, recruiter-safe outcomes. No inflated metrics, only
+              realistic value signals from the current stage.
+            </p>
+          </div>
+
+          <div class="outcomes-grid">
+            <article class="outcome-card reveal">
+              <h3>Operational Impact</h3>
+              <ul>
+                <li>Reduced dependency on manual tracking across memberships, payments, and communication.</li>
+                <li>Simplified daily workflows by prioritizing high-frequency admin tasks.</li>
+                <li>Structured reminders replaced inconsistent manual outreach.</li>
+              </ul>
+            </article>
+            <article class="outcome-card reveal">
+              <h3>Business Impact</h3>
+              <ul>
+                <li>Designed around dues collection and renewals to support revenue visibility.</li>
+                <li>Improved ability to identify pending payments and expiring memberships proactively.</li>
+                <li>Reduced risk of missed follow-ups and renewal leakage.</li>
+              </ul>
+            </article>
+            <article class="outcome-card reveal">
+              <h3>Product Impact</h3>
+              <ul>
+                <li>Created a scalable module structure for future expansion.</li>
+                <li>Established a foundation for messaging automation under one parent workflow.</li>
+                <li>Aligned product direction with observed gym-owner behavior.</li>
+              </ul>
+            </article>
+          </div>
+
+          <article class="early-validation reveal">
+            <p class="eyebrow">Early Validation Signals</p>
+            <h3>Directional response from early walkthroughs</h3>
+            <ul>
+              <li>Demoed to gym owners and staff for early reaction checks.</li>
+              <li>Positive response to simpler, action-first dashboard behavior.</li>
+              <li>Positive response to reminder automation potential and renewal visibility.</li>
+              <li>Positive response to dues and expiry clarity in daily workflows.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="impact">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">What Makes This Case Study Unique</p>
+            <h2>Evidence-driven decisions across product, UX, AI, and operational context</h2>
+            <p>
+              This project is positioned around observable problem signals and practical decision
+              quality, not self-promotional claims. The design was optimized for action-first clarity.
+            </p>
+          </div>
+          <div class="impact-grid">
+            <article class="impact-card reveal">
+              <h3>Real operational SaaS context</h3>
+              <p>The challenge came from everyday gym operations, not a fictional UI prompt.</p>
+            </article>
+            <article class="impact-card reveal">
+              <h3>AI used through the actual lifecycle</h3>
+              <p>AI supported discovery, structure, exploration, and handoff rather than surface-level styling.</p>
+            </article>
+            <article class="impact-card reveal">
+              <h3>Product and UX thinking together</h3>
+              <p>Decisions were shaped by business priorities, usability needs, and delivery reality.</p>
+            </article>
+            <article class="impact-card reveal">
+              <h3>Faster exploration without weak judgment</h3>
+              <p>AI expanded options quickly, but practical filtering drove the final direction.</p>
+            </article>
+            <article class="impact-card reveal">
+              <h3>Grounded in operator behavior</h3>
+              <p>Workflow priorities followed observed gym-owner behavior rather than feature assumptions.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="reflections">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Reflections</p>
+            <h2>What Fitlyn taught me about AI-assisted design and where human judgment still matters most</h2>
+          </div>
+          <div class="reflection-grid">
+            <article class="reflection-card reveal">
+              <h3>Where AI helped most</h3>
+              <p>
+                AI made early expansion faster. It was especially useful for surfacing feature
+                possibilities, module structures, and multiple visual directions without slowing the process down.
+              </p>
+            </article>
+            <article class="reflection-card reveal">
+              <h3>Where human judgment stayed critical</h3>
+              <p>
+                Prioritization, usability tradeoffs, and business practicality still depended on
+                product judgment. The strongest direction was the one that felt most usable for the
+                real operational context, not the one that looked most elaborate.
+              </p>
+            </article>
+            <article class="reflection-card reveal">
+              <h3>How I would evolve Fitlyn next</h3>
+              <p>
+                I would deepen the communication layer, add smarter reporting views, and build
+                channel-level workflows under messaging so reminders and retention campaigns become more systematic.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="next">
+        <div class="container">
+          <article class="final-cta reveal">
+            <p class="eyebrow">Next / Other Case Studies</p>
+            <h2>Explore more product work or reach out if you are hiring for AI, product, or UX design ownership</h2>
+            <p>
+              This case study is meant to show how I think through business problems, structure a
+              product, and use AI intentionally during execution. If that is relevant to your team,
+              I would be glad to discuss the role.
+            </p>
+            <div class="cta-row center">
+              <a href="../../index.html#case-studies" class="btn btn-primary">Explore Other Work</a>
+              <a href="../../index.html#contact" class="btn btn-secondary">Contact Me</a>
+              <a href="../../assets/Apramit-Pradhan-Resume.pdf" class="btn btn-ghost" target="_blank" rel="noreferrer"
+                >Open Resume</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>(c) <span id="year"></span> Apramit Pradhan | Fitlyn Case Study</p>
+      </div>
+    </footer>
+
+    <script src="fitlyn-case-study.js?v=20260405-alignfix2"></script>
+  </body>
+</html>

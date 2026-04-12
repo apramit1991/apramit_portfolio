@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" role="img" aria-labelledby="fitlynLogoTitle fitlynLogoDesc">
+  <title id="fitlynLogoTitle">Fitlyn Logo</title>
+  <desc id="fitlynLogoDesc">Fitlyn wordmark with a fitness-inspired icon</desc>
+  <defs>
+    <linearGradient id="fitlynGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5d480"/>
+      <stop offset="100%" stop-color="#d5b03c"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(20,22)">
+    <rect x="0" y="76" width="22" height="64" rx="10" fill="url(#fitlynGold)"/>
+    <rect x="28" y="62" width="22" height="78" rx="10" fill="url(#fitlynGold)"/>
+    <rect x="56" y="48" width="22" height="92" rx="10" fill="url(#fitlynGold)"/>
+    <rect x="84" y="62" width="22" height="78" rx="10" fill="url(#fitlynGold)"/>
+    <rect x="112" y="76" width="22" height="64" rx="10" fill="url(#fitlynGold)"/>
+    <path d="M30 118 L88 156 L196 66 L96 186 L30 118Z" fill="url(#fitlynGold)"/>
+    <path d="M88 142 L120 162 L170 106 L120 178 L88 142Z" fill="#07111d"/>
+  </g>
+
+  <g transform="translate(250,52)">
+    <text x="0" y="120" font-family="Sora, Manrope, Segoe UI, sans-serif" font-size="156" font-weight="800" fill="#f0f5fb">Fit</text>
+    <text x="278" y="120" font-family="Sora, Manrope, Segoe UI, sans-serif" font-size="156" font-weight="800" fill="url(#fitlynGold)">lyn</text>
+  </g>
+</svg>

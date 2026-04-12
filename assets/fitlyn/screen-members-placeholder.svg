@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Fitlyn members placeholder</title>
+  <desc id="desc">Member management placeholder screen for the Fitlyn case study.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#112034" />
+      <stop offset="100%" stop-color="#08131f" />
+    </linearGradient>
+    <linearGradient id="panel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15273f" />
+      <stop offset="100%" stop-color="#0c1827" />
+    </linearGradient>
+    <linearGradient id="mint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7ce0cb" />
+      <stop offset="100%" stop-color="#43b8a1" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f4cd8f" />
+      <stop offset="100%" stop-color="#d39a51" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="980" rx="46" fill="#07111d" />
+  <rect x="28" y="28" width="1544" height="924" rx="34" fill="url(#bg)" stroke="#24374f" />
+  <rect x="28" y="28" width="1544" height="76" rx="34" fill="#101d30" />
+  <circle cx="78" cy="66" r="9" fill="#6d7d93" />
+  <circle cx="108" cy="66" r="9" fill="#6d7d93" />
+  <circle cx="138" cy="66" r="9" fill="#6d7d93" />
+  <text x="188" y="73" fill="#d8f7ee" font-size="28" font-family="Sora, Manrope, Segoe UI, sans-serif" font-weight="700">FITLYN MEMBERS</text>
+  <rect x="52" y="128" width="126" height="800" rx="24" fill="#0f1c2d" stroke="#22344a" />
+  <rect x="74" y="170" width="82" height="82" rx="18" fill="url(#gold)" opacity="0.16" />
+  <rect x="74" y="286" width="82" height="18" rx="9" fill="#2a3c52" />
+  <rect x="74" y="334" width="82" height="18" rx="9" fill="#2a3c52" />
+  <rect x="74" y="382" width="82" height="18" rx="9" fill="#2a3c52" />
+  <text x="214" y="176" fill="#f4cd8f" font-size="24" font-family="Manrope, Segoe UI, sans-serif" font-weight="700" letter-spacing="2">MEMBER MANAGEMENT</text>
+  <text x="214" y="230" fill="#f3f8ff" font-size="52" font-family="Sora, Manrope, Segoe UI, sans-serif" font-weight="700">Fast lookup and clear member states</text>
+  <rect x="214" y="318" width="520" height="74" rx="22" fill="url(#panel)" stroke="#274159" />
+  <rect x="754" y="318" width="242" height="74" rx="22" fill="url(#panel)" stroke="#274159" />
+  <rect x="1016" y="318" width="160" height="74" rx="22" fill="#122539" stroke="#33506e" />
+  <rect x="1194" y="318" width="166" height="74" rx="22" fill="url(#mint)" />
+  <text x="248" y="364" fill="#8ea7c1" font-size="24" font-family="Manrope, Segoe UI, sans-serif">Search by name, phone, or membership ID</text>
+  <text x="786" y="364" fill="#dfeaf9" font-size="24" font-family="Manrope, Segoe UI, sans-serif">Status: Active</text>
+  <text x="1060" y="364" fill="#dfeaf9" font-size="24" font-family="Manrope, Segoe UI, sans-serif">Due today</text>
+  <text x="1238" y="364" fill="#072017" font-size="24" font-family="Manrope, Segoe UI, sans-serif" font-weight="800">Add member</text>
+  <rect x="214" y="428" width="1146" height="440" rx="30" fill="url(#panel)" stroke="#274159" />
+  <rect x="244" y="460" width="1086" height="56" rx="18" fill="#102133" />
+  <rect x="244" y="540" width="1086" height="78" rx="22" fill="#13253a" />
+  <rect x="244" y="636" width="1086" height="78" rx="22" fill="#102133" />
+  <rect x="244" y="732" width="1086" height="78" rx="22" fill="#13253a" />
+  <circle cx="288" cy="579" r="24" fill="url(#mint)" opacity="0.85" />
+  <circle cx="288" cy="675" r="24" fill="url(#gold)" opacity="0.85" />
+  <circle cx="288" cy="771" r="24" fill="#607089" />
+  <rect x="330" y="560" width="188" height="16" rx="8" fill="#eef6ff" />
+  <rect x="330" y="588" width="122" height="14" rx="7" fill="#6e829d" />
+  <rect x="330" y="656" width="188" height="16" rx="8" fill="#eef6ff" />
+  <rect x="330" y="684" width="122" height="14" rx="7" fill="#6e829d" />
+  <rect x="330" y="752" width="188" height="16" rx="8" fill="#eef6ff" />
+  <rect x="330" y="780" width="122" height="14" rx="7" fill="#6e829d" />
+  <rect x="1004" y="551" width="168" height="36" rx="18" fill="url(#gold)" />
+  <rect x="1004" y="647" width="152" height="36" rx="18" fill="url(#mint)" />
+  <rect x="1004" y="743" width="176" height="36" rx="18" fill="#22364c" />
+  <rect x="1128" y="136" width="232" height="62" rx="18" fill="url(#gold)" />
+  <text x="1172" y="176" fill="#1b1406" font-size="22" font-family="Manrope, Segoe UI, sans-serif" font-weight="800">Replace later</text>
+</svg>
