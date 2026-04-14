@@ -763,6 +763,198 @@ h2 {
   margin-top: 1rem;
 }
 
+.case-study-listing-section {
+  position: relative;
+  background:
+    radial-gradient(circle at 82% 14%, rgba(244, 205, 143, 0.05), transparent 24rem),
+    radial-gradient(circle at 18% 84%, rgba(124, 224, 203, 0.04), transparent 26rem),
+    linear-gradient(180deg, #06101b 0%, #08111c 100%);
+  color: #eef4fb;
+}
+
+.case-study-listing-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 16%, transparent 84%, rgba(255, 255, 255, 0.02));
+  pointer-events: none;
+}
+
+.case-study-listing-section .container {
+  width: min(1320px, calc(100% - 3rem));
+  position: relative;
+  z-index: 1;
+}
+
+.case-study-listing-section .section-head {
+  margin-bottom: 2.7rem;
+}
+
+.case-study-listing-section .eyebrow {
+  color: #f4cd8f;
+}
+
+.case-study-listing-section .section-head h2 {
+  max-width: none;
+  color: #f5f8fd;
+}
+
+.case-study-listing-section .section-head p {
+  color: rgba(215, 225, 238, 0.72);
+  max-width: none;
+}
+
+.case-study-list {
+  display: grid;
+}
+
+.case-study-row {
+  display: grid;
+  grid-template-columns: minmax(0, 45%) minmax(0, 55%);
+  gap: clamp(1.6rem, 3vw, 3rem);
+  align-items: center;
+  padding: clamp(5rem, 8vw, 7rem) 0;
+  border-top: 1px solid rgba(170, 194, 228, 0.14);
+}
+
+.case-study-row:last-child {
+  border-bottom: 1px solid rgba(170, 194, 228, 0.14);
+}
+
+.case-study-row-reverse .case-study-copy {
+  order: 2;
+}
+
+.case-study-row-reverse .case-study-visual {
+  order: 1;
+}
+
+.case-study-copy {
+  max-width: 520px;
+}
+
+.case-study-category {
+  margin: 0 0 0.72rem;
+  color: rgba(244, 205, 143, 0.8);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.case-study-copy h3 {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Sora", "Segoe UI", sans-serif;
+  font-size: clamp(2.25rem, 3.9vw, 3.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.case-study-description {
+  margin: 0.82rem 0 0;
+  color: rgba(223, 231, 241, 0.7);
+  font-size: 0.98rem;
+  line-height: 1.62;
+  max-width: 450px;
+}
+
+.case-study-tags {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.case-study-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0.24rem 0.58rem;
+  border-radius: 999px;
+  border: 1px solid rgba(170, 194, 228, 0.12);
+  background: rgba(11, 20, 33, 0.32);
+  color: rgba(233, 240, 247, 0.64);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.case-study-link {
+  margin-top: 1.15rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  transition: color 180ms ease;
+}
+
+.case-study-link span {
+  color: #f4cd8f;
+  transition: transform 200ms ease;
+}
+
+.case-study-link:hover span,
+.case-study-link:focus-visible span {
+  transform: translateX(3px);
+}
+
+.case-study-link:focus-visible {
+  outline: none;
+  color: #ffffff;
+}
+
+.case-study-link:hover,
+.case-study-link:focus-visible {
+  color: #f4cd8f;
+}
+
+.case-study-visual {
+  margin: 0;
+  justify-self: end;
+  width: min(100%, 920px);
+}
+
+.case-study-row-reverse .case-study-visual {
+  justify-self: start;
+}
+
+.case-study-visual img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 22px 44px rgba(0, 0, 0, 0.2));
+}
+
+.fitlyn-case-row {
+  align-items: start;
+}
+
+.fitlyn-case-row .case-study-copy {
+  padding-top: 0.45rem;
+}
+
+.tradeup-case-row {
+  align-items: start;
+}
+
+.tradeup-case-row .case-study-copy {
+  padding-top: 0.45rem;
+}
+
+.tradeup-case-row .case-study-description {
+  max-width: 470px;
+}
+
+.fitlyn-case-visual {
+  align-self: end;
+  justify-self: center;
+  width: min(100%, 1180px);
+  transform: translateY(1.1rem);
+}
+
 .meta-list {
   margin: 0;
   padding: 0;
@@ -1128,6 +1320,23 @@ h2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .case-study-row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 4.6rem 0;
+  }
+
+  .case-study-row-reverse .case-study-copy,
+  .case-study-row-reverse .case-study-visual {
+    order: initial;
+  }
+
+  .case-study-copy,
+  .case-study-visual {
+    max-width: none;
+    justify-self: stretch;
+  }
+
   .final-cta-actions {
     grid-template-columns: 1fr 1fr;
   }
@@ -1136,6 +1345,33 @@ h2 {
 @media (max-width: 760px) {
   .section-pad {
     padding: 4.2rem 0;
+  }
+
+  .case-study-listing-section .container {
+    width: min(1320px, calc(100% - 1.8rem));
+  }
+
+  .case-study-listing-section .section-head {
+    margin-bottom: 2.3rem;
+  }
+
+  .case-study-row {
+    gap: 1.55rem;
+    padding: 3.5rem 0;
+  }
+
+  .case-study-copy h3 {
+    font-size: clamp(1.8rem, 8vw, 2.45rem);
+  }
+
+  .case-study-description {
+    max-width: none;
+    font-size: 0.96rem;
+  }
+
+  .fitlyn-case-visual {
+    width: min(100%, 980px);
+    transform: translateY(0.6rem);
   }
 
   .menu-btn {

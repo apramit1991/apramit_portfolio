@@ -13,7 +13,7 @@
       content="TradeUp case study, fintech UX case study, stock trading app UX, product designer portfolio, Apramit Pradhan"
     />
     <meta name="author" content="Apramit Pradhan" />
-    <meta name="theme-color" content="#06111d" />
+    <meta name="theme-color" content="#08101d" />
     <meta property="og:title" content="TradeUp Case Study | Fintech Product UX by Apramit Pradhan" />
     <meta
       property="og:description"
@@ -26,7 +26,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="tradeup-case-study.css" />
@@ -51,9 +51,12 @@
       <div class="container case-nav-wrap" id="caseNav">
         <a href="#overview">Overview</a>
         <a href="#problem">Problem</a>
+        <a href="#validation">Insight</a>
         <a href="#user-insights">User Insights</a>
         <a href="#role">Role</a>
-        <a href="#solution">Solution</a>
+        <a href="#iteration">Design Decisions</a>
+        <a href="#process">Workflow</a>
+        <a href="#architecture">Structure</a>
         <a href="#final-outcome">Outcome</a>
         <a href="#impact-outcomes">Impact</a>
         <a href="#reflections">Reflections</a>
@@ -64,81 +67,54 @@
       <section class="section hero" id="hero">
         <div class="container">
           <div class="hero-shell">
-            <div class="hero-stage">
+            <div class="hero-stage tradeup-hero-stage">
               <div class="hero-display-word" aria-hidden="true">TRADEUP</div>
 
               <div class="hero-copy reveal">
-                <p class="hero-kicker">FINTECH PRODUCT UX CASE STUDY</p>
-                <div class="brand-lockup">
-                  <span class="brand-mark">T</span>
-                  <div>
-                    <strong>TradeUp</strong>
-                    <small>Stock Trading App</small>
-                  </div>
+                <p class="hero-kicker">Fintech Product Case Study</p>
+                <div class="tradeup-logo-wrap" aria-label="TradeUp brand lockup">
+                  <img
+                    src="assets/tradeup-case/trade-up.png"
+                    alt="TradeUp logo"
+                    class="tradeup-logo"
+                    loading="eager"
+                    decoding="async"
+                  />
                 </div>
                 <h1 class="hero-heading">
-                  Mobile trading UX built for clarity, confidence, and faster decisions
+                  <span>Designing an Action-Driven Trading Experience for Confident Decisions</span>
                 </h1>
-                <p class="hero-value">
-                  TradeUp was designed to make stock trading feel easier to understand for newer
-                  investors while keeping speed and control intact for active traders.
+                <p class="hero-value hero-value-lead">
+                  How I designed an action-driven mobile trading experience to simplify onboarding,
+                  portfolio visibility, and decision-making — using user behavior insights and
+                  UX-led product structuring.
                 </p>
-                <ul class="tag-row">
-                  <li>Fintech Product</li>
-                  <li>Mobile UX</li>
-                  <li>High-Stakes Flows</li>
-                </ul>
-                <div class="hero-metrics">
+
+                <div class="hero-metrics" aria-label="TradeUp project summary">
                   <article>
                     <span>Role</span>
                     <strong>UX Designer</strong>
                   </article>
                   <article>
                     <span>Scope</span>
-                    <strong>Research to UAT</strong>
+                    <strong>Research, flows, UI, UAT</strong>
                   </article>
                   <article>
                     <span>Signal</span>
-                    <strong>1M+ downloads | 4.2 rating</strong>
+                    <strong>1M+ downloads, 4.2 rating</strong>
                   </article>
                 </div>
-                <div class="cta-row">
-                  <a href="#overview" class="btn btn-primary">Explore Case Study</a>
-                  <a href="assets/Apramit-Pradhan-Resume.pdf" class="btn btn-secondary" target="_blank" rel="noreferrer">Download Resume</a>
-                </div>
+
+                <a class="hero-scroll-cta" href="#overview">Scroll to explore</a>
               </div>
 
-              <figure class="hero-visual media-frame reveal">
-                <div class="hero-visual-stage" aria-hidden="true"></div>
+              <figure class="hero-visual media-frame reveal tradeup-hero-visual">
                 <img
                   src="assets/tradeup-case/hero-trade-desk.webp"
-                  alt="TradeUp trading interface preview shown in a premium product presentation"
+                  alt="TradeUp product preview displayed in a desktop-style showcase"
                   loading="eager"
                   decoding="async"
                 />
-                <div class="media-fallback stage-card" role="img" aria-label="TradeUp trading interface preview">
-                  <div class="stage-top">
-                    <span></span><span></span><span></span>
-                    <b>TradeUp Mobile</b>
-                  </div>
-                  <div class="stage-body">
-                    <article>
-                      <small>Portfolio value</small>
-                      <strong>&#8377;4.8L</strong>
-                    </article>
-                    <article>
-                      <small>Daily change</small>
-                      <strong>+2.3%</strong>
-                    </article>
-                    <article>
-                      <small>Quick action</small>
-                      <strong>Buy / Sell / Watch</strong>
-                    </article>
-                  </div>
-                </div>
-                <figcaption>
-                  TradeUp product direction covering onboarding, portfolio, quote, and trade execution flows.
-                </figcaption>
               </figure>
             </div>
           </div>
@@ -148,43 +124,45 @@
       <section class="section" id="overview">
         <div class="container">
           <div class="section-head reveal">
-            <p class="eyebrow">Project Overview</p>
-            <h2>A fintech product story framed around trust, speed, and decision-heavy mobile UX</h2>
+            <p class="eyebrow">Why TradeUp Exists</p>
+            <h2>A trading product needed to feel easier to read without reducing depth</h2>
             <p>
-              TradeUp needed to feel approachable for first-time investors while still supporting
-              repeat trading behavior, portfolio monitoring, and time-sensitive execution on mobile.
+              TradeUp sits in a high-trust category where hesitation can come from interface
+              complexity as much as market risk. The product direction focused on making key
+              actions feel clearer, safer, and easier to understand on mobile.
             </p>
           </div>
+
           <div class="overview-grid">
             <article class="overview-card reveal">
               <span class="card-label">Product</span>
               <h3>TradeUp</h3>
-              <p>A stock trading app built around onboarding, portfolio review, and trade execution.</p>
+              <p>A consumer trading app for market access, watchlists, portfolio tracking, and orders.</p>
             </article>
             <article class="overview-card reveal">
               <span class="card-label">Category</span>
               <h3>Fintech Mobile Product</h3>
-              <p>Designed for users making high-trust financial decisions on a mobile interface.</p>
+              <p>Designed for high-trust, action-heavy investor workflows.</p>
             </article>
             <article class="overview-card reveal">
               <span class="card-label">Users</span>
               <h3>Retail Investors</h3>
-              <p>From newer investors seeking confidence to active traders needing speed and control.</p>
+              <p>From newer investors to active users who need speed and confidence.</p>
             </article>
             <article class="overview-card reveal">
               <span class="card-label">Challenge</span>
-              <h3>Complexity without confidence</h3>
-              <p>Trading flows felt dense, intimidating, and too easy to misread during critical actions.</p>
+              <h3>Clarity under pressure</h3>
+              <p>Financial density and decision anxiety made it harder to act with confidence.</p>
             </article>
             <article class="overview-card reveal">
               <span class="card-label">My Role</span>
-              <h3>UX Designer</h3>
-              <p>I handled research synthesis, journey flows, wireframes, UI direction, and UAT support.</p>
+              <h3>UX / Product Design</h3>
+              <p>I worked across research synthesis, flows, wireframes, UI direction, and UAT support.</p>
             </article>
             <article class="overview-card reveal">
               <span class="card-label">Outcome</span>
-              <h3>Clearer, faster product journeys</h3>
-              <p>More approachable onboarding, stronger portfolio visibility, and better trade confidence.</p>
+              <h3>Clearer trading journeys</h3>
+              <p>The experience became easier to scan, easier to trust, and easier to act through.</p>
             </article>
           </div>
         </div>
@@ -193,240 +171,443 @@
       <section class="section section-alt" id="problem">
         <div class="container">
           <div class="section-head reveal">
-            <p class="eyebrow">The Product Problem</p>
-            <h2>Trading products need speed, but users also need confidence before they act</h2>
+            <p class="eyebrow">The Core Problem</p>
+            <h2>Speed mattered, but trust mattered more in the moments before action</h2>
             <p>
-              In stock trading, friction is costly and ambiguity is risky. The product challenge was
-              not just visual cleanup. It was about helping users understand what they were seeing,
-              act quickly, and trust the outcome of each trade.
+              Trading products cannot rely on visual polish alone. Newer investors needed better
+              orientation, active users needed faster access to what mattered, and key actions had
+              to feel deliberate rather than risky or rushed.
             </p>
           </div>
 
           <div class="problem-layout">
             <article class="problem-summary reveal">
-              <h3>Where the experience was breaking down</h3>
+              <h3>Where friction showed up most</h3>
               <p>
-                New users were overwhelmed by financial terminology, active traders wanted faster
-                execution, and portfolio screens surfaced too much data without enough hierarchy.
-                TradeUp needed a more deliberate flow from first use to confident action.
+                The clearest pain points appeared in onboarding, portfolio review, quote reading,
+                and trade confirmation. Important information was present, but not always surfaced
+                with the hierarchy users needed when money was involved.
               </p>
               <p class="problem-quote">
-                The redesign focused on reducing hesitation during high-pressure moments without
-                stripping away the depth serious traders expected.
+                The product challenge was to reduce hesitation without oversimplifying a serious
+                financial workflow.
               </p>
             </article>
 
             <div class="pain-grid">
               <article class="pain-card reveal">
                 <span class="pain-icon">01</span>
-                <h3>Onboarding felt heavy</h3>
-                <p>New investors needed clearer guidance instead of long, intimidating setup flows.</p>
+                <h3>Heavy onboarding</h3>
+                <p>New users could feel intimidated before reaching the product's core value.</p>
               </article>
               <article class="pain-card reveal">
                 <span class="pain-icon">02</span>
-                <h3>Key data lacked hierarchy</h3>
-                <p>Portfolio and quote screens made it hard to identify what mattered most in the moment.</p>
+                <h3>Dense market context</h3>
+                <p>Quotes and market data needed clearer signal hierarchy on smaller screens.</p>
               </article>
               <article class="pain-card reveal">
                 <span class="pain-icon">03</span>
-                <h3>Trade execution created hesitation</h3>
-                <p>Users needed stronger feedback and clearer confirmation before placing an order.</p>
+                <h3>Portfolio readability</h3>
+                <p>Performance metrics were available, but not always easy to parse at a glance.</p>
               </article>
               <article class="pain-card reveal">
                 <span class="pain-icon">04</span>
-                <h3>Speed and trust were competing</h3>
-                <p>The product had to reduce taps while still feeling controlled and reliable.</p>
+                <h3>Execution confidence</h3>
+                <p>Trade actions needed stronger reassurance in final decision moments.</p>
               </article>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="validation">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">User Insight</p>
+            <h2>Control mattered more than feature density</h2>
+            <p>
+              The strongest signal from research was not a demand for more features. It was a need
+              to feel informed and in control while moving through complex financial tasks on mobile.
+            </p>
+          </div>
+
+          <div class="validation-layout">
+            <article class="validation-card reveal">
+              <h3>Observed in research and behavior</h3>
+              <ul>
+                <li>Newer investors wanted reassurance before acting.</li>
+                <li>Active users still expected fast navigation and quick access to quotes.</li>
+                <li>Portfolio health had to be readable without forcing deep interpretation.</li>
+              </ul>
+            </article>
+            <article class="validation-card reveal">
+              <h3>What this meant for product direction</h3>
+              <ul>
+                <li>Key actions needed stronger hierarchy and less clutter.</li>
+                <li>Financial signals had to feel legible before secondary details.</li>
+                <li>Confirmation steps needed to reduce hesitation, not add more doubt.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="early-signals reveal">
+            <div class="early-signals-head">
+              <p class="eyebrow">Turning Point</p>
+              <h3>The insight that framed the rest of the work</h3>
+            </div>
+            <blockquote class="quote-card quote-card-strong">
+              <p>"I want to feel in control, but not overwhelmed when the market is moving."</p>
+            </blockquote>
+          </div>
+
+          <article class="validation-impact reveal">
+            <h3>What this changed in the design direction</h3>
+            <ul>
+              <li>Primary information moved ahead of secondary financial detail.</li>
+              <li>Navigation and flows became more direct for repeat trading tasks.</li>
+              <li>Visual hierarchy was tuned to improve confidence before execution.</li>
+            </ul>
+          </article>
         </div>
       </section>
 
       <section class="section" id="user-insights">
         <div class="container">
           <article class="user-insights-board reveal" aria-labelledby="userInsightsTitle">
-            <aside class="persona-panel">
-              <div class="persona-avatar">A</div>
-              <p class="role-eyebrow">Primary Persona</p>
-              <h3>Alexa</h3>
-              <p class="persona-role">
-                Software developer, active retail investor, and mobile-first user balancing long-term
-                holdings with short-term opportunities.
-              </p>
-              <div class="persona-traits">
+            <aside class="insights-persona">
+              <figure class="insights-persona-visual tradeup-persona-avatar">
+                <img
+                  src="assets/tradeup-case/aarav-persona.PNG"
+                  alt="Aarav persona illustration"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <div class="insights-persona-copy">
+                <p class="role-eyebrow">Primary User Persona</p>
+                <h3 id="personaTitle">Aarav, Retail Investor</h3>
+                <p class="persona-role">
+                  Mobile-first investor balancing long-term holdings with shorter-term market
+                  opportunities.
+                </p>
+              </div>
+              <div class="insights-persona-traits" aria-label="Persona traits">
                 <article>
                   <span>01</span>
-                  <strong>Needs fast execution</strong>
+                  <strong>Decision-sensitive</strong>
                 </article>
                 <article>
                   <span>02</span>
-                  <strong>Wants clear risk signals</strong>
+                  <strong>Speed-aware</strong>
                 </article>
                 <article>
                   <span>03</span>
-                  <strong>Expects portfolio visibility</strong>
+                  <strong>Trust-seeking</strong>
                 </article>
               </div>
             </aside>
 
             <div class="insights-main">
               <header class="insights-main-head">
-                <p class="eyebrow">User Insights</p>
-                <h2 id="userInsightsTitle">What research revealed about trading behavior on mobile</h2>
+                <p class="eyebrow">User Insights & Persona</p>
+                <h2 id="userInsightsTitle">The product had to make complex information feel usable on mobile</h2>
                 <p>
-                  Interview themes, contextual inquiry, and behavior patterns pointed to a clear UX
-                  opportunity: make important actions feel simpler without removing the analytical depth
-                  that users rely on.
+                  Once the need for clarity was established, the user profile became more specific:
+                  people who wanted faster access to information and action, but not at the cost of
+                  confidence or trust.
                 </p>
               </header>
 
               <div class="insight-findings-grid">
                 <article class="insight-finding-card">
-                  <h3>New users needed confidence cues</h3>
-                  <p>First trades triggered anxiety unless the app made actions, values, and confirmation states explicit.</p>
+                  <span class="insight-icon">01</span>
+                  <h3>Confidence cues matter</h3>
+                  <p>Users hesitated when trade actions felt abrupt or insufficiently explained.</p>
                 </article>
                 <article class="insight-finding-card">
-                  <h3>Active traders optimized for speed</h3>
-                  <p>Frequent users wanted fewer taps, faster access to charts, and clearer trade setup pathways.</p>
+                  <span class="insight-icon">02</span>
+                  <h3>Portfolio health needs hierarchy</h3>
+                  <p>Key metrics had to stand out before deeper analysis and secondary details.</p>
                 </article>
                 <article class="insight-finding-card">
-                  <h3>Portfolio screens needed prioritization</h3>
-                  <p>Users needed high-signal metrics first, with deeper data available but not overwhelming.</p>
+                  <span class="insight-icon">03</span>
+                  <h3>Speed still matters</h3>
+                  <p>Frequent users wanted direct access to quotes, watchlists, and actions.</p>
+                </article>
+                <article class="insight-finding-card">
+                  <span class="insight-icon">04</span>
+                  <h3>Mobile clarity is strategic</h3>
+                  <p>Readability, spacing, and action priority shape how trustworthy the product feels.</p>
                 </article>
               </div>
 
-              <blockquote class="quote-card quote-card-strong">
-                <p>"I want to feel in control, but not overwhelmed when the market is moving."</p>
-              </blockquote>
+              <div class="insights-bottom-grid">
+                <article class="persona-block">
+                  <span class="persona-label">Goals</span>
+                  <ul class="persona-list">
+                    <li>Understand quote context quickly</li>
+                    <li>Track portfolio health without friction</li>
+                    <li>Reach key actions in fewer steps</li>
+                    <li>Feel confident before placing trades</li>
+                  </ul>
+                </article>
+
+                <article class="persona-block persona-block-accent">
+                  <span class="persona-label">Pain Points</span>
+                  <ul class="persona-list">
+                    <li>Too much data competing for attention</li>
+                    <li>Trade flows that felt abrupt or dense</li>
+                    <li>Important signals buried in the layout</li>
+                    <li>Higher hesitation in critical action moments</li>
+                  </ul>
+                </article>
+
+                <aside class="insights-quote-card" aria-label="Key investor quote">
+                  <div class="user-insights-quote-mark" aria-hidden="true">"</div>
+                  <blockquote class="quote-card quote-card-strong">
+                    <p>"I want to feel in control, but not overwhelmed when the market is moving."</p>
+                  </blockquote>
+                  <p class="insights-quote-copy">
+                    That became the filter for the final product direction: clearer hierarchy,
+                    faster access, and calmer decision moments.
+                  </p>
+                </aside>
+              </div>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="section section-alt" id="role">
+      <section class="section" id="role">
         <div class="container">
           <div class="section-head reveal">
-            <p class="eyebrow">Role & Process</p>
-            <h2>My contribution covered the core UX path from problem framing to production readiness</h2>
+            <p class="eyebrow">My Role</p>
+            <h2>Turning research signals into clearer product structure and screen decisions</h2>
             <p>
-              I worked across research synthesis, journey definition, wireframes, UI direction, and
-              validation support so the product could move from insight to implementation with clarity.
+              My role was to connect investor behavior, product clarity, and mobile execution into
+              a direction that could support both trust and speed.
             </p>
           </div>
 
           <div class="role-grid">
             <article class="role-panel reveal">
-              <span class="card-label">Responsibilities</span>
-              <h3>Research, flows, UI, and UAT</h3>
-              <p>
-                I translated user findings into experience principles, simplified flow logic, and
-                designed production-facing screens for the most important journeys.
-              </p>
+              <p class="role-eyebrow">Core contribution</p>
+              <h3>I worked across the product design flow</h3>
+              <ul class="check-list">
+                <li>Synthesized user pain points and identified decision-heavy moments.</li>
+                <li>Mapped flows for onboarding, quotes, portfolio review, and trade execution.</li>
+                <li>Created wireframes and high-fidelity directions for core mobile screens.</li>
+                <li>Improved hierarchy, readability, and action visibility across the app.</li>
+                <li>Supported UAT and production-facing refinement.</li>
+              </ul>
             </article>
-            <article class="role-panel reveal">
-              <span class="card-label">Design Focus</span>
-              <h3>Reduce hesitation during high-stakes actions</h3>
-              <p>
-                The work centered on improving onboarding clarity, portfolio readability, and the
-                trade execution path without removing advanced capabilities.
-              </p>
-            </article>
-          </div>
 
-          <div class="workflow-timeline">
-            <article class="workflow-step reveal">
-              <span class="step-no">01</span>
-              <h3>Research & synthesis</h3>
-              <p>Mapped core user needs, pain points, and decision behaviors across investor types.</p>
-            </article>
-            <article class="workflow-step reveal">
-              <span class="step-no">02</span>
-              <h3>Flows & structure</h3>
-              <p>Reworked onboarding, quote, portfolio, and trade flows to make progression clearer.</p>
-            </article>
-            <article class="workflow-step reveal">
-              <span class="step-no">03</span>
-              <h3>High-fidelity direction</h3>
-              <p>Designed screens that balanced trust, data visibility, and action readiness.</p>
-            </article>
-            <article class="workflow-step reveal">
-              <span class="step-no">04</span>
-              <h3>Validation & handoff</h3>
-              <p>Supported UAT and refinement so the experience held up closer to implementation.</p>
+            <article class="role-panel role-panel-accent reveal">
+              <p class="role-eyebrow">Decision lens</p>
+              <h3>How I approached the work</h3>
+              <div class="decision-points">
+                <article>
+                  <span>Trust first</span>
+                  <p>Critical financial actions had to feel deliberate, not visually rushed.</p>
+                </article>
+                <article>
+                  <span>Signal over noise</span>
+                  <p>Important data moved forward so users could read the screen faster.</p>
+                </article>
+                <article>
+                  <span>Mobile realism</span>
+                  <p>Every decision was shaped around limited space and high-stakes user context.</p>
+                </article>
+              </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="solution">
+      <section class="section" id="iteration">
         <div class="container">
           <div class="section-head reveal">
-            <p class="eyebrow">Solution Direction</p>
-            <h2>Designing a trading experience that felt faster without feeling riskier</h2>
+            <p class="eyebrow">Design Decisions</p>
+            <h2>From exploration to clearer product decisions</h2>
             <p>
-              The solution focused on reducing cognitive load at key moments: getting started,
-              reviewing portfolio health, reading quote data, and confirming a trade with confidence.
+              The design work focused on reducing friction in the moments that mattered most:
+              understanding the market, reviewing holdings, and deciding whether to act.
             </p>
           </div>
 
-          <div class="solution-layout">
-            <article class="solution-copy reveal">
-              <h3>Core design decisions</h3>
-              <p>
-                Instead of adding more features, the product direction emphasized better information
-                hierarchy, clearer action states, and more direct paths to the tasks users repeated most.
-              </p>
-              <div class="decision-list">
-                <article>
-                  <span>Clarity</span>
-                  <strong>Prioritized essential financial signals before secondary detail.</strong>
-                </article>
-                <article>
-                  <span>Speed</span>
-                  <strong>Reduced unnecessary steps in trade execution and quick actions.</strong>
-                </article>
-                <article>
-                  <span>Confidence</span>
-                  <strong>Introduced stronger confirmation cues and clearer status feedback.</strong>
-                </article>
+          <div class="iteration-stack">
+            <article class="iteration-card reveal">
+              <h3>Iteration 1: Dense onboarding vs guided entry</h3>
+              <div class="decision-flow">
+                <p><span>Initial direction</span>Early onboarding concepts packed too much context and too many decisions into the first-time flow.</p>
+                <p><span>Problem</span>For new investors, the setup experience felt heavier than it needed to be and risked slowing access to the product's core value.</p>
+                <p><span>Final decision</span>The onboarding was simplified to feel more guided, with clearer progress and fewer competing prompts.</p>
+                <p><span>Outcome</span>The product felt more approachable without making the experience feel overly basic.</p>
               </div>
             </article>
 
-            <figure class="solution-visual media-frame reveal">
-              <img
-                src="assets/tradeup/preview-ui-batch.jpg"
-                alt="TradeUp UI preview sheet showing multiple app screens"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="media-fallback solution-board" role="img" aria-label="TradeUp UI preview sheet">
-                <div class="solution-board-grid">
-                  <article></article>
-                  <article></article>
-                  <article></article>
-                  <article></article>
-                </div>
+            <article class="iteration-card reveal">
+              <h3>Iteration 2: Data-heavy screens vs signal-first hierarchy</h3>
+              <div class="decision-flow">
+                <p><span>Initial direction</span>Market and portfolio screens surfaced a wide range of data with similar visual weight.</p>
+                <p><span>Problem</span>Important signals became harder to identify quickly, especially on mobile where space was limited.</p>
+                <p><span>Final decision</span>The layout hierarchy was reworked so core values, trends, and actions appeared first.</p>
+                <p><span>Outcome</span>Users could scan portfolio health and quote context faster before going deeper.</p>
               </div>
-            </figure>
+            </article>
+
+            <article class="iteration-card reveal">
+              <h3>Iteration 3: Faster execution vs calmer confirmation</h3>
+              <div class="decision-flow">
+                <p><span>Initial direction</span>Trade actions were easy to reach, but some moments felt abrupt when users were close to confirming an order.</p>
+                <p><span>Problem</span>In a financial product, speed without reassurance can increase hesitation instead of reducing it.</p>
+                <p><span>Final decision</span>Confirmation moments were refined to feel more explicit, readable, and trustworthy.</p>
+                <p><span>Outcome</span>The trade flow stayed efficient while feeling more deliberate and confidence-building.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="process">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Workflow</p>
+            <h2>From research signals to production-facing mobile screens</h2>
+            <p>
+              The process was structured to keep the work grounded in user behavior while moving
+              quickly through the screens that mattered most.
+            </p>
           </div>
 
-          <div class="feature-grid">
-            <article class="feature-card reveal">
-              <h3>Streamlined onboarding</h3>
-              <p>Made setup feel less intimidating for newer investors entering the product for the first time.</p>
+          <div class="workflow-intro reveal">
+            <p>
+              This was less about adding surface polish and more about making sure each key mobile
+              workflow became easier to read, easier to trust, and easier to use repeatedly.
+            </p>
+          </div>
+
+          <article class="ai-proof-block reveal" aria-label="TradeUp workflow example">
+            <div class="ai-proof-head">
+              <p class="eyebrow">Workflow In Practice</p>
+              <h3>One clear example: quote and execution flow refinement</h3>
+              <p>
+                The quote experience had to balance data visibility, decision support, and action
+                readiness without making the screen feel overloaded.
+              </p>
+            </div>
+            <div class="ai-proof-grid">
+              <article class="ai-proof-card ai-proof-generated">
+                <h4>Early direction</h4>
+                <div class="ai-proof-sections">
+                  <div class="ai-proof-section">
+                    <span>What existed</span>
+                    <p>Quotes exposed the right information, but too much of it competed at the same visual level.</p>
+                  </div>
+                  <div class="ai-proof-section">
+                    <span>Risk</span>
+                    <p>Users had to work harder to identify what was important before acting.</p>
+                  </div>
+                  <div class="ai-proof-section">
+                    <span>Observation</span>
+                    <p>High-stakes moments needed calmer hierarchy, not just more speed.</p>
+                  </div>
+                </div>
+              </article>
+              <article class="ai-proof-card ai-proof-final">
+                <h4>Final product direction</h4>
+                <div class="ai-proof-sections">
+                  <div class="ai-proof-section">
+                    <span>What changed</span>
+                    <p>The quote flow was tuned around clearer values, stronger action hierarchy, and more deliberate confirmation.</p>
+                  </div>
+                  <div class="ai-proof-section">
+                    <span>Outcome</span>
+                    <p>The screen felt easier to scan while still supporting fast action for repeat users.</p>
+                  </div>
+                  <div class="ai-proof-section">
+                    <span>Why it mattered</span>
+                    <p>The product better balanced execution speed with the confidence users needed before placing a trade.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="ai-proof-takeaway">
+              <span>Key takeaway</span>
+              <p>
+                The strongest product decisions came from reducing ambiguity in the moments where
+                users had to interpret, decide, and act.
+              </p>
+            </div>
+          </article>
+
+          <div class="workflow-timeline">
+            <article class="workflow-step reveal">
+              <span class="step-no">01</span>
+              <div class="workflow-copy">
+                <h3>Research and synthesis</h3>
+                <p>Mapped friction across onboarding, quotes, portfolio review, and execution.</p>
+              </div>
             </article>
-            <article class="feature-card reveal">
-              <h3>Stronger quote readability</h3>
-              <p>Focused the quote screen on price context, chart visibility, and immediate action readiness.</p>
+            <article class="workflow-step reveal">
+              <span class="step-no">02</span>
+              <div class="workflow-copy">
+                <h3>Flow definition</h3>
+                <p>Reworked key journeys so important information and actions appeared sooner.</p>
+              </div>
             </article>
-            <article class="feature-card reveal">
-              <h3>Portfolio-first hierarchy</h3>
-              <p>Surfaced account value, gain/loss cues, and holdings in a more scannable structure.</p>
+            <article class="workflow-step reveal">
+              <span class="step-no">03</span>
+              <div class="workflow-copy">
+                <h3>Screen refinement</h3>
+                <p>Adjusted hierarchy, spacing, and action placement to reduce decision friction.</p>
+              </div>
             </article>
-            <article class="feature-card reveal">
-              <h3>Clearer trade confirmation</h3>
-              <p>Reduced hesitation by making final action states easier to read and trust.</p>
+            <article class="workflow-step reveal">
+              <span class="step-no">04</span>
+              <div class="workflow-copy">
+                <h3>Validation and UAT</h3>
+                <p>Supported refinement so the experience stayed coherent closer to production.</p>
+              </div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="architecture">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Product Structure</p>
+            <h2>IA organized around repeat investor workflows</h2>
+            <p>
+              The app structure needed to support both discovery and repeat action. Core areas were
+              organized around how people actually move through a mobile trading product.
+            </p>
+          </div>
+
+          <div class="architecture-layout">
+            <article class="architecture-copy reveal">
+              <h3>IA rationale</h3>
+              <p>
+                The product moves from entry and market discovery into watchlists, quote depth,
+                portfolio review, funding, rewards, and profile management. The structure keeps
+                the highest-frequency tasks easy to reach without burying account-level workflows.
+              </p>
+            </article>
+
+            <div class="architecture-map reveal" role="img" aria-label="TradeUp information architecture diagram">
+              <div class="ia-root">TradeUp App</div>
+              <div class="ia-branches">
+                <article class="ia-node">Welcome</article>
+                <article class="ia-node">Market</article>
+                <article class="ia-node">Watchlist</article>
+                <article class="ia-node">Quote</article>
+                <article class="ia-node">Portfolio</article>
+                <article class="ia-node">Deposit</article>
+                <article class="ia-node">Rewards</article>
+                <article class="ia-node">Profile</article>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -434,56 +615,90 @@
       <section class="section section-alt" id="final-outcome">
         <div class="container">
           <div class="section-head reveal">
-            <p class="eyebrow">Final Outcome</p>
-            <h2>Key screens that demonstrate the product direction</h2>
+            <p class="eyebrow">Final Screens &amp; UX Decisions</p>
+            <h2>How the final product direction showed up in key mobile screens</h2>
             <p>
-              The final UI focused on making core actions readable and repeatable: checking quotes,
-              reviewing portfolio performance, and executing trades with less friction.
+              The final UI made the product easier to scan, easier to trust, and easier to move
+              through across the moments that mattered most.
             </p>
           </div>
 
-          <div class="screen-gallery">
-            <figure class="screen-card reveal">
-              <img
-                src="assets/tradeup-case/screen-chart.webp"
-                alt="TradeUp quote and chart screen"
-                loading="lazy"
-              />
-              <figcaption>Quote screen with chart context and clearer buy/sell actions</figcaption>
-            </figure>
-            <figure class="screen-card reveal">
-              <img
-                src="assets/tradeup-case/screen-portfolio.webp"
-                alt="TradeUp portfolio overview screen"
-                loading="lazy"
-              />
-              <figcaption>Portfolio dashboard with stronger value hierarchy and quick visibility</figcaption>
-            </figure>
-            <figure class="screen-card reveal">
-              <img
-                src="assets/tradeup-case/screen-quote.webp"
-                alt="TradeUp trading execution screen"
-                loading="lazy"
-              />
-              <figcaption>Execution flow designed to improve confidence during final action</figcaption>
-            </figure>
-          </div>
+          <div class="tradeup-final-grid">
+            <article class="tradeup-screen-card reveal">
+              <figure class="tradeup-screen-frame media-frame">
+                <div class="tradeup-device">
+                  <div class="tradeup-device-notch" aria-hidden="true"></div>
+                  <div class="tradeup-device-screen">
+                    <div class="tradeup-device-scroll">
+                      <img src="assets/tradeup-case/Market.png" alt="TradeUp market screen" loading="lazy" decoding="async" />
+                    </div>
+                  </div>
+                </div>
+              </figure>
+              <div class="tradeup-screen-copy">
+                <span>Market</span>
+                <h3>Cleaner market scanning</h3>
+                <p>Signals and movement were easier to read before users drilled into details.</p>
+              </div>
+            </article>
 
-          <div class="outcomes-grid">
-            <article class="outcome-card reveal">
-              <span class="card-label">Quote Experience</span>
-              <h3>Information first, action second</h3>
-              <p>Users could understand price movement, chart context, and next action faster without extra scanning.</p>
+            <article class="tradeup-screen-card reveal">
+              <figure class="tradeup-screen-frame media-frame">
+                <div class="tradeup-device">
+                  <div class="tradeup-device-notch" aria-hidden="true"></div>
+                  <div class="tradeup-device-screen">
+                    <div class="tradeup-device-scroll">
+                      <img src="assets/tradeup-case/Watchlist.png" alt="TradeUp watchlist screen" loading="lazy" decoding="async" />
+                    </div>
+                  </div>
+                </div>
+              </figure>
+              <div class="tradeup-screen-copy">
+                <span>Watchlist</span>
+                <h3>Faster monitoring flow</h3>
+                <p>Users could track movement and jump into quotes with less friction.</p>
+              </div>
             </article>
-            <article class="outcome-card reveal">
-              <span class="card-label">Portfolio UX</span>
-              <h3>Performance became easier to read</h3>
-              <p>The interface reduced clutter and made portfolio state more legible for everyday monitoring.</p>
+
+            <article class="tradeup-screen-card reveal">
+              <figure class="tradeup-screen-frame media-frame">
+                <div class="tradeup-device">
+                  <div class="tradeup-device-notch" aria-hidden="true"></div>
+                  <div class="tradeup-device-screen">
+                    <div class="tradeup-device-scroll">
+                      <img
+                        src="assets/tradeup-case/Portfolio%20(1).png"
+                        alt="TradeUp portfolio screen"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </figure>
+              <div class="tradeup-screen-copy">
+                <span>Portfolio</span>
+                <h3>Better value hierarchy</h3>
+                <p>Holdings and performance became easier to understand at a glance on mobile.</p>
+              </div>
             </article>
-            <article class="outcome-card reveal">
-              <span class="card-label">Trade Flow</span>
-              <h3>Execution felt more deliberate</h3>
-              <p>Trade confirmation states were clearer, reducing last-step hesitation in decision-heavy moments.</p>
+
+            <article class="tradeup-screen-card reveal">
+              <figure class="tradeup-screen-frame media-frame">
+                <div class="tradeup-device">
+                  <div class="tradeup-device-notch" aria-hidden="true"></div>
+                  <div class="tradeup-device-screen">
+                    <div class="tradeup-device-scroll">
+                      <img src="assets/tradeup-case/Rewards.png" alt="TradeUp rewards screen" loading="lazy" decoding="async" />
+                    </div>
+                  </div>
+                </div>
+              </figure>
+              <div class="tradeup-screen-copy">
+                <span>Rewards</span>
+                <h3>Supporting features with clarity</h3>
+                <p>Secondary product areas stayed consistent with the same trust-led visual language.</p>
+              </div>
             </article>
           </div>
         </div>
@@ -491,96 +706,112 @@
 
       <section class="section" id="impact-outcomes">
         <div class="container">
-          <div class="section-head reveal">
-            <p class="eyebrow">Impact & Signals</p>
-            <h2>What made this product work valuable from a hiring perspective</h2>
-            <p>
-              TradeUp shows my ability to handle high-trust product UX where business stakes,
-              information complexity, and usability all matter at once.
-            </p>
-          </div>
+          <article class="impact-outcomes-board reveal" aria-labelledby="impactOutcomesTitle">
+            <header class="impact-outcomes-head">
+              <div>
+                <p class="eyebrow">Impact &amp; Outcomes</p>
+                <h2 id="impactOutcomesTitle">Signals that the product work mattered beyond visual polish</h2>
+              </div>
+              <p>
+                TradeUp was not just a UI exercise. The product direction supported a mobile
+                experience used at meaningful scale in a high-trust consumer category.
+              </p>
+            </header>
 
-          <div class="impact-grid">
-            <article class="impact-card reveal">
-              <span class="impact-value">1M+</span>
-              <h3>Downloads</h3>
-              <p>Strong product reach on a trading app where experience quality affects trust and retention.</p>
-            </article>
-            <article class="impact-card reveal">
-              <span class="impact-value">4.2</span>
-              <h3>App rating</h3>
-              <p>A meaningful quality signal for a fintech product where user confidence is critical.</p>
-            </article>
-            <article class="impact-card reveal">
-              <span class="impact-value">150+</span>
-              <h3>Brokerages</h3>
-              <p>The product was adopted across a broad operational footprint, not just a concept exercise.</p>
-            </article>
-          </div>
+            <div class="impact-outcomes-grid" aria-label="Impact summary cards">
+              <article class="impact-summary-card">
+                <h3>Product clarity</h3>
+                <p>Information hierarchy was strengthened across onboarding, market views, and portfolio review.</p>
+              </article>
+              <article class="impact-summary-card">
+                <h3>Execution confidence</h3>
+                <p>Critical trading moments were refined to feel more explicit and less ambiguous.</p>
+              </article>
+              <article class="impact-summary-card">
+                <h3>Scale relevance</h3>
+                <p>The work supported a product context where trust, readability, and repeat usage all matter.</p>
+              </article>
+            </div>
 
-          <div class="reflection-grid">
-            <article class="reflection-card reveal">
-              <h3>Fintech trust matters</h3>
-              <p>Users evaluate not just speed, but whether the interface makes them feel safe enough to act.</p>
+            <article class="impact-traction-card">
+              <div class="impact-traction-intro">
+                <p class="impact-traction-eyebrow">Product Signal</p>
+                <div class="impact-traction-stat">
+                  <span class="impact-traction-number">1M+</span>
+                  <p>downloads in a trust-sensitive fintech environment</p>
+                </div>
+              </div>
+
+              <div class="impact-traction-copy">
+                <h3>TradeUp reached consumer scale with product signals that made UX quality meaningful</h3>
+                <p>
+                  The product context was not hypothetical. TradeUp carried real adoption signals,
+                  including 1M+ downloads, a 4.2 app rating, and availability across 150+
+                  brokerages. In that environment, clarity, confidence, and usability were
+                  directly tied to product credibility.
+                </p>
+                <p class="impact-traction-validation">
+                  This made the work valuable beyond interface polish. The design direction had to
+                  support trust, readability, and repeat decision-making at scale.
+                </p>
+                <div class="impact-traction-chips" aria-label="Product credibility tags">
+                  <span>1M+ downloads</span>
+                  <span>4.2 app rating</span>
+                  <span>150+ brokerages</span>
+                </div>
+                <p class="impact-traction-takeaway">
+                  <span>Takeaway</span>
+                  <strong>High-trust UX at consumer scale</strong>
+                </p>
+              </div>
             </article>
-            <article class="reflection-card reveal">
-              <h3>Hierarchy drives confidence</h3>
-              <p>When data-heavy screens are organized well, the product feels more understandable and more usable.</p>
-            </article>
-            <article class="reflection-card reveal">
-              <h3>Better UX reduces friction at the business layer</h3>
-              <p>Clearer flows directly support onboarding completion, trade execution, and repeat product use.</p>
-            </article>
-          </div>
+          </article>
         </div>
       </section>
 
       <section class="section section-alt" id="reflections">
         <div class="container">
           <div class="section-head reveal">
-            <p class="eyebrow">Reflections</p>
-            <h2>What this case study demonstrates about my product design approach</h2>
+            <p class="eyebrow">Reflection</p>
+            <h2>What this project reinforced about product design in high-trust categories</h2>
+            <p>
+              TradeUp reinforced that good fintech UX is not about making the interface look
+              simpler than the product. It is about making complex decisions easier to read and act through.
+            </p>
           </div>
 
           <div class="reflection-grid">
             <article class="reflection-card reveal">
-              <h3>I design for complexity, not just interface polish</h3>
-              <p>
-                TradeUp required balancing speed, trust, data density, and action clarity inside a
-                product where users make meaningful financial decisions.
-              </p>
+              <h3>Hierarchy drives confidence</h3>
+              <p>Users feel more in control when important signals are surfaced before secondary detail.</p>
             </article>
             <article class="reflection-card reveal">
-              <h3>I can work from research through production-facing output</h3>
-              <p>
-                The project covered research, journeys, wireframes, UI direction, and validation,
-                which is the kind of end-to-end responsibility expected in strong product teams.
-              </p>
+              <h3>Speed needs reassurance</h3>
+              <p>In financial products, faster paths only help when action moments still feel deliberate.</p>
             </article>
             <article class="reflection-card reveal">
-              <h3>I bring product judgment to high-stakes flows</h3>
-              <p>
-                My focus was not just making the app look cleaner. It was making critical moments
-                easier to understand and act on with confidence.
-              </p>
+              <h3>Mobile clarity is strategic</h3>
+              <p>Readability, spacing, and action priority shape trust as much as features do.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section final-cta" id="cta">
-        <div class="container final-cta-card reveal">
-          <p class="eyebrow">Contact</p>
-          <h2>Hiring for fintech, SaaS, or workflow-heavy product design?</h2>
-          <p>
-            I design product experiences that help users move through complex decisions with more
-            clarity, confidence, and speed.
-          </p>
-          <div class="cta-row center">
-            <a href="mailto:pradhan.apramit@gmail.com" class="btn btn-primary">Email Apramit</a>
-            <a href="assets/Apramit-Pradhan-Resume.pdf" class="btn btn-secondary" target="_blank" rel="noreferrer">Download Resume</a>
-            <a href="index.html" class="btn btn-ghost">Back to Portfolio</a>
-          </div>
+      <section class="section" id="cta">
+        <div class="container">
+          <article class="final-cta reveal">
+            <p class="eyebrow">Next</p>
+            <h2>Hiring for fintech, SaaS, or workflow-heavy product design?</h2>
+            <p>
+              I design product experiences that help users move through complex decisions with
+              more clarity, confidence, and speed.
+            </p>
+            <div class="cta-row center">
+              <a href="mailto:pradhan.apramit@gmail.com" class="btn btn-primary">Email Apramit</a>
+              <a href="assets/Apramit-Pradhan-Resume.pdf" class="btn btn-secondary" target="_blank" rel="noreferrer">Download Resume</a>
+              <a href="index.html" class="btn btn-ghost">Back to Portfolio</a>
+            </div>
+          </article>
         </div>
       </section>
     </main>
