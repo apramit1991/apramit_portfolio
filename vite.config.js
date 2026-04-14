@@ -24,6 +24,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, "index.html"),
+        tradeup: path.resolve(__dirname, "tradeup-case-study.html"),
         fitlyn: path.resolve(__dirname, "case-study/fitlyn/index.html"),
       },
     },
