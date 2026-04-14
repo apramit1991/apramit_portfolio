@@ -124,6 +124,142 @@ export function useFitlynLegacyPage() {
       });
     });
 
+    const carousels = Array.from(document.querySelectorAll("[data-carousel]"));
+
+    carousels.forEach((carousel) => {
+      const slides = Array.from(carousel.querySelectorAll("[data-carousel-slide]"));
+      const tabs = Array.from(carousel.querySelectorAll("[data-carousel-dot]"));
+      const pagination = carousel.querySelector(".fitlyn-showcase-pagination");
+      const prevButton = carousel.querySelector("[data-carousel-prev]");
+      const nextButton = carousel.querySelector("[data-carousel-next]");
+      const currentEl = carousel.querySelector("[data-carousel-current]");
+      const totalEl = carousel.querySelector("[data-carousel-total]");
+      const progressEl = carousel.querySelector("[data-carousel-progress]");
+      const chipsEl = carousel.querySelector("[data-carousel-chips]");
+
+      if (!slides.length) return;
+
+      const totalSlides = slides.length;
+      const pad = (value) => String(value).padStart(2, "0");
+      let activeIndex = Math.max(
+        0,
+        slides.findIndex((slide) => slide.classList.contains("is-active"))
+      );
+
+      const syncCarousel = (nextIndex, options = {}) => {
+        const { focusTab = false } = options;
+        activeIndex = (nextIndex + totalSlides) % totalSlides;
+
+        slides.forEach((slide, index) => {
+          const isActive = index === activeIndex;
+          const labelledBy = tabs[index]?.id;
+
+          slide.classList.toggle("is-active", isActive);
+          slide.setAttribute("aria-hidden", String(!isActive));
+          slide.setAttribute("aria-label", `${index + 1} of ${totalSlides}`);
+          if (labelledBy) slide.setAttribute("aria-labelledby", labelledBy);
+        });
+
+        tabs.forEach((tab, index) => {
+          const isActive = index === activeIndex;
+          tab.classList.toggle("is-active", isActive);
+          tab.setAttribute("aria-selected", String(isActive));
+          tab.tabIndex = isActive ? 0 : -1;
+        });
+
+        if (currentEl) currentEl.textContent = pad(activeIndex + 1);
+        if (totalEl) totalEl.textContent = pad(totalSlides);
+        if (progressEl) {
+          progressEl.style.width = `${((activeIndex + 1) / totalSlides) * 100}%`;
+        }
+
+        if (chipsEl) {
+          const activeSlide = slides[activeIndex];
+          const chips = [
+            activeSlide?.dataset.chip1,
+            activeSlide?.dataset.chip2,
+            activeSlide?.dataset.chip3,
+          ].filter(Boolean);
+
+          if (chips.length) {
+            chipsEl.innerHTML = chips
+              .map((chip, index) => `<span><b>${pad(index + 1)}</b> ${chip}</span>`)
+              .join("");
+          }
+        }
+
+        const activeTab = tabs[activeIndex];
+        if (pagination && activeTab && pagination.scrollWidth > pagination.clientWidth + 4) {
+          const targetLeft =
+            activeTab.offsetLeft - (pagination.clientWidth - activeTab.offsetWidth) / 2;
+
+          pagination.scrollTo({
+            left: Math.max(0, targetLeft),
+            behavior: reduceMotion ? "auto" : "smooth",
+          });
+        }
+
+        if (focusTab) activeTab?.focus();
+      };
+
+      const onPrev = () => syncCarousel(activeIndex - 1);
+      const onNext = () => syncCarousel(activeIndex + 1);
+
+      prevButton?.addEventListener("click", onPrev);
+      nextButton?.addEventListener("click", onNext);
+      if (prevButton) cleanups.push(() => prevButton.removeEventListener("click", onPrev));
+      if (nextButton) cleanups.push(() => nextButton.removeEventListener("click", onNext));
+
+      tabs.forEach((tab, index) => {
+        const onClick = () => syncCarousel(index, { focusTab: true });
+        const onKeyDown = (event) => {
+          if (event.key === "ArrowRight") {
+            event.preventDefault();
+            syncCarousel(index + 1, { focusTab: true });
+          }
+
+          if (event.key === "ArrowLeft") {
+            event.preventDefault();
+            syncCarousel(index - 1, { focusTab: true });
+          }
+
+          if (event.key === "Home") {
+            event.preventDefault();
+            syncCarousel(0, { focusTab: true });
+          }
+
+          if (event.key === "End") {
+            event.preventDefault();
+            syncCarousel(totalSlides - 1, { focusTab: true });
+          }
+        };
+
+        tab.addEventListener("click", onClick);
+        tab.addEventListener("keydown", onKeyDown);
+        cleanups.push(() => {
+          tab.removeEventListener("click", onClick);
+          tab.removeEventListener("keydown", onKeyDown);
+        });
+      });
+
+      const onCarouselKeyDown = (event) => {
+        if (event.key === "ArrowRight") {
+          event.preventDefault();
+          syncCarousel(activeIndex + 1);
+        }
+
+        if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          syncCarousel(activeIndex - 1);
+        }
+      };
+
+      carousel.addEventListener("keydown", onCarouselKeyDown);
+      cleanups.push(() => carousel.removeEventListener("keydown", onCarouselKeyDown));
+
+      syncCarousel(activeIndex);
+    });
+
     const canHoverMotion =
       !reduceMotion &&
       window.matchMedia("(hover: hover)").matches &&

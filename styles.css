@@ -234,7 +234,7 @@ h3 {
 
 h1 {
   font-size: clamp(2.25rem, 5vw, 4rem);
-  max-width: 15ch;
+  max-width: 12ch;
   margin-bottom: 0.9rem;
 }
 
@@ -245,9 +245,17 @@ h2 {
 
 .subtext {
   color: var(--muted);
-  max-width: 46ch;
-  margin-bottom: 1.12rem;
+  max-width: 54ch;
+  margin-bottom: 0.7rem;
   font-size: 1.03rem;
+}
+
+.hero-support {
+  margin: 0 0 1rem;
+  color: var(--text);
+  max-width: 50ch;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .hero-proof-list {
@@ -418,13 +426,9 @@ h2 {
   z-index: 2;
 }
 
-.impact {
-  padding-top: 0.4rem;
-}
-
 .impact-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 0.9rem;
 }
 
@@ -456,9 +460,44 @@ h2 {
   color: var(--muted);
 }
 
+.proof-strip {
+  padding: 0 0 4.4rem;
+}
+
+.proof-strip-label {
+  margin: 0 0 0.9rem;
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.proof-strip-grid {
+  gap: 0.75rem;
+}
+
+.compact-impact-card {
+  padding: 0.9rem 0.95rem;
+}
+
+.compact-impact-card .impact-value {
+  font-size: clamp(1.35rem, 2.3vw, 2rem);
+}
+
+.compact-impact-card .impact-title {
+  margin-top: 0.38rem;
+  font-size: 0.9rem;
+}
+
+.compact-impact-card .impact-meta {
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
 .spec-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.9rem;
 }
 
@@ -702,6 +741,20 @@ h2 {
   max-width: 34ch;
 }
 
+.case-detail-list {
+  gap: 0.38rem;
+  margin-bottom: 0.95rem;
+}
+
+.case-detail-list li {
+  color: var(--muted);
+  line-height: 1.48;
+}
+
+.case-detail-list strong {
+  color: var(--text);
+}
+
 .minimal-case-card .tags {
   margin-top: auto;
 }
@@ -814,6 +867,15 @@ h2 {
   color: var(--accent-strong);
   font-weight: 700;
   font-size: 0.84rem;
+}
+
+.timeline-context {
+  margin: 0 0 0.4rem;
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .testimonials-grid {
@@ -1030,7 +1092,7 @@ h2 {
   }
 
   .impact-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .spec-grid {
@@ -1128,13 +1190,25 @@ h2 {
     transform: translateY(2px);
   }
 
-  .impact-grid,
   .spec-grid,
   .compact-case-grid,
   .case-grid,
   .testimonials-grid,
   .toolkit-grid {
     grid-template-columns: 1fr;
+  }
+
+  .proof-strip-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .impact-grid,
+  .spec-grid,
+  .compact-case-grid,
+  .case-grid,
+  .testimonials-grid,
+  .toolkit-grid {
+    gap: 0.85rem;
   }
 
   .timeline {
