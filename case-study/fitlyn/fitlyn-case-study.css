@@ -1016,6 +1016,15 @@ h3 {
   margin-top: 1.15rem;
 }
 
+.insights-persona-name {
+  margin-top: 0.8rem;
+  color: #dfe9f7;
+  font-family: "Sora", "Segoe UI", sans-serif;
+  font-size: 0.94rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
 .insights-persona-copy h3 {
   margin-top: 0.45rem;
   font-size: clamp(1.7rem, 2.4vw, 2.3rem);
