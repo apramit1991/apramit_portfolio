@@ -368,7 +368,6 @@ h3 {
 .insight-finding-card,
 .user-insights-quote,
 .role-panel,
-.workflow-step,
 .insight-banner,
 .architecture-copy,
 .architecture-map,
@@ -737,7 +736,6 @@ h3 {
 .persona-card,
 .insight-finding-card,
 .role-panel,
-.workflow-step,
 .architecture-copy,
 .note-card,
 .showcase-card,
@@ -1575,53 +1573,306 @@ h3 {
 }
 
 .workflow-intro {
-  max-width: 68ch;
+  max-width: 62ch;
   margin-bottom: 1.2rem;
 }
 
-.workflow-timeline {
-  --workflow-badge-left: 0.95rem;
-  --workflow-badge-size: 62px;
-  --workflow-copy-gap: 1.25rem;
+.workflow-loop {
   position: relative;
-  display: grid;
-  gap: 0.95rem;
+  margin-top: 1.4rem;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border-radius: 34px;
+  border: 1px solid rgba(170, 194, 228, 0.14);
+  background:
+    radial-gradient(circle at 50% 50%, rgba(124, 224, 203, 0.06), transparent 34rem),
+    radial-gradient(circle at 50% 50%, rgba(244, 205, 143, 0.08), transparent 28rem),
+    linear-gradient(180deg, rgba(11, 22, 36, 0.98), rgba(7, 15, 26, 0.98));
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
 }
 
-.workflow-timeline::before {
+.workflow-loop::before {
   content: "";
   position: absolute;
-  left: calc(var(--workflow-badge-left) + (var(--workflow-badge-size) / 2));
-  top: calc(1rem + (var(--workflow-badge-size) / 2));
-  bottom: calc(1rem + (var(--workflow-badge-size) / 2));
-  width: 2px;
-  background: linear-gradient(var(--accent), rgba(124, 224, 203, 0.1));
+  left: -4%;
+  bottom: 12%;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(244, 205, 143, 0.12), transparent 68%);
+  filter: blur(26px);
+  pointer-events: none;
+}
+
+.workflow-loop::after {
+  content: "";
+  position: absolute;
+  top: 4%;
+  right: -2%;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124, 224, 203, 0.1), transparent 72%);
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+.workflow-loop-stage {
+  position: relative;
+  min-height: clamp(760px, 74vw, 930px);
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.workflow-loop-stage::before,
+.workflow-loop-stage::after {
+  content: "";
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.workflow-loop-stage::before {
+  width: min(58vw, 620px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(170, 194, 228, 0.16);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.015) inset,
+    0 0 24px rgba(244, 205, 143, 0.08),
+    0 0 48px rgba(124, 224, 203, 0.05);
+}
+
+.workflow-loop-stage::after {
+  width: min(54vw, 580px);
+  aspect-ratio: 1;
+  background: radial-gradient(circle, transparent 61%, rgba(244, 205, 143, 0.08) 63%, transparent 68%);
+  filter: blur(8px);
+}
+
+.workflow-loop-center,
+.workflow-loop-step {
+  position: absolute;
+  border-radius: 26px;
+}
+
+.workflow-loop-center {
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  width: min(34vw, 320px);
+  padding: 1.55rem 1.35rem;
+  text-align: center;
+  border: 1px solid rgba(244, 205, 143, 0.24);
+  background:
+    radial-gradient(circle at top, rgba(244, 205, 143, 0.12), transparent 72%),
+    linear-gradient(180deg, rgba(18, 30, 49, 0.96), rgba(10, 17, 29, 0.98));
+  box-shadow:
+    0 24px 58px rgba(3, 9, 16, 0.42),
+    0 0 0 1px rgba(244, 205, 143, 0.05) inset;
+  z-index: 2;
+}
+
+.workflow-loop-center h3 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.2vw, 1.9rem);
+}
+
+.workflow-loop-center p {
+  margin-top: 0.7rem;
+  color: #f5dfb7;
+  font-size: 0.96rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.workflow-loop-step {
+  width: min(250px, calc(50% - 2rem));
+  padding: 1rem 1rem 1rem 1.05rem;
+  border: 1px solid rgba(170, 194, 228, 0.14);
+  background: linear-gradient(180deg, rgba(15, 27, 44, 0.94), rgba(8, 16, 28, 0.98));
+  box-shadow:
+    0 18px 42px rgba(3, 9, 16, 0.32),
+    0 0 0 1px rgba(255, 255, 255, 0.012) inset;
+  transition:
+    transform 240ms ease,
+    border-color 240ms ease,
+    box-shadow 240ms ease,
+    background 240ms ease;
+  z-index: 1;
+}
+
+.workflow-loop-step::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.9;
+  background: linear-gradient(90deg, rgba(124, 224, 203, 0.12), rgba(244, 205, 143, 0.55), rgba(124, 224, 203, 0.08));
+  box-shadow: 0 0 14px rgba(244, 205, 143, 0.12);
+}
+
+.workflow-loop-step-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.workflow-loop-step-no {
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(124, 224, 203, 0.22);
+  background: rgba(124, 224, 203, 0.08);
+  color: var(--accent-strong);
+  font-family: "Sora", "Segoe UI", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: border-color 240ms ease, background 240ms ease, color 240ms ease;
+}
+
+.workflow-loop-step h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.28;
+}
+
+.workflow-loop-step p {
+  margin-top: 0.85rem;
+  color: var(--muted);
+  font-size: 0.93rem;
+  line-height: 1.58;
+}
+
+.workflow-loop-step:hover,
+.workflow-loop-step:focus-visible {
+  transform: translateY(-4px) scale(1.015);
+  border-color: rgba(244, 205, 143, 0.36);
+  box-shadow:
+    0 24px 52px rgba(3, 9, 16, 0.4),
+    0 0 0 1px rgba(244, 205, 143, 0.08) inset,
+    0 0 24px rgba(244, 205, 143, 0.08);
+  background: linear-gradient(180deg, rgba(18, 30, 48, 0.98), rgba(10, 18, 30, 0.99));
+  outline: none;
+}
+
+.workflow-loop-step:hover::after,
+.workflow-loop-step:focus-visible::after {
+  background: linear-gradient(90deg, rgba(244, 205, 143, 0.16), rgba(244, 205, 143, 0.82), rgba(124, 224, 203, 0.14));
+  box-shadow: 0 0 20px rgba(244, 205, 143, 0.18);
+}
+
+.workflow-loop-step:hover .workflow-loop-step-no,
+.workflow-loop-step:focus-visible .workflow-loop-step-no {
+  border-color: rgba(244, 205, 143, 0.38);
+  background: rgba(244, 205, 143, 0.12);
+  color: #f8e3be;
+}
+
+.workflow-loop-step-1 {
+  top: 2%;
+  left: 50%;
   transform: translateX(-50%);
 }
 
-.workflow-step {
+.workflow-loop-step-1::after {
+  left: 50%;
+  top: 100%;
+  width: 1px;
+  height: 74px;
+  transform: translateX(-50%);
+}
+
+.workflow-loop-step-2 {
+  top: 16%;
+  right: 2%;
+}
+
+.workflow-loop-step-2::after {
+  right: 100%;
+  top: 50%;
+  width: 96px;
+  height: 1px;
+}
+
+.workflow-loop-step-3 {
+  right: 4%;
+  bottom: 18%;
+}
+
+.workflow-loop-step-3::after {
+  right: 100%;
+  top: 50%;
+  width: 74px;
+  height: 1px;
+}
+
+.workflow-loop-step-4 {
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.workflow-loop-step-4::after {
+  left: 50%;
+  bottom: 100%;
+  width: 1px;
+  height: 74px;
+  transform: translateX(-50%);
+}
+
+.workflow-loop-step-5 {
+  bottom: 18%;
+  left: 4%;
+}
+
+.workflow-loop-step-5::after {
+  left: 100%;
+  top: 50%;
+  width: 74px;
+  height: 1px;
+}
+
+.workflow-loop-step-6 {
+  top: 16%;
+  left: 2%;
+}
+
+.workflow-loop-step-6::after {
+  left: 100%;
+  top: 50%;
+  width: 96px;
+  height: 1px;
+}
+
+.workflow-loop-note {
   position: relative;
-  padding: 1rem 1rem 1rem calc(var(--workflow-badge-left) + var(--workflow-badge-size) + var(--workflow-copy-gap));
+  z-index: 1;
+  margin: 1.2rem auto 0;
+  max-width: 42ch;
+  text-align: center;
+  color: #d8e5f7;
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
-.step-no {
-  position: absolute;
-  left: var(--workflow-badge-left);
-  top: 1rem;
-  width: var(--workflow-badge-size);
-  height: var(--workflow-badge-size);
-  border-radius: 18px;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(180deg, rgba(124, 224, 203, 0.18), rgba(124, 224, 203, 0.08));
-  border: 1px solid rgba(124, 224, 203, 0.24);
-  color: var(--accent-strong);
-  font-family: "Sora", "Segoe UI", sans-serif;
-  font-weight: 700;
+.workflow-loop-note::before {
+  content: "";
+  display: block;
+  width: 84px;
+  height: 1px;
+  margin: 0 auto 0.85rem;
+  background: linear-gradient(90deg, transparent, rgba(244, 205, 143, 0.88), transparent);
 }
 
-.workflow-copy p {
-  margin-top: 0.55rem;
+.workflow-loop-step-1:hover,
+.workflow-loop-step-1:focus-visible,
+.workflow-loop-step-4:hover,
+.workflow-loop-step-4:focus-visible {
+  transform: translateX(-50%) translateY(-4px) scale(1.015);
 }
 
 .validation-card ul,
@@ -2808,7 +3059,6 @@ h3 {
   .impact-traction-card:hover,
   .role-panel:hover,
   .ai-tool-card:hover,
-  .workflow-step:hover,
   .validation-card:hover,
   .iteration-card:hover,
   .architecture-copy:hover,
@@ -2923,6 +3173,14 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .workflow-loop-stage {
+    min-height: clamp(700px, 88vw, 860px);
+  }
+
+  .workflow-loop-step {
+    width: min(228px, calc(50% - 1.4rem));
+  }
+
   .user-insights-board {
     grid-template-columns: 1fr;
   }
@@ -2971,6 +3229,48 @@ h3 {
 
   .validation-layout {
     grid-template-columns: 1fr;
+  }
+
+  .workflow-loop {
+    padding: 1rem;
+  }
+
+  .workflow-loop-stage {
+    min-height: auto;
+    max-width: none;
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .workflow-loop-stage::before,
+  .workflow-loop-stage::after {
+    display: none;
+  }
+
+  .workflow-loop-center,
+  .workflow-loop-step {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    transform: none;
+  }
+
+  .workflow-loop-step::after {
+    display: none;
+  }
+
+  .workflow-loop-center {
+    order: -1;
+    margin-bottom: 0.25rem;
+  }
+
+  .workflow-loop-step:hover,
+  .workflow-loop-step:focus-visible,
+  .workflow-loop-step-1:hover,
+  .workflow-loop-step-1:focus-visible,
+  .workflow-loop-step-4:hover,
+  .workflow-loop-step-4:focus-visible {
+    transform: translateY(-3px) scale(1.01);
   }
 
   .pain-grid {
@@ -3049,7 +3349,6 @@ h3 {
   }
 
   .hero-copy,
-  .workflow-step,
   .screen-gallery-hero,
   .showcase-copy,
   .fitlyn-showcase-panel,
@@ -3161,6 +3460,37 @@ h3 {
     border-radius: 22px;
   }
 
+  .workflow-loop {
+    padding: 0.9rem;
+    border-radius: 24px;
+  }
+
+  .workflow-loop-center,
+  .workflow-loop-step {
+    border-radius: 22px;
+  }
+
+  .workflow-loop-center {
+    padding: 1.2rem 1rem;
+  }
+
+  .workflow-loop-step {
+    padding: 0.95rem;
+  }
+
+  .workflow-loop-step-head {
+    align-items: flex-start;
+  }
+
+  .workflow-loop-step h3 {
+    font-size: 0.95rem;
+  }
+
+  .workflow-loop-note {
+    max-width: none;
+    font-size: 0.92rem;
+  }
+
   .ai-toolkit-grid {
     grid-template-columns: 1fr;
   }
@@ -3256,11 +3586,6 @@ h3 {
     height: auto;
     aspect-ratio: 16 / 10;
     transform: none;
-  }
-
-  .workflow-timeline {
-    --workflow-badge-size: 52px;
-    --workflow-copy-gap: 1rem;
   }
 
   .showcase-grid,
