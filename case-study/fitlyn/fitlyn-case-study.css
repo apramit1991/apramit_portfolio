@@ -347,17 +347,14 @@ h3 {
 .architecture-layout > *,
 .overview-grid > *,
 .pain-grid > *,
-.exploration-grid > *,
 .showcase-grid > *,
 .impact-grid > *,
 .reflection-grid > *,
-.exploration-notes > *,
 .insights-panel > *,
 .persona-detail-grid > *,
 .validation-layout > *,
 .grounded-grid > *,
 .outcomes-grid > *,
-.ai-proof-grid > *,
 .iteration-stack > * {
   min-width: 0;
 }
@@ -375,7 +372,6 @@ h3 {
 .insight-banner,
 .architecture-copy,
 .architecture-map,
-.exploration-card,
 .note-card,
 .showcase-card,
 .impact-card,
@@ -386,7 +382,6 @@ h3 {
 .iteration-card,
 .outcome-card,
 .early-validation,
-.ai-proof-block,
 .final-cta {
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
@@ -620,8 +615,6 @@ h3 {
 .architecture-layout,
 .problem-layout,
 .role-grid,
-.exploration-grid,
-.exploration-notes,
 .showcase-grid,
 .impact-grid,
 .reflection-grid {
@@ -746,7 +739,6 @@ h3 {
 .role-panel,
 .workflow-step,
 .architecture-copy,
-.exploration-card,
 .note-card,
 .showcase-card,
 .impact-card,
@@ -791,7 +783,6 @@ h3 {
 .problem-summary p,
 .architecture-copy p,
 .workflow-intro p,
-.exploration-copy p,
 .showcase-copy p,
 .persona-role,
 .insight-finding-card p,
@@ -872,7 +863,6 @@ h3 {
 }
 
 .insight-strip span,
-.ai-proof-takeaway span,
 .decision-flow span {
   display: block;
   font-size: 0.76rem;
@@ -1590,6 +1580,9 @@ h3 {
 }
 
 .workflow-timeline {
+  --workflow-badge-left: 0.95rem;
+  --workflow-badge-size: 62px;
+  --workflow-copy-gap: 1.25rem;
   position: relative;
   display: grid;
   gap: 0.95rem;
@@ -1598,24 +1591,25 @@ h3 {
 .workflow-timeline::before {
   content: "";
   position: absolute;
-  left: 32px;
-  top: 0.9rem;
-  bottom: 0.9rem;
+  left: calc(var(--workflow-badge-left) + (var(--workflow-badge-size) / 2));
+  top: calc(1rem + (var(--workflow-badge-size) / 2));
+  bottom: calc(1rem + (var(--workflow-badge-size) / 2));
   width: 2px;
   background: linear-gradient(var(--accent), rgba(124, 224, 203, 0.1));
+  transform: translateX(-50%);
 }
 
 .workflow-step {
   position: relative;
-  padding: 1rem 1rem 1rem 5rem;
+  padding: 1rem 1rem 1rem calc(var(--workflow-badge-left) + var(--workflow-badge-size) + var(--workflow-copy-gap));
 }
 
 .step-no {
   position: absolute;
-  left: 0.95rem;
+  left: var(--workflow-badge-left);
   top: 1rem;
-  width: 62px;
-  height: 62px;
+  width: var(--workflow-badge-size);
+  height: var(--workflow-badge-size);
   border-radius: 18px;
   display: grid;
   place-items: center;
@@ -1630,89 +1624,6 @@ h3 {
   margin-top: 0.55rem;
 }
 
-.ai-proof-block {
-  margin-bottom: 1rem;
-  padding: 1.15rem;
-  border-color: rgba(124, 224, 203, 0.22);
-}
-
-.ai-proof-head h3 {
-  margin-top: 0.1rem;
-}
-
-.ai-proof-head p {
-  margin-top: 0.55rem;
-  max-width: 56ch;
-  color: var(--muted);
-}
-
-.ai-proof-grid {
-  margin-top: 0.9rem;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.85rem;
-  align-items: stretch;
-}
-
-.ai-proof-card {
-  border-radius: 18px;
-  border: 1px solid var(--line);
-  padding: 0.9rem;
-  background: rgba(170, 194, 228, 0.04);
-}
-
-.ai-proof-generated {
-  border-color: rgba(244, 205, 143, 0.23);
-  background: rgba(244, 205, 143, 0.08);
-}
-
-.ai-proof-final {
-  border-color: rgba(124, 224, 203, 0.24);
-  background: rgba(124, 224, 203, 0.08);
-}
-
-.ai-proof-card h4 {
-  margin: 0;
-  font-family: "Sora", "Segoe UI", sans-serif;
-  font-size: 0.95rem;
-}
-
-.ai-proof-card p {
-  margin-top: 0.5rem;
-  color: var(--muted);
-}
-
-.ai-proof-sections {
-  margin-top: 0.65rem;
-  display: grid;
-  gap: 0.7rem;
-}
-
-.ai-proof-section {
-  padding: 0.75rem 0.78rem;
-  border-radius: 16px;
-  border: 1px solid rgba(170, 194, 228, 0.12);
-  background: rgba(7, 17, 29, 0.18);
-}
-
-.ai-proof-section span {
-  display: block;
-  font-size: 0.74rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 800;
-  color: var(--accent-strong);
-}
-
-.ai-proof-generated .ai-proof-section span {
-  color: #f4d7a7;
-}
-
-.ai-proof-section p {
-  margin-top: 0.36rem;
-}
-
-.ai-proof-card ul,
 .validation-card ul,
 .validation-impact ul,
 .outcome-card ul,
@@ -1721,19 +1632,6 @@ h3 {
   display: grid;
   gap: 0.35rem;
   color: var(--text);
-}
-
-.ai-proof-takeaway {
-  margin-top: 0.85rem;
-  padding: 0.75rem 0.85rem;
-  border-radius: 14px;
-  border: 1px solid rgba(124, 224, 203, 0.24);
-  background: rgba(124, 224, 203, 0.08);
-}
-
-.ai-proof-takeaway p {
-  margin-top: 0.35rem;
-  color: #dff4ef;
 }
 
 .ai-toolkit {
@@ -2047,10 +1945,6 @@ h3 {
   font-weight: 700;
 }
 
-.exploration-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .showcase-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -2167,12 +2061,10 @@ h3 {
   z-index: 2;
 }
 
-.exploration-card,
 .showcase-card {
   overflow: hidden;
 }
 
-.exploration-visual,
 .showcase-screen {
   min-height: 250px;
   border-bottom: 1px solid rgba(170, 194, 228, 0.12);
@@ -2190,11 +2082,6 @@ h3 {
   gap: 0.55rem;
 }
 
-.exploration-visual .visual-body {
-  padding: 0.85rem;
-}
-
-.exploration-visual i,
 .screen-content b,
 .table-block {
   display: block;
@@ -2203,45 +2090,8 @@ h3 {
   background: rgba(170, 194, 228, 0.12);
 }
 
-.visual-compact .visual-body {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.visual-compact i {
-  min-height: 72px;
-}
-
-.visual-balanced .visual-body {
-  grid-template-columns: 1.25fr 0.75fr;
-}
-
-.visual-balanced i:first-child {
-  min-height: 160px;
-}
-
-.visual-balanced i:not(:first-child) {
-  min-height: 72px;
-}
-
-.visual-minimal .visual-body {
-  grid-template-columns: 1fr;
-}
-
-.visual-minimal i:first-child {
-  min-height: 84px;
-}
-
-.visual-minimal i:last-child {
-  min-height: 136px;
-}
-
-.exploration-copy,
 .showcase-copy {
   padding: 1rem;
-}
-
-.exploration-copy p {
-  margin-top: 0.5rem;
 }
 
 .showcase-copy p {
@@ -2250,11 +2100,6 @@ h3 {
 
 .showcase-copy strong {
   color: var(--text);
-}
-
-.exploration-notes {
-  margin-top: 1rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .showcase-card {
@@ -2962,14 +2807,12 @@ h3 {
   .impact-outcome-card:hover,
   .impact-traction-card:hover,
   .role-panel:hover,
-  .ai-proof-block:hover,
   .ai-tool-card:hover,
   .workflow-step:hover,
   .validation-card:hover,
   .iteration-card:hover,
   .architecture-copy:hover,
   .architecture-map:hover,
-  .exploration-card:hover,
   .deep-dive-visual:hover,
   .deep-dive-card:hover,
   .note-card:hover,
@@ -3072,7 +2915,6 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .exploration-grid,
   .showcase-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -3127,7 +2969,6 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .ai-proof-grid,
   .validation-layout {
     grid-template-columns: 1fr;
   }
@@ -3137,8 +2978,7 @@ h3 {
   }
 
   .impact-grid,
-  .reflection-grid,
-  .exploration-notes {
+  .reflection-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -3228,15 +3068,12 @@ h3 {
   .stage-foot,
   .overview-grid,
   .pain-grid,
-  .exploration-grid,
   .validation-layout,
   .deep-dive-layout,
-  .exploration-notes,
   .impact-grid,
   .reflection-grid,
   .showcase-grid,
   .outcomes-grid,
-  .ai-proof-grid,
   .grounded-grid {
     grid-template-columns: 1fr;
   }
@@ -3421,17 +3258,9 @@ h3 {
     transform: none;
   }
 
-  .workflow-step {
-    padding-left: 4.4rem;
-  }
-
-  .step-no {
-    width: 52px;
-    height: 52px;
-  }
-
-  .workflow-timeline::before {
-    left: 26px;
+  .workflow-timeline {
+    --workflow-badge-size: 52px;
+    --workflow-copy-gap: 1rem;
   }
 
   .showcase-grid,
