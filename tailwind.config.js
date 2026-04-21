@@ -10,8 +10,7 @@ export default {
         gold: "#f4cd8f",
       },
       fontFamily: {
-        display: ['"Sora"', '"Segoe UI"', "sans-serif"],
-        sans: ['"Manrope"', '"Segoe UI"', "sans-serif"],
+        sans: ['"Inter"', '"Segoe UI"', "sans-serif"],
       },
       boxShadow: {
         ambient: "0 24px 60px rgba(2, 8, 16, 0.38)",

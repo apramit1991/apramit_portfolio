@@ -40,7 +40,8 @@ main {
 
 body {
   margin: 0;
-  font-family: "Manrope", "Segoe UI", sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  font-size: 1rem;
   color: var(--text);
   line-height: 1.65;
   background:
@@ -102,22 +103,26 @@ h1,
 h2,
 h3 {
   margin: 0;
-  font-family: "Sora", "Segoe UI", sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
   line-height: 1.15;
   letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: clamp(3rem, 7vw, 5.6rem);
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
 }
 
 h2 {
-  font-size: clamp(1.8rem, 3.8vw, 3.2rem);
+  font-size: clamp(1.875rem, 3.6vw, 2.75rem);
+  font-weight: 600;
   line-height: 1.2;
 }
 
 h3 {
-  font-size: 1.05rem;
+  font-size: 1.0625rem;
+  font-weight: 600;
 }
 
 .sr-only {
@@ -151,24 +156,26 @@ h3 {
 .card-label,
 .role-eyebrow {
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.78rem;
-  font-weight: 800;
+  letter-spacing: 0.1em;
+  font-size: 0.6875rem;
+  font-weight: 600;
 }
 
 .eyebrow {
   color: var(--accent-strong);
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.75rem;
 }
 
 .section-head {
-  max-width: 76ch;
+  max-width: 72ch;
   margin-bottom: 2.1rem;
 }
 
 .section-head p {
-  margin-top: 0.9rem;
+  margin-top: 0.75rem;
   color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 .top-nav {
@@ -196,9 +203,10 @@ h3 {
 
 .brand {
   text-decoration: none;
-  font-family: "Sora", "Segoe UI", sans-serif;
-  font-size: 1.2rem;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  font-size: 1.125rem;
   font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .top-links {
@@ -218,8 +226,8 @@ h3 {
 
 .top-links a {
   color: var(--muted);
-  font-size: 0.88rem;
-  font-weight: 700;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
 .top-links a:hover,
@@ -233,20 +241,55 @@ h3 {
   display: none;
   width: 44px;
   height: 44px;
+  padding: 0;
   border-radius: 14px;
   border: 1px solid var(--line);
   background: rgba(13, 25, 41, 0.95);
+  position: relative;
   align-items: center;
   justify-content: center;
-  gap: 5px;
   cursor: pointer;
+  transition: border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.menu-btn:hover,
+.menu-btn:focus-visible {
+  border-color: rgba(244, 205, 143, 0.24);
+  background: rgba(16, 30, 48, 0.98);
+  box-shadow: 0 12px 26px rgba(3, 9, 16, 0.18);
+}
+
+.menu-btn:focus-visible {
+  outline: none;
 }
 
 .menu-btn span {
-  width: 16px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 18px;
   height: 2px;
   display: block;
   background: var(--text);
+  border-radius: 999px;
+  transform-origin: center;
+  transition: transform 180ms ease, opacity 180ms ease, background 180ms ease;
+}
+
+.menu-btn span:first-child {
+  transform: translate(-50%, -4px);
+}
+
+.menu-btn span:last-child {
+  transform: translate(-50%, 4px);
+}
+
+.menu-btn[aria-expanded="true"] span:first-child {
+  transform: translate(-50%, 0) rotate(45deg);
+}
+
+.menu-btn[aria-expanded="true"] span:last-child {
+  transform: translate(-50%, 0) rotate(-45deg);
 }
 
 .case-nav {
@@ -269,8 +312,8 @@ h3 {
 .case-nav-wrap a {
   color: var(--muted);
   white-space: nowrap;
-  font-weight: 700;
-  font-size: 0.84rem;
+  font-weight: 500;
+  font-size: 0.8125rem;
   border-color: rgba(170, 194, 228, 0.16);
   background: rgba(170, 194, 228, 0.04);
 }
@@ -288,9 +331,10 @@ h3 {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  border-radius: 14px;
-  padding: 0.84rem 1.12rem;
-  font-weight: 800;
+  border-radius: 10px;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
   transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease;
 }
 
@@ -423,13 +467,16 @@ h3 {
 .hero-subtitle {
   margin-top: 1rem;
   max-width: 54ch;
-  font-size: 1.06rem;
-  color: #dfe9f7;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: rgba(223, 233, 247, 0.9);
 }
 
 .hero-value {
-  margin-top: 1rem;
+  margin-top: 0.875rem;
   max-width: 58ch;
+  font-size: 1rem;
+  line-height: 1.65;
   color: var(--muted);
 }
 
@@ -449,7 +496,7 @@ h3 {
   border: 1px solid rgba(124, 224, 203, 0.22);
   color: var(--accent-strong);
   font-size: 0.75rem;
-  font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -639,7 +686,7 @@ h3 {
   border-radius: 999px;
   font-style: normal;
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--accent-strong);
   background: rgba(124, 224, 203, 0.1);
   border: 1px solid rgba(124, 224, 203, 0.22);
@@ -854,7 +901,7 @@ h3 {
   color: #f8e3be;
   font-size: 1.02rem;
   line-height: 1.5;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .quote-card-strong {
@@ -877,7 +924,7 @@ h3 {
   font-size: 0.76rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--accent-strong);
 }
 
@@ -904,7 +951,7 @@ h3 {
   border: 1px solid rgba(244, 205, 143, 0.24);
   color: var(--gold);
   font-size: 0.76rem;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .pain-card h3,
@@ -1019,7 +1066,7 @@ h3 {
 .insights-persona-name {
   margin-top: 0.8rem;
   color: #dfe9f7;
-  font-family: "Sora", "Segoe UI", sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
   font-size: 0.94rem;
   font-weight: 600;
   letter-spacing: 0.01em;
@@ -1066,7 +1113,7 @@ h3 {
   color: var(--gold);
   background: rgba(244, 205, 143, 0.08);
   font-size: 0.76rem;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .insights-persona-traits strong {
@@ -1127,7 +1174,7 @@ h3 {
   color: var(--gold);
   background: rgba(244, 205, 143, 0.08);
   font-size: 0.8rem;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .insight-finding-card h3 {
@@ -1169,7 +1216,7 @@ h3 {
   padding: 0.34rem 0.7rem;
   border-radius: 999px;
   font-size: 0.74rem;
-  font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--accent-strong);
@@ -1253,7 +1300,7 @@ h3 {
   position: absolute;
   top: 0.55rem;
   left: 1rem;
-  font-family: "Sora", "Segoe UI", sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
   font-size: clamp(3.4rem, 5vw, 4.8rem);
   line-height: 1;
   color: rgba(244, 205, 143, 0.22);
@@ -1374,7 +1421,7 @@ h3 {
   color: var(--gold);
   background: rgba(244, 205, 143, 0.08);
   font-size: 0.8rem;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .impact-outcome-card h3 {
@@ -1416,7 +1463,7 @@ h3 {
   position: absolute;
   top: 0.55rem;
   right: 1rem;
-  font-family: "Sora", "Segoe UI", sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
   font-size: clamp(2.9rem, 4vw, 4.1rem);
   line-height: 1;
   color: rgba(244, 205, 143, 0.16);
@@ -1437,7 +1484,7 @@ h3 {
   padding: 0.34rem 0.7rem;
   border-radius: 999px;
   font-size: 0.74rem;
-  font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #f8dfb5;
@@ -1464,9 +1511,9 @@ h3 {
   background: rgba(244, 205, 143, 0.08);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
   color: var(--gold);
-  font-family: "Sora", "Segoe UI", sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
   font-size: clamp(2rem, 3vw, 2.7rem);
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1;
 }
 
@@ -1527,13 +1574,13 @@ h3 {
   align-items: center;
   gap: 0.65rem 0.8rem;
   color: #edf3fb;
-  font-family: "Sora", "Segoe UI", sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
   font-size: 0.98rem;
 }
 
 .impact-traction-takeaway strong {
   color: var(--gold);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .role-panel {
@@ -1576,7 +1623,7 @@ h3 {
 .decision-points span {
   display: block;
   font-size: 0.82rem;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--accent-strong);
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -1702,7 +1749,7 @@ h3 {
   margin-top: 0.7rem;
   color: #f5dfb7;
   font-size: 0.96rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.03em;
 }
 
@@ -1747,9 +1794,9 @@ h3 {
   border: 1px solid rgba(124, 224, 203, 0.22);
   background: rgba(124, 224, 203, 0.08);
   color: var(--accent-strong);
-  font-family: "Sora", "Segoe UI", sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.02em;
   transition: border-color 240ms ease, background 240ms ease, color 240ms ease;
 }
@@ -1955,9 +2002,9 @@ h3 {
   border: 1px solid rgba(244, 205, 143, 0.2);
   background: rgba(244, 205, 143, 0.08);
   color: var(--gold);
-  font-family: "Sora", "Segoe UI", sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
   font-size: 0.76rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.06em;
   overflow: hidden;
 }
@@ -1971,7 +2018,7 @@ h3 {
 
 .ai-tool-card h4 {
   margin: 0;
-  font-family: "Sora", "Segoe UI", sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
   font-size: 0.95rem;
 }
 
@@ -2114,7 +2161,7 @@ h3 {
 .business-proof-label {
   margin: 0;
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--gold);
@@ -2126,7 +2173,7 @@ h3 {
   flex-wrap: wrap;
   align-items: baseline;
   gap: 0.38rem 0.55rem;
-  font-family: "Sora", "Segoe UI", sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
   line-height: 1.1;
   color: #f4fbff;
 }
@@ -2140,7 +2187,7 @@ h3 {
   border: 1px solid rgba(244, 205, 143, 0.28);
   color: #fff3d5;
   font-size: 1.12rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .business-proof-stat span {
@@ -2232,7 +2279,7 @@ h3 {
   font-size: 0.76rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-weight: 800;
+  font-weight: 600;
   color: #f8e3be;
 }
 
@@ -2372,7 +2419,7 @@ h3 {
   border: 1px solid rgba(124, 224, 203, 0.24);
   color: var(--accent-strong);
   font-size: 0.72rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
@@ -2525,7 +2572,7 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 0.11em;
   font-size: 0.72rem;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .fitlyn-showcase-chip {
@@ -2735,7 +2782,7 @@ h3 {
   display: inline-flex;
   align-items: baseline;
   gap: 0.22rem;
-  font-family: "Sora", "Segoe UI", sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
   font-size: 1.3rem;
 }
 
@@ -2816,7 +2863,7 @@ h3 {
   background: rgba(12, 22, 36, 0.72);
   color: var(--muted);
   font-size: 0.82rem;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
   transition: border-color 180ms ease, background 180ms ease, color 180ms ease;
 }
@@ -2954,7 +3001,7 @@ h3 {
   font-size: 0.74rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-weight: 800;
+  font-weight: 600;
   color: var(--gold);
 }
 
@@ -3683,9 +3730,9 @@ h3 {
   position: absolute;
   top: -0.4rem;
   right: -1.5rem;
-  font-family: "Outfit", "Segoe UI", sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
   font-size: clamp(8rem, 18vw, 16rem);
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.05em;
   line-height: 0.9;
   color: rgba(214, 222, 236, 0.05);
@@ -3719,7 +3766,7 @@ h3 {
   color: #eac37e;
   background: rgba(243, 195, 107, 0.05);
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.12em;
 }
 
@@ -3736,7 +3783,7 @@ h3 {
   max-width: 12ch;
   margin-top: 0;
   color: #ffffff;
-  font-family: "Outfit", "Segoe UI", sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
   font-size: clamp(2.7rem, 4.4vw, 4.15rem);
   font-weight: 700;
   line-height: 1.05;
@@ -3815,7 +3862,7 @@ h3 {
   background: rgba(243, 195, 107, 0.08);
   color: #f3c36b;
   font-size: 0.84rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .hero-feature-card strong {
