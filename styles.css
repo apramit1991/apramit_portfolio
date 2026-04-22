@@ -1402,6 +1402,193 @@ h3 {
   }
 }
 
+/* ── Card-style case studies ─────────────────────────── */
+.cs-cards {
+  display: grid;
+  gap: 1.55rem;
+}
+
+.cs-card {
+  background:
+    radial-gradient(circle at 88% 15%, rgba(17, 34, 56, 0.9), transparent 38%),
+    linear-gradient(160deg, rgba(7, 20, 34, 0.96), rgba(5, 15, 27, 0.98));
+  border: 1px solid rgba(78, 111, 152, 0.34);
+  border-radius: 22px;
+  padding: clamp(2.1rem, 3.5vw, 2.95rem) clamp(2rem, 3.7vw, 3.1rem);
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  box-shadow:
+    inset 0 1px 0 rgba(163, 193, 231, 0.16),
+    0 18px 48px rgba(0, 0, 0, 0.26);
+  transition: transform 260ms ease, border-color 260ms ease, box-shadow 260ms ease;
+}
+
+.cs-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(114, 149, 194, 0.44);
+  box-shadow:
+    inset 0 1px 0 rgba(176, 205, 240, 0.2),
+    0 26px 58px rgba(0, 0, 0, 0.35);
+}
+
+.cs-card-reverse {
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+}
+
+.cs-card-copy {
+  max-width: 510px;
+}
+
+.cs-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.9rem;
+}
+
+.cs-num {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #f1c364;
+  font-family: "Sora", "Inter", "Segoe UI", sans-serif;
+  line-height: 1;
+}
+
+.cs-category {
+  margin: 0;
+  color: #f1c364;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.cs-title {
+  margin: 0;
+  color: #f9fbff;
+  font-size: clamp(2.1rem, 3.9vw, 3.05rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.03;
+}
+
+.cs-desc {
+  margin: 0.92rem 0 0;
+  color: rgba(217, 227, 240, 0.86);
+  font-size: 1rem;
+  line-height: 1.62;
+}
+
+.cs-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.95rem;
+  margin: 1.55rem 0 1.35rem;
+  padding: 0;
+}
+
+.cs-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.18rem;
+}
+
+.cs-metric-icon {
+  color: #f2c66f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid rgba(103, 131, 170, 0.42);
+  background: rgba(9, 22, 37, 0.86);
+  margin-bottom: 0.46rem;
+}
+
+.cs-metric-value {
+  margin: 0;
+  font-size: clamp(1.65rem, 2.7vw, 2.12rem);
+  font-weight: 700;
+  color: #f8fbff;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.cs-metric-label {
+  margin: 0;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: rgba(219, 229, 241, 0.72);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  line-height: 1.35;
+}
+
+.cs-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 1.2rem;
+  padding: 0.84rem 1.5rem;
+  background: linear-gradient(180deg, #f6cb72, #eab54c);
+  color: #0f1115;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  transition: background 200ms ease, transform 220ms ease, box-shadow 220ms ease, color 220ms ease;
+  box-shadow: 0 10px 24px rgba(244, 205, 116, 0.28);
+}
+
+.cs-btn:hover {
+  background: linear-gradient(180deg, #ffd889, #efbd59);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(244, 205, 116, 0.38);
+}
+
+.cs-card-visual {
+  margin: 0;
+  width: 100%;
+  align-self: center;
+  position: relative;
+}
+
+.cs-card-visual img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 24px 44px rgba(0, 0, 0, 0.4));
+  display: block;
+  transition: transform 300ms ease;
+}
+
+.cs-card:hover .cs-card-visual img {
+  transform: translateY(-2px) scale(1.01);
+}
+
+.cs-visual-fitlyn {
+  align-self: end;
+  transform: translateY(0.9rem);
+}
+
+.cs-card .case-study-tags {
+  margin-top: 0.55rem;
+}
+
+.cs-card .case-study-tags span {
+  color: rgba(220, 230, 241, 0.88);
+  border: 1px solid rgba(91, 122, 162, 0.4);
+  background: rgba(10, 23, 39, 0.72);
+  font-size: 0.765rem;
+  padding: 0.28rem 0.62rem;
+}
+
 @media (max-width: 980px) {
   .hero-grid {
     grid-template-columns: 1fr;
@@ -1480,6 +1667,19 @@ h3 {
   .final-cta-actions {
     grid-template-columns: 1fr 1fr;
   }
+
+  .cs-card,
+  .cs-card-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-card-reverse .cs-card-visual {
+    order: -1;
+  }
+
+  .cs-visual-fitlyn {
+    transform: translateY(0.6rem);
+  }
 }
 
 @media (max-width: 760px) {
@@ -1512,6 +1712,25 @@ h3 {
   .fitlyn-case-visual {
     width: min(100%, 980px);
     transform: translateY(0.6rem);
+  }
+
+  .cs-card {
+    padding: 1.75rem 1.5rem;
+    border-radius: 16px;
+  }
+
+  .cs-metrics {
+    gap: 0.75rem;
+    padding: 1rem 0;
+    margin: 1.1rem 0;
+  }
+
+  .cs-metric-value {
+    font-size: clamp(1.25rem, 5.5vw, 1.6rem);
+  }
+
+  .cs-visual-fitlyn {
+    transform: translateY(0.4rem);
   }
 
   .menu-btn {

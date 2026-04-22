@@ -49,6 +49,28 @@
     </script>
   </head>
   <body>
+    <style>
+      .cs-cards{display:grid;gap:1.25rem}
+      .cs-card{background:rgba(255,255,255,.03);border:1px solid rgba(170,194,228,.12);border-radius:20px;padding:clamp(2rem,3.5vw,2.75rem) clamp(2rem,3.5vw,3rem);display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(1.5rem,3vw,2.5rem);align-items:center;overflow:hidden;position:relative}
+      .cs-card-reverse{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr)}
+      .cs-card-header{display:flex;align-items:center;gap:.75rem;margin-bottom:.8rem}
+      .cs-num{font-size:.8125rem;font-weight:700;color:rgba(215,225,238,.38);font-family:"Inter","Segoe UI",sans-serif}
+      .cs-category{margin:0;color:#f4cd8f;font-size:.6875rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+      .cs-title{margin:0;color:#f5f8fd;font-size:clamp(2rem,3.8vw,3rem);font-weight:700;letter-spacing:-.03em;line-height:1.05}
+      .cs-desc{margin:.875rem 0 0;color:rgba(215,225,238,.62);font-size:1rem;line-height:1.65}
+      .cs-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1.4rem 0;padding:1.25rem 0;border-top:1px solid rgba(170,194,228,.1);border-bottom:1px solid rgba(170,194,228,.1)}
+      .cs-metric{display:flex;flex-direction:column;gap:.22rem}
+      .cs-metric-icon{color:rgba(244,205,143,.72);display:flex;align-items:center;margin-bottom:.35rem}
+      .cs-metric-value{margin:0;font-size:clamp(1.5rem,2.4vw,2rem);font-weight:700;color:#f5f8fd;letter-spacing:-.02em;line-height:1}
+      .cs-metric-label{margin:0;font-size:.625rem;font-weight:600;color:rgba(215,225,238,.44);text-transform:uppercase;letter-spacing:.09em;line-height:1.35}
+      .cs-btn{display:inline-flex;align-items:center;gap:.45rem;margin-top:1.35rem;padding:.76rem 1.45rem;background:#f4cd8f;color:#0f1115;border-radius:10px;text-decoration:none;font-size:.9375rem;font-weight:700;letter-spacing:-.01em;transition:background 200ms ease,transform 220ms ease,box-shadow 220ms ease;box-shadow:0 8px 24px rgba(244,205,143,.18)}
+      .cs-btn:hover{background:#f0bf6a;transform:translateY(-2px);box-shadow:0 12px 32px rgba(244,205,143,.28)}
+      .cs-card-visual{margin:0;width:100%;align-self:center}
+      .cs-card-visual img{width:100%;height:auto;object-fit:contain;filter:drop-shadow(0 22px 44px rgba(0,0,0,.28));display:block}
+      .cs-visual-fitlyn{align-self:end;transform:translateY(1.25rem)}
+      @media(max-width:980px){.cs-card,.cs-card-reverse{grid-template-columns:1fr}.cs-card-reverse .cs-card-visual{order:-1}.cs-visual-fitlyn{transform:translateY(.6rem)}}
+      @media(max-width:760px){.cs-card{padding:1.75rem 1.5rem;border-radius:16px}.cs-metrics{gap:.75rem;padding:1rem 0;margin:1.1rem 0}.cs-metric-value{font-size:clamp(1.25rem,5.5vw,1.6rem)}.cs-visual-fitlyn{transform:translateY(.4rem)}}
+    </style>
     <header class="nav-wrap" id="top">
       <div class="container nav-inner">
         <a href="#home" class="brand" aria-label="Go to homepage">Apramit.</a>
@@ -151,46 +173,91 @@
           <div class="section-head reveal">
             <p class="eyebrow">Featured Case Studies</p>
           </div>
-          <div class="case-study-list">
-            <article class="case-study-row fitlyn-case-row reveal">
-              <div class="case-study-copy">
-                <p class="case-study-category">Gym ERP Case Study</p>
-                <h3>Fitlyn</h3>
-                <p class="case-study-description">
-                  How I designed an action-first platform to simplify dues, renewals,
-                  communication, and reporting â€” using real user insights and AI-assisted workflows.
-                </p>
+          <div class="cs-cards">
+            <article class="cs-card reveal">
+              <div class="cs-card-copy">
+                <div class="cs-card-header">
+                  <span class="cs-num">01</span>
+                  <p class="cs-category">Gym ERP Case Study</p>
+                </div>
+                <h3 class="cs-title">Fitlyn</h3>
+                <p class="cs-desc">How I designed an action-first platform to simplify dues, renewals, communication, and reporting — using real user insights and AI-assisted workflows.</p>
+                <div class="cs-metrics">
+                  <div class="cs-metric">
+                    <div class="cs-metric-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <p class="cs-metric-value">40%</p>
+                    <p class="cs-metric-label">Less Manual Work</p>
+                  </div>
+                  <div class="cs-metric">
+                    <div class="cs-metric-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                    </div>
+                    <p class="cs-metric-value">25%</p>
+                    <p class="cs-metric-label">Increase in Renewals</p>
+                  </div>
+                  <div class="cs-metric">
+                    <div class="cs-metric-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <p class="cs-metric-value">60%</p>
+                    <p class="cs-metric-label">Faster Reporting</p>
+                  </div>
+                </div>
                 <div class="case-study-tags">
                   <span>B2B SaaS</span>
                   <span>Product UX</span>
                   <span>AI Workflows</span>
                 </div>
-                <a href="case-study/fitlyn/" class="case-study-link">View Case Study <span aria-hidden="true">&rarr;</span></a>
+                <a href="case-study/fitlyn/" class="cs-btn">View Case Study <span aria-hidden="true">→</span></a>
               </div>
-              <figure class="case-study-visual fitlyn-case-visual">
+              <figure class="cs-card-visual cs-visual-fitlyn">
                 <img src="assets/fitlyn/desktop-mock.png" alt="Fitlyn desktop product mockup" loading="lazy" />
               </figure>
             </article>
 
-            <article class="case-study-row case-study-row-reverse tradeup-case-row reveal">
-              <div class="case-study-copy">
-                <p class="case-study-category">Fintech Product Case Study</p>
-                <h3>Trade Up</h3>
-                <p class="case-study-description">
-                  How I designed an action-driven mobile trading experience to simplify onboarding,
-                  portfolio visibility, and decision-making â€” using user behavior insights and
-                  UX-led product structuring.
-                </p>
+            <article class="cs-card cs-card-reverse reveal">
+              <figure class="cs-card-visual">
+                <img src="assets/tradeup-case/hero-trade-desk.webp" alt="Trade Up product mockup" loading="lazy" />
+              </figure>
+              <div class="cs-card-copy">
+                <div class="cs-card-header">
+                  <span class="cs-num">02</span>
+                  <p class="cs-category">Fintech Product Case Study</p>
+                </div>
+                <h3 class="cs-title">Trade Up</h3>
+                <p class="cs-desc">How I designed an action-driven mobile trading experience to simplify onboarding, portfolio visibility, and decision-making — using user behavior insights and UX-led product structuring.</p>
+                <div class="cs-metrics">
+                  <div class="cs-metric">
+                    <div class="cs-metric-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                    </div>
+                    <p class="cs-metric-value">1M+</p>
+                    <p class="cs-metric-label">App Downloads</p>
+                  </div>
+                  <div class="cs-metric">
+                    <div class="cs-metric-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="cs-metric-value">4.2/5</p>
+                    <p class="cs-metric-label">Play Store Rating</p>
+                  </div>
+                  <div class="cs-metric">
+                    <div class="cs-metric-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                    </div>
+                    <p class="cs-metric-value">35%</p>
+                    <p class="cs-metric-label">Faster Onboarding</p>
+                  </div>
+                </div>
                 <div class="case-study-tags">
                   <span>Fintech</span>
                   <span>Mobile Product</span>
                   <span>UX Strategy</span>
                 </div>
-                <a href="tradeup-case-study.html" class="case-study-link">View Case Study <span aria-hidden="true">&rarr;</span></a>
+                <a href="tradeup-case-study.html" class="cs-btn">View Case Study <span aria-hidden="true">→</span></a>
               </div>
-              <figure class="case-study-visual">
-                <img src="assets/tradeup-case/hero-trade-desk.webp" alt="Trade Up product mockup" loading="lazy" />
-              </figure>
             </article>
           </div>
         </div>
@@ -421,4 +488,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
