@@ -1258,6 +1258,118 @@ h3 {
   font-weight: 500;
 }
 
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.credential-card {
+  grid-column: span 4;
+  background: var(--surface);
+  border: 1px solid rgba(216, 221, 216, 0.86);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(16, 18, 23, 0.06);
+  padding: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.credential-card:nth-child(n + 4) {
+  grid-column: span 3;
+}
+
+.credential-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(16, 18, 23, 0.1);
+}
+
+.credential-icon {
+  width: 72px;
+  height: 72px;
+  min-width: 72px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  border: 1px solid rgba(16, 18, 23, 0.08);
+}
+
+.credential-logo {
+  width: 78%;
+  height: 78%;
+  object-fit: contain;
+}
+
+.icon-green {
+  background: #e7f4eb;
+  color: #0f8a44;
+}
+
+.icon-blue {
+  background: #e7efff;
+  color: #2352c8;
+}
+
+.icon-cyan {
+  background: #e7f7f6;
+  color: #0a8d83;
+}
+
+.icon-indigo {
+  background: #ecebff;
+  color: #4d47d8;
+}
+
+.icon-amber {
+  background: #fff3de;
+  color: #bf8400;
+}
+
+.icon-purple {
+  background: #f2eaff;
+  color: #7a3dd9;
+}
+
+.icon-teal {
+  background: #e6f4f3;
+  color: #157f77;
+}
+
+.credential-type {
+  margin: 0 0 0.18rem;
+  color: #758095;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.credential-title {
+  margin: 0;
+  font-size: clamp(1.2rem, 1.4vw, 1.4rem);
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+}
+
+.credential-meta {
+  margin: 0.46rem 0 0;
+  color: #b07f19;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.credentials-note {
+  margin: 1.3rem 0 0;
+  color: #606c7f;
+  text-align: center;
+  font-size: 1.05rem;
+}
+
 .recruiter-toolkit {
   border-top: 1px solid rgba(216, 221, 216, 0.45);
   border-bottom: 1px solid rgba(216, 221, 216, 0.45);
@@ -1639,6 +1751,14 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .credentials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .credential-card {
+    grid-column: auto;
+  }
+
   .final-cta-card {
     grid-template-columns: 1fr;
   }
@@ -1791,6 +1911,25 @@ h3 {
   .toolkit-grid,
   .testimonial-track {
     grid-template-columns: 1fr;
+  }
+
+  .credentials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .credential-card {
+    padding: 1rem;
+  }
+
+  .credential-icon {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    border-radius: 14px;
+  }
+
+  .credential-meta {
+    font-size: 0.95rem;
   }
 
   .proof-strip-grid {

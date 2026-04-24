@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile Checkout UX Case Study | Apramit Pradhan</title>
+    <meta
+      name="description"
+      content="Ecommerce mobile checkout UX case study showing how abandonment was reduced by simplifying checkout, improving trust, enabling guest checkout, and reducing friction."
+    />
+    <meta
+      name="keywords"
+      content="mobile checkout UX case study, ecommerce UX, conversion optimization, cart abandonment, product designer portfolio"
+    />
+    <meta name="author" content="Apramit Pradhan" />
+    <meta name="theme-color" content="#07111d" />
+    <meta property="og:title" content="Designing a High-Converting Mobile Checkout Experience" />
+    <meta
+      property="og:description"
+      content="How mobile cart abandonment was reduced by simplifying checkout, building trust, and removing friction."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://apramit.in/case-study/mobile-checkout" />
+    <meta property="og:image" content="https://apramit.in/assets/checkout-case/hero-checkout-illustration.png" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./mobile-checkout-case-study.css" />
+  </head>
+  <body>
+    <header class="top-nav" id="top">
+      <div class="container nav-inner">
+        <a href="../../index.html" class="brand" aria-label="Back to portfolio home">Apramit.</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle page menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="top-links" id="topLinks" aria-label="Case study actions">
+          <a href="../../index.html#case-studies">More Case Studies</a>
+          <a href="../../assets/Apramit-Pradhan-Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+          <a href="../../index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <nav class="case-nav" aria-label="Case study section navigation">
+      <div class="container case-nav-wrap" id="caseNav">
+        <a href="#hero">Hero</a>
+        <a href="#problem">Problem</a>
+        <a href="#goals">Goal & Scope</a>
+        <a href="#research">Research</a>
+        <a href="#strategy">Strategy</a>
+        <a href="#showcase">Screens</a>
+        <a href="#impact">Impact</a>
+        <a href="#takeaways">Takeaways</a>
+        <a href="#conclusion">Conclusion</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="section hero" id="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-copy reveal">
+              <p class="hero-kicker">Ecommerce UX Case Study</p>
+              <h1>Designing a High-Converting Mobile Checkout Experience</h1>
+              <p class="hero-subtitle">
+                How I reduced mobile cart abandonment by simplifying checkout, building trust, and
+                removing friction.
+              </p>
+              <div class="chip-row">
+                <span>Ecommerce</span>
+                <span>Conversion Optimization</span>
+                <span>Mobile UX</span>
+              </div>
+            </div>
+            <figure class="hero-visual reveal">
+              <img
+                src="../../assets/checkout-case/hero-checkout-illustration.png"
+                alt="Mobile payment illustration used as checkout visual"
+                loading="eager"
+                decoding="async"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="problem">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Problem</p>
+            <h2>High mobile traffic but weak checkout conversion was driving revenue leakage</h2>
+          </div>
+
+          <div class="problem-stats reveal">
+            <article class="stat-card">
+              <p class="stat-value">~70%+</p>
+              <p class="stat-label">Mobile traffic share</p>
+            </article>
+            <article class="stat-card">
+              <p class="stat-value">~2.9%</p>
+              <p class="stat-label">Mobile conversion rate</p>
+            </article>
+            <article class="stat-card">
+              <p class="stat-value">~70%</p>
+              <p class="stat-label">Cart abandonment at checkout</p>
+            </article>
+          </div>
+
+          <article class="highlight-statement reveal">
+            <p>
+              The business was losing revenue because mobile checkout abandonment (~70%) and low
+              mobile conversion (~2.9%) were significantly underperforming expected benchmarks.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="goals">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Goal & Scope</p>
+            <h2>Tight scope on checkout flow to improve conversion-critical behavior</h2>
+          </div>
+          <div class="goal-grid">
+            <article class="goal-card reveal">
+              <h3>Primary Goal</h3>
+              <ul>
+                <li>Reduce mobile cart abandonment.</li>
+              </ul>
+            </article>
+            <article class="goal-card reveal">
+              <h3>Secondary Goals</h3>
+              <ul>
+                <li>Increase checkout completion rate.</li>
+                <li>Reduce payment error recovery drop-offs.</li>
+                <li>Improve accessibility compliance to WCAG AA.</li>
+              </ul>
+            </article>
+            <article class="goal-card reveal">
+              <h3>Scope</h3>
+              <ul>
+                <li>Focused only on checkout flow optimization.</li>
+                <li>Product page -> Cart -> One-page mobile checkout.</li>
+                <li>Traffic acquisition and discovery were out of scope.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="research">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Research & Insights</p>
+            <h2>Competitive pattern audit + secondary research from Baymard</h2>
+          </div>
+
+          <div class="research-split">
+            <article class="research-panel reveal">
+              <h3>Competitive Insights</h3>
+              <p class="panel-sub">Reference review: Amazon, Shopify, Stripe</p>
+              <div class="insight-stack">
+                <div class="insight-item">
+                  <h4>No forced account creation</h4>
+                  <p>Move account creation after payment confirmation.</p>
+                </div>
+                <div class="insight-item">
+                  <h4>Progressive disclosure</h4>
+                  <p>Information -> Shipping -> Payment to reduce perceived length.</p>
+                </div>
+                <div class="insight-item">
+                  <h4>Trust near CTA</h4>
+                  <p>Lock icon and secure microcopy directly under Pay Now action.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="research-panel reveal">
+              <h3>Secondary Research (Baymard)</h3>
+              <p class="panel-sub">Top checkout abandonment reasons</p>
+              <div class="reason-grid">
+                <article>
+                  <strong>19%</strong>
+                  <span>Lack of trust in entering card details</span>
+                </article>
+                <article>
+                  <strong>19%</strong>
+                  <span>Forced account creation</span>
+                </article>
+                <article>
+                  <strong>18%</strong>
+                  <span>Checkout too long or complex</span>
+                </article>
+              </div>
+              <div class="chart-grid">
+                <figure class="inline-chart">
+                  <img
+                    src="../../assets/checkout-case/baymard-reasons-chart.png"
+                    alt="Baymard checkout abandonment reasons chart"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+                <figure class="inline-chart">
+                  <img
+                    src="../../assets/checkout-case/trust-badge-study-chart.png"
+                    alt="Trust badge perception comparison from Baymard"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="strategy">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Design Strategy</p>
+            <h2>Three friction drivers mapped to concrete UX decisions</h2>
+          </div>
+
+          <div class="strategy-stack">
+            <article class="strategy-card reveal">
+              <div class="strategy-copy">
+                <p class="strategy-index">Block 1 - Trust</p>
+                <h3>Users hesitated while entering payment details</h3>
+                <div class="problem-solution">
+                  <div>
+                    <h4>Problem</h4>
+                    <p>Trust anxiety reduced willingness to complete payment.</p>
+                  </div>
+                  <div>
+                    <h4>Solution</h4>
+                    <ul>
+                      <li>Add visible trust signals close to payment action.</li>
+                      <li>Add "Secure Checkout" microcopy near CTA.</li>
+                      <li>Use padlock icon directly under payment action.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <figure class="strategy-visual">
+                <img
+                  src="../../assets/checkout-case/screen-payment-secure.png"
+                  alt="Payment UI with secure checkout microcopy and padlock"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+            </article>
+
+            <article class="strategy-card strategy-reverse reveal">
+              <figure class="strategy-visual split-visual">
+                <img
+                  src="../../assets/checkout-case/screen-guest-checkout.png"
+                  alt="Before view of account-first checkout options"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  src="../../assets/checkout-case/screen-account-after-purchase.png"
+                  alt="After view with account creation after purchase"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <div class="strategy-copy">
+                <p class="strategy-index">Block 2 - Account Creation</p>
+                <h3>Forced sign-up created avoidable drop-offs</h3>
+                <div class="problem-solution">
+                  <div>
+                    <h4>Problem</h4>
+                    <p>Users resisted registration during checkout.</p>
+                  </div>
+                  <div>
+                    <h4>Solution</h4>
+                    <ul>
+                      <li>Enable guest checkout as default path.</li>
+                      <li>Move account creation after purchase completion.</li>
+                      <li>Position sign-up with clear value benefits.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="strategy-card reveal">
+              <div class="strategy-copy">
+                <p class="strategy-index">Block 3 - Complex Checkout</p>
+                <h3>Long forms increased friction and error risk</h3>
+                <div class="problem-solution">
+                  <div>
+                    <h4>Problem</h4>
+                    <p>Too many visible fields increased cognitive load and form errors.</p>
+                  </div>
+                  <div>
+                    <h4>Solution</h4>
+                    <ul>
+                      <li>Use progressive disclosure with accordion sections.</li>
+                      <li>Remove nonessential fields.</li>
+                      <li>Add real-time validation and browser autofill.</li>
+                      <li>Support third-party wallets for faster completion.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <figure class="strategy-visual">
+                <img
+                  src="../../assets/checkout-case/screen-accordion-checkout.png"
+                  alt="Accordion checkout form with progressive disclosure"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="showcase">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Final Design Showcase</p>
+            <h2>Optimized checkout flow screens</h2>
+          </div>
+
+          <div class="showcase reveal">
+            <div class="showcase-frame" data-carousel>
+              <button class="showcase-arrow prev" type="button" data-prev aria-label="Previous screen">
+                <span aria-hidden="true">&larr;</span>
+              </button>
+
+              <div class="showcase-track" data-track>
+                <figure class="showcase-slide is-active">
+                  <div class="showcase-media">
+                    <img
+                      src="../../assets/checkout-case/screen-checkout-overview.png"
+                      alt="Checkout overview screen with order summary and checkout CTA"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <figcaption>Checkout overview with clear order summary and total visibility.</figcaption>
+                </figure>
+                <figure class="showcase-slide">
+                  <div class="showcase-media">
+                    <img
+                      src="../../assets/checkout-case/screen-payment-secure.png"
+                      alt="Payment screen with secure microcopy and lock indicator"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <figcaption>Payment screen with trust microcopy and secure indicator placement.</figcaption>
+                </figure>
+                <figure class="showcase-slide">
+                  <div class="showcase-media">
+                    <img
+                      src="../../assets/checkout-case/screen-guest-checkout.png"
+                      alt="Guest checkout option alongside sign-in route"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <figcaption>Guest checkout path removes forced registration friction.</figcaption>
+                </figure>
+                <figure class="showcase-slide">
+                  <div class="showcase-media">
+                    <img
+                      src="../../assets/checkout-case/screen-accordion-checkout.png"
+                      alt="Accordion style checkout form with staged sections"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <figcaption>Accordion layout reduces perceived form length and cognitive load.</figcaption>
+                </figure>
+                <figure class="showcase-slide">
+                  <div class="showcase-media">
+                    <img
+                      src="../../assets/checkout-case/screen-express-wallets.png"
+                      alt="Express checkout with third-party wallet options"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <figcaption>Express checkout wallets accelerate payment completion.</figcaption>
+                </figure>
+              </div>
+
+              <button class="showcase-arrow next" type="button" data-next aria-label="Next screen">
+                <span aria-hidden="true">&rarr;</span>
+              </button>
+            </div>
+
+            <div class="showcase-dots" data-dots aria-label="Select checkout screen"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="impact">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Impact</p>
+            <h2>Measured outcome after checkout optimization</h2>
+          </div>
+          <div class="impact-grid reveal">
+            <article class="impact-card">
+              <p class="impact-value">24%</p>
+              <p class="impact-title">Reduced Mobile Cart Abandonment</p>
+              <p class="impact-note">Primary outcome reported in the case study.</p>
+            </article>
+            <article class="impact-card">
+              <p class="impact-value">+Checkout</p>
+              <p class="impact-title">Improved Completion Confidence</p>
+              <p class="impact-note">Trust signals and microcopy reduced hesitation moments.</p>
+            </article>
+            <article class="impact-card">
+              <p class="impact-value">Faster</p>
+              <p class="impact-title">Reduced Checkout Time</p>
+              <p class="impact-note">Progressive disclosure, validation, autofill, and wallets removed friction.</p>
+            </article>
+            <article class="impact-card">
+              <p class="impact-value">WCAG AA</p>
+              <p class="impact-title">Accessibility-Driven Scope</p>
+              <p class="impact-note">Checkout components were improved with accessibility compliance in mind.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="takeaways">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Key Takeaways</p>
+            <h2>What this case reinforced</h2>
+          </div>
+          <ul class="takeaway-list reveal">
+            <li>Checkout issues are UX problems, not traffic problems.</li>
+            <li>Trust is emotional and visual, not only technical.</li>
+            <li>Guest checkout improves conversion over forced registration.</li>
+            <li>Progressive disclosure reduces form friction without reducing required data.</li>
+            <li>Microcopy at hesitation points directly impacts revenue behavior.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="conclusion">
+        <div class="container">
+          <article class="conclusion-card reveal">
+            <p class="eyebrow">Conclusion</p>
+            <h2>Conversion improves when you remove friction, not when you add features.</h2>
+            <p>
+              When most users arrive on mobile, each forced login, unclear trust cue, and extra
+              field silently taxes revenue. In this case study, meaningful improvement came from
+              making checkout feel safer, shorter, and more respectful of user time.
+            </p>
+            <div class="cta-row">
+              <a href="../../index.html#contact" class="btn btn-primary">Discuss Product Role Fit</a>
+              <a href="../../index.html#case-studies" class="btn btn-secondary">Back to Case Studies</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Apramit Pradhan | Mobile Checkout UX Case Study</p>
+      </div>
+    </footer>
+
+    <script type="module" src="./mobile-checkout-case-study.js"></script>
+  </body>
+</html>

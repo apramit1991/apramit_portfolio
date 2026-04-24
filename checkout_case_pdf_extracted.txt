@@ -1,0 +1,172 @@
+
+
+===== PAGE 1 =====
+
+Bootcamp
+How I Reduced Mobile Cart
+Abandonment by 24% in my UI/UX
+Case Study
+Obaapa Ama Ampaben-Kyereme Follow 5 min read · Jan 13, 2026
+13 1
+Despite mobile accounting for ~70%+ of total traffic, mobile conversion
+rates remain significantly lower (~2.9%) compared to desktop (~3.2%+).
+Open in app Sign up Sign in
+Search Write
+
+
+===== PAGE 2 =====
+
+Business illustrations Credit: Storyset
+My Problem Statement
+The business is losing revenue because mobile checkout abandonment
+(~70%) and low mobile conversion (~2.9%) significantly underperform
+benchmarks.
+My Goal Statement
+
+
+===== PAGE 3 =====
+
+Reduce mobile cart abandonment by optimizing the checkout experience.
+Secondary goals included increasing mobile checkout completion rate,
+lowering payment error recovery drop off, and improving accessibility
+compliance to WCAG AA across all checkout components.
+The Scope
+To solve this problem, the scope had to be narrowed to the checkout flow.
+Traffic acquisition and product discovery was working but even though users
+were successfully reaching product pages, revenue was being lost at
+checkout.
+The project focuses on optimizing the core mobile purchase funnel: Product
+page →  Cart →  One-page mobile checkout.
+Competitive Analysis Using Amazon, Shopify, and Stripe
+Key takeaways:
+Never force account creation. Place Create Account after payment
+confirmation on the success screen.
+Do not show all fields at once. Use a progressive disclosure pattern such
+as Information then Shipping then Payment to make the page feel
+shorter.
+Place a lock icon or Secure Checkout text directly under the Pay Now
+button. This microcopy improves conversion by addressing trust anxiety.
+Secondary Research and Comparative Analysis
+
+===== PAGE 4 =====
+
+According to secondary research from Baymard Institute cart abandonment
+statistics for 2025 and comparative analysis, the three leading causes of
+checkout abandonment are:
+1. Lack of trust in providing credit card information at 19 percent.
+2. Forced account creation at 19 percent
+3. Checkout being too long or complex at 18 percent.
+Image of stat from Reasons for Abandoning Online Purchases at Checkout. Credit: Baymard
+
+
+===== PAGE 5 =====
+
+How I addressed each abandonment driver in my case study.
+1. Lack of trust in providing credit card information at 19 percent
+I used trust signals and secure payment elements to increase perceived and
+actual security.
+This aligns with PCI Security Standards Council requirements for data
+integrity and confidentiality, including the use of tokenized payment fields
+such as Stripe Elements and visible security indicators near the payment
+form.
+Get Obaapa Am a Am paben-Kyerem e’s stories in your inbox
+Join Medium for free to get updates from this writer.
+Enter your email Subscribe
+Remember me for faster sign in
+According to Baymard Institute research in 2023, users respond differently
+to different types of security indicators.
+SSL seals are issued by certificate authorities such as Norton, Thawte,
+and Trustwave. These indicate that the communication between the
+browser and the site is encrypted using SSL or TLS.
+Trust seals typically indicate third party verification of the business or
+website, such as Google or TRUSTe.
+Baymard has found that most users respond more strongly to recognizable trust
+brands even though SSL technically provides the real security. Perception of safety
+is driven more by the logo than by the protocol behind the scenes.
+
+===== PAGE 6 =====
+
+Image of stat from “Which badge gives you the best sense of trust when paying online?” study. Credit:
+Baymard
+I therefore used a neutral padlock icon with Secure Checkout microcopy.
+While it is not a third party brand, it communicates safety at the exact
+moment users hesitate, which is directly under the payment action.
+
+
+===== PAGE 7 =====
+
+A screenshot of the Order Summary at checkout with Secure Checkout Guaranteed as microcopy from case
+study.
+
+===== PAGE 8 =====
+
+A screenshot of the card payment form with secure microcopy and a padlock icon in the form from case study.
+2. Forced account creation at 19 percent
+Users resist creating accounts during checkout because they do not perceive
+immediate value. It requires sharing personal information, remembering
+new credentials, and committing to a relationship they did not ask for.
+Instead of forcing registration, I allowed guest checkout and positioned
+account creation as a benefit. The microcopy explained value such as faster
+reorders, order tracking, and access to offers.
+
+===== PAGE 9 =====
+
+A screenshot of the sign in option along with a caption of benefits of signing in from case study.
+When users chose to create an account, you reduce friction by collecting
+only name and password initially. Additional data such as saved payment
+methods was deferred until after trust was established
+
+
+===== PAGE 10 =====
+
+Image of simple sign up option and guest checkout from Nike. Credit: ConvertCart
+3. Checkout being too long or complex at 18 percent
+Long forms increase cognitive load and error rates. I used progressive
+disclosure with collapsible sections for Information, Address, and Payment
+so the checkout felt shorter even when the total fields remained the same.
+I removed nonessential fields and implemented real time validation to
+prevent submission errors that would force users to re enter data.
+
+===== PAGE 11 =====
+
+A screenshot of the accordion type of form filling from case study.
+I also supported browser autofill and third party wallets. This not only
+reduced friction but also addressed another major abandonment driver
+which is limited payment options.
+
+
+===== PAGE 12 =====
+
+A screenshot of third-party payment option from case study.
+Key Takeaways
+Mobile conversion problems are checkout problems, not traffic problems.
+Trust is a visual and emotional signal, not just a technical one.
+Guest checkout consistently outperforms forced registration.
+Progressive disclosure increases completion without reducing data
+quality.
+Microcopy placed at the point of hesitation directly impacts revenue.
+Conclusion
+Mobile conversion is rarely fixed by more marketing. It is fixed by removing
+the small moments of doubt that compound into abandonment.
+In this case study, the biggest gains came from three changes that required
+no new traffic, no discounts, and no feature bloat. We made the checkout
+feel safer, shorter, and more respectful of the user’s time.
+
+
+===== PAGE 13 =====
+
+When seventy percent of your users arrive on a phone, every unnecessary
+field, every forced login, and every missing trust signal quietly taxes
+revenue. Optimizing mobile checkout should be your growth strategy.
+If you are losing money on mobile, the answer is almost never at the top of
+the funnel. It’s waiting at the Pay Now button.
+Published in Bootcamp
+109K followers · Last published 2 hours ago
+From idea to product, one lesson at a time. To submit your story:
+https://tinyurl.com/bootspub1
+Follow
+Written by Obaapa Ama Ampaben-Kyereme
+3 followers · 12 following
+Writing about how to design products that survive the real world.
+Follow
+UX Design Conversion Optimization Ecommerce Mobile Money
