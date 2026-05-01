@@ -26,7 +26,7 @@ export default defineConfig({
         main: path.resolve(__dirname, "index.html"),
         tradeup: path.resolve(__dirname, "tradeup-case-study.html"),
         fitlyn: path.resolve(__dirname, "case-study/fitlyn/index.html"),
-        mobileCheckout: path.resolve(__dirname, "case-study/mobile-checkout/index.html"),
+        logile: path.resolve(__dirname, "case-study/logile/index.html"),
       },
     },
   },

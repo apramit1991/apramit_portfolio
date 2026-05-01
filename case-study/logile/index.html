@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logile Workforce AI Case Study | Apramit Pradhan</title>
+    <meta
+      name="description"
+      content="AI workforce UX case study showing how shift changes can become explainable, AI-assisted decisions across coverage, cost, compliance, payroll, and fairness."
+    />
+    <meta
+      name="keywords"
+      content="Logile case study, AI product design portfolio, workforce management UX, retail scheduling UX, enterprise SaaS UX, Apramit Pradhan"
+    />
+    <meta name="author" content="Apramit Pradhan" />
+    <meta name="theme-color" content="#07111d" />
+    <meta property="og:title" content="Designing AI-Assisted Shift Change Management for Retail Stores" />
+    <meta
+      property="og:description"
+      content="How shift changes were redesigned from request processing into explainable, AI-assisted workforce decisions."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://apramit.in/case-study/logile" />
+    <meta property="og:image" content="https://apramit.in/assets/case-qms.svg" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./logile-case-study.css" />
+  </head>
+  <body>
+    <header class="top-nav" id="top">
+      <div class="container nav-inner">
+        <a href="../../index.html" class="brand" aria-label="Back to portfolio home">Apramit.</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle page menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="top-links" id="topLinks" aria-label="Case study actions">
+          <a href="../../index.html#case-studies">More Case Studies</a>
+          <a href="../../assets/Apramit-Pradhan-Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+          <a href="../../index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <nav class="case-nav" aria-label="Case study section navigation">
+      <div class="container case-nav-wrap" id="caseNav">
+        <a href="#hero">Hero</a>
+        <a href="#problem">Context</a>
+        <a href="#role">Role</a>
+        <a href="#analysis">Analysis</a>
+        <a href="#direction">Direction</a>
+        <a href="#ai">AI Strategy</a>
+        <a href="#solution">Solution</a>
+        <a href="#impact">Impact</a>
+        <a href="#reflection">Reflection</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="section hero" id="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-copy reveal">
+              <p class="hero-kicker">AI Workforce UX Case Study</p>
+              <h1>Designing AI-Assisted Shift Change Management for Retail Stores</h1>
+              <p class="hero-subtitle">
+                How I redesigned shift changes from request processing into explainable,
+                AI-assisted workforce decisions.
+              </p>
+              <div class="hero-metrics" aria-label="Logile project summary">
+                <article>
+                  <span>Role</span>
+                  <strong>Senior Product Designer</strong>
+                </article>
+                <article>
+                  <span>Timeline</span>
+                  <strong>April 2026</strong>
+                </article>
+                <article>
+                  <span>Project Type</span>
+                  <strong>Take-home / Workforce SaaS</strong>
+                </article>
+                <article>
+                  <span>Tools</span>
+                  <strong>Figma, UX strategy, AI product thinking</strong>
+                </article>
+              </div>
+            </div>
+
+            <figure class="hero-visual reveal" aria-label="AI-assisted workforce dashboard concept">
+              <div class="product-shell">
+                <div class="product-topbar">
+                  <span></span>
+                  <b>Shift Change Triage</b>
+                  <em>AI assist on</em>
+                </div>
+                <div class="kpi-row">
+                  <article>
+                    <span>Coverage</span>
+                    <strong>96%</strong>
+                  </article>
+                  <article>
+                    <span>Payroll Risk</span>
+                    <strong>2</strong>
+                  </article>
+                  <article>
+                    <span>Pending</span>
+                    <strong>14</strong>
+                  </article>
+                </div>
+                <div class="dashboard-grid">
+                  <div class="request-list">
+                    <div class="request-card high">
+                      <small>High risk</small>
+                      <b>Same-day cover request</b>
+                      <p>Coverage drops below SEI target at 5 PM.</p>
+                    </div>
+                    <div class="request-card">
+                      <small>Auto-eligible</small>
+                      <b>Same-role swap</b>
+                      <p>No overtime. Role fit confirmed.</p>
+                    </div>
+                    <div class="request-card medium">
+                      <small>Review</small>
+                      <b>Bid fill request</b>
+                      <p>Seniority rule needs manager confirmation.</p>
+                    </div>
+                  </div>
+                  <div class="ai-panel">
+                    <span class="ai-label">AI recommendation</span>
+                    <h3>Approve Jesse Kim</h3>
+                    <p>Best role fit, no overtime, keeps coverage above target.</p>
+                    <div class="score-bars">
+                      <i style="--w: 92%"></i>
+                      <i style="--w: 78%"></i>
+                      <i style="--w: 88%"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="problem">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Problem Context</p>
+            <h2>Shift changes sit at the intersection of coverage, cost, compliance, and fairness</h2>
+            <p>
+              In retail workforce management, a shift change is not just a request. It affects store
+              coverage, labor cost, payroll accuracy, regional rules, and the trust associates place
+              in the scheduling system.
+            </p>
+          </div>
+
+          <div class="context-grid">
+            <article class="context-card reveal">
+              <span>Users</span>
+              <h3>Store managers</h3>
+              <p>Need to make fast decisions while balancing floor coverage, payroll risk, and compliance.</p>
+            </article>
+            <article class="context-card reveal">
+              <span>Users</span>
+              <h3>Hourly associates</h3>
+              <p>Need transparency, fair outcomes, and clear status when they request a shift change.</p>
+            </article>
+            <article class="context-card reveal">
+              <span>Business</span>
+              <h3>HR and payroll</h3>
+              <p>Need clean traceability so corrections do not become manual cleanup at period close.</p>
+            </article>
+          </div>
+
+          <article class="thesis-card reveal">
+            <p>
+              The product opportunity was to make the right decision obvious, defensible, and fast:
+              show the decision context, recommend the best path, and record the rationale automatically.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="role">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">My Role & Approach</p>
+            <h2>I treated the assignment as a product strategy problem, not only a UI redesign</h2>
+          </div>
+
+          <div class="approach-grid">
+            <article class="approach-card reveal">
+              <span>01</span>
+              <h3>Mapped the workflow</h3>
+              <p>Request, review, approve, execute, and reconcile were mapped across associate, manager, and payroll touchpoints.</p>
+            </article>
+            <article class="approach-card reveal">
+              <span>02</span>
+              <h3>Prioritized product risks</h3>
+              <p>I focused on trust collapse, compliance blind spots, and manager cognitive overload as the highest-risk failures.</p>
+            </article>
+            <article class="approach-card reveal">
+              <span>03</span>
+              <h3>Defined automation boundaries</h3>
+              <p>Routine, reversible requests could be automated. Uncertain or high-liability decisions needed human review or escalation.</p>
+            </article>
+            <article class="approach-card reveal">
+              <span>04</span>
+              <h3>Connected AI to outcomes</h3>
+              <p>AI was framed around measurable workflow improvements: faster decisions, fewer payroll errors, and smarter coverage recovery.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="analysis">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">UX Analysis</p>
+            <h2>The same system problem appeared differently for each stakeholder</h2>
+          </div>
+
+          <div class="journey-map reveal" aria-label="Shift change journey map">
+            <div class="journey-step">
+              <span>01</span>
+              <h3>Request</h3>
+              <p>Associate submits a swap but has limited visibility into status or likely outcome.</p>
+            </div>
+            <div class="journey-step">
+              <span>02</span>
+              <h3>Review</h3>
+              <p>Manager sees a queue but lacks inline coverage, cost, and compliance context.</p>
+            </div>
+            <div class="journey-step">
+              <span>03</span>
+              <h3>Approve</h3>
+              <p>Decision happens without a clear rationale, making escalations hard to defend later.</p>
+            </div>
+            <div class="journey-step">
+              <span>04</span>
+              <h3>Execute</h3>
+              <p>Schedule updates need to propagate cleanly without creating new payroll exceptions.</p>
+            </div>
+            <div class="journey-step">
+              <span>05</span>
+              <h3>Reconcile</h3>
+              <p>HR and payroll often absorb the cost of missing records through manual cleanup.</p>
+            </div>
+          </div>
+
+          <div class="friction-grid">
+            <article class="friction-card reveal">
+              <h3>Information scarcity</h3>
+              <p>Managers make approval decisions without the payroll impact, coverage change, and compliance status in one place.</p>
+            </article>
+            <article class="friction-card reveal">
+              <h3>Opaque outcomes</h3>
+              <p>Associates get denied without useful explanation, which pushes people toward text messages and offline workarounds.</p>
+            </article>
+            <article class="friction-card reveal">
+              <h3>Weak traceability</h3>
+              <p>Actions happen, but the system does not always preserve a readable record of why the decision was made.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="direction">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Design Direction</p>
+            <h2>A decision-first workflow with risk, context, and accountability built in</h2>
+          </div>
+
+          <div class="direction-layout">
+            <article class="decision-matrix reveal" aria-label="Automation and approval matrix">
+              <div class="matrix-axis y">Decision reversibility</div>
+              <div class="matrix-grid">
+                <div>
+                  <b>Human review</b>
+                  <span>Same-day cover</span>
+                </div>
+                <div>
+                  <b>Auto-approve</b>
+                  <span>Same-role swap</span>
+                </div>
+                <div>
+                  <b>Elevated approval</b>
+                  <span>Payroll lock, union override</span>
+                </div>
+                <div>
+                  <b>Manager confirm</b>
+                  <span>Bid fill, time off in budget</span>
+                </div>
+              </div>
+              <div class="matrix-axis x">Automation confidence</div>
+            </article>
+
+            <div class="direction-list">
+              <article class="direction-card reveal">
+                <h3>Risk-ranked manager inbox</h3>
+                <p>Requests are sorted by urgency and risk instead of arrival time.</p>
+              </article>
+              <article class="direction-card reveal">
+                <h3>Inline decision signals</h3>
+                <p>Coverage, payroll delta, compliance, and availability appear before the approval action.</p>
+              </article>
+              <article class="direction-card reveal">
+                <h3>Explainable audit trail</h3>
+                <p>Every human and system action writes a plain-language record that can be reviewed later.</p>
+              </article>
+              <article class="direction-card reveal">
+                <h3>Alternative paths</h3>
+                <p>Denied requests become ranked alternatives, not dead ends.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section ai-section" id="ai">
+        <div class="container">
+          <div class="section-head ai-head reveal">
+            <p class="eyebrow">AI-Led Product Improvement</p>
+            <h2>AI becomes the system's decision-support layer, not a decorative feature</h2>
+            <p>
+              The strongest product opportunity was to use AI to reduce manual search, detect
+              hidden risk earlier, and help managers act before coverage problems become urgent.
+              The AI recommends, explains, records, and escalates when confidence is low.
+            </p>
+          </div>
+
+          <div class="ai-showcase reveal">
+            <article class="ai-hero-card">
+              <span class="ai-chip">Predictive AI</span>
+              <h3>Ranked-candidate auto-suggester</h3>
+              <p>
+                Instead of forcing managers to hunt through schedules, the system ranks the top
+                replacement options using role fit, availability, overtime headroom, seniority, and
+                coverage impact.
+              </p>
+              <div class="candidate-stack">
+                <div class="candidate recommended">
+                  <b>Jesse Kim</b>
+                  <span>Recommended - 92 match</span>
+                  <i>No overtime, role fit confirmed</i>
+                </div>
+                <div class="candidate">
+                  <b>Derek Moore</b>
+                  <span>78 match</span>
+                  <i>Available, minor coverage tradeoff</i>
+                </div>
+                <div class="candidate">
+                  <b>Priya Shah</b>
+                  <span>74 match</span>
+                  <i>Available, seniority check needed</i>
+                </div>
+              </div>
+            </article>
+
+            <div class="ai-side">
+              <article class="ai-play-card">
+                <span class="ai-chip">Anomaly Detection</span>
+                <h3>Time-punch anomaly flagging</h3>
+                <p>Repeated late starts, early clock-outs, or rounding patterns are flagged before payroll locks.</p>
+              </article>
+              <article class="ai-play-card">
+                <span class="ai-chip">Agentic AI</span>
+                <h3>Predictive coverage-gap alerts</h3>
+                <p>An agent watches the next 72 hours against forecasted demand and proposes fill requests before gaps appear.</p>
+              </article>
+              <article class="ai-play-card">
+                <span class="ai-chip">Explainability</span>
+                <h3>Recommendations with rationale</h3>
+                <p>Each automated action explains why it happened: same role, no overtime, coverage above target.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="solution">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Final Solution</p>
+            <h2>The final experience helps managers decide faster without hiding accountability</h2>
+          </div>
+
+          <div class="solution-grid">
+            <article class="solution-card reveal">
+              <span>Step 1</span>
+              <h3>See what needs attention</h3>
+              <p>The manager opens a risk-scored queue where urgent, high-liability requests rise above routine swaps.</p>
+            </article>
+            <article class="solution-card reveal">
+              <span>Step 2</span>
+              <h3>Understand the decision</h3>
+              <p>The review card brings coverage impact, payroll delta, compliance status, and AI recommendation into one view.</p>
+            </article>
+            <article class="solution-card reveal">
+              <span>Step 3</span>
+              <h3>Approve a defensible action</h3>
+              <p>The manager selects the best path, the schedule updates, and the system writes the rationale automatically.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="impact">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Impact / Value</p>
+            <h2>Success was framed around measurable workflow improvement</h2>
+          </div>
+
+          <div class="impact-grid reveal">
+            <article class="impact-card">
+              <p class="impact-value">40%+</p>
+              <p class="impact-title">Shift changes auto-resolved</p>
+              <p class="impact-note">Routine, compliant requests can move without manager intervention.</p>
+            </article>
+            <article class="impact-card">
+              <p class="impact-value">-25%</p>
+              <p class="impact-title">Payroll error rate</p>
+              <p class="impact-note">Cleaner data capture and audit trails reduce manual correction work.</p>
+            </article>
+            <article class="impact-card">
+              <p class="impact-value">&lt;90s</p>
+              <p class="impact-title">Manager decision time</p>
+              <p class="impact-note">Decision context appears where action happens, not in separate reports.</p>
+            </article>
+            <article class="impact-card">
+              <p class="impact-value">72h</p>
+              <p class="impact-title">Predictive coverage window</p>
+              <p class="impact-note">Managers can approve smart fixes before staffing gaps become urgent.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="reflection">
+        <div class="container">
+          <article class="conclusion-card reveal">
+            <p class="eyebrow">Reflection</p>
+            <h2>This assignment demonstrates product judgment beyond screen design</h2>
+            <p>
+              The case study shows how I think through enterprise UX: understand the operating
+              constraints, define the decision model, design for edge cases, and use AI where it
+              can improve outcomes instead of simply adding novelty.
+            </p>
+            <p>
+              The core lesson is that AI product design has to stay accountable. The system can
+              automate and recommend, but the experience must still explain, escalate, and preserve
+              trust across every stakeholder.
+            </p>
+            <div class="cta-row">
+              <a href="../../index.html#contact" class="btn btn-primary">Discuss Product Role Fit</a>
+              <a href="../../index.html#case-studies" class="btn btn-secondary">Back to Case Studies</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Apramit Pradhan | Logile Workforce AI Case Study</p>
+      </div>
+    </footer>
+
+    <script type="module" src="./logile-case-study.js"></script>
+  </body>
+</html>
