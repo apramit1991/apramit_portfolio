@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      try {
+        var t = localStorage.getItem("theme");
+        document.documentElement.dataset.theme = t === "dark" ? "dark" : "light";
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Apramit Pradhan | AI Product & UI/UX Designer Portfolio</title>
     <meta
       name="description"
-      content="Apramit Pradhan is an AI Product and UI/UX Designer based in Bhubaneswar, India, with 11+ years of experience across enterprise SaaS, fintech, gaming, and digital platforms."
+      content="Apramit Pradhan is an AI Product and UI/UX Designer based in Bhubaneswar, India, with 11+ years of experience across enterprise SaaS, fintech, gaming, and digital platforms. Explore his work through a conversational portfolio."
     />
     <meta
       name="keywords"
       content="AI Product Designer India, UI UX Designer India, Product UX Strategy, Enterprise SaaS UX, Fintech UX, Dashboard UX, Design Systems"
     />
     <meta name="author" content="Apramit Pradhan" />
-    <meta name="theme-color" content="#0f1115" />
+    <meta name="theme-color" content="#ffffff" />
     <meta property="og:title" content="Apramit Pradhan | AI Product & UI/UX Designer Portfolio" />
     <meta
       property="og:description"
-      content="AI Product and UI/UX Designer with 11+ years of experience in enterprise SaaS, fintech, gaming, UX strategy, and scalable product design."
+      content="AI Product and UI/UX Designer with 11+ years of experience in enterprise SaaS, fintech, gaming, UX strategy, and scalable product design. Ask me anything about my work."
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/assets/apramit-head-cutout-v2.webp" />
@@ -26,12 +34,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Dancing+Script:wght@600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Apramit Pradhan",
+        "jobTitle": "Lead Product Designer",
+        "email": "pradhan.apramit@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bhubaneswar",
+          "addressCountry": "India"
+        },
+        "sameAs": ["https://apramit.in/", "https://www.linkedin.com/in/apramit-pradhan/"],
+        "url": "https://apramit.in/"
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/entry-home.jsx"></script>
+    <script type="module" src="/src/entry-chat.jsx"></script>
   </body>
-  </html>
+</html>

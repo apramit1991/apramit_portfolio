@@ -1,0 +1,98 @@
+/* ============================================================
+   Chat page theme tokens — imported ONLY by src/entry-chat.jsx.
+   Default is LIGHT; dark is opt-in via data-theme, set by the
+   inline boot script in index.html before first paint (no FOUC).
+   :root[data-theme] (0,2,0) intentionally out-specifies
+   globals.css :root { color-scheme: dark } (0,1,0) on this page
+   only — other entries never set data-theme and never import this.
+   ============================================================ */
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f6f7f9;
+  --bg-elevated: #ffffff;
+  --bg-hover: #eef1f5;
+  --border-subtle: rgba(11, 22, 38, 0.08);
+  --border-strong: rgba(11, 22, 38, 0.16);
+  --text-primary: #0b1626;
+  --text-secondary: #44506a;
+  --text-muted: #5b6b82;
+  --accent: #f4cd8f;         /* decorative fill only on light — 1.53:1 on white */
+  --accent-strong: #f0bf6a;
+  --accent-ink: #7a5c1a;     /* text-safe gold: 6.23:1 on white */
+  --success: #15803d;
+  --purple: #6553c9;
+  --ring: #b8860b;
+  --bubble-user-bg: #0b1626;
+  --bubble-user-text: #f8fafc;
+  --shadow-card: 0 1px 2px rgba(11, 22, 38, 0.06), 0 8px 24px rgba(11, 22, 38, 0.08);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-primary: #07111f;
+  --bg-secondary: #0b1626;
+  --bg-elevated: #111d2e;
+  --bg-hover: #172335;
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --text-primary: #f8fafc;
+  --text-secondary: #a8b3c5;
+  --text-muted: #8090a8; /* spec's #718096 fails AA on elevated/hover — bumped */
+  --accent: #f4cd8f;
+  --accent-strong: #f0bf6a;
+  --accent-ink: #f4cd8f;
+  --success: #3ddc84;
+  --purple: #9b8cff;
+  --ring: #f4cd8f;
+  --bubble-user-bg: #111d2e;
+  --bubble-user-text: #f8fafc;
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+:root[data-theme] body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* ---- typing indicator ---- */
+@keyframes chat-dot {
+  0%, 60%, 100% { opacity: 0.25; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(-2px); }
+}
+.typing-dot {
+  animation: chat-dot 1.2s infinite ease-in-out;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.15s; }
+.typing-dot:nth-child(3) { animation-delay: 0.3s; }
+
+/* ---- mobile drawer (native <dialog>) ---- */
+dialog.chat-drawer {
+  position: fixed;
+  inset: 0 auto 0 0;
+  height: 100dvh;
+  max-height: none;
+  width: min(320px, 86vw);
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-right: 1px solid var(--border-subtle);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+dialog.chat-drawer::backdrop {
+  background: rgba(7, 17, 31, 0.45);
+}
+
+/* ---- reduced motion: chat entry only ---- */
+@media (prefers-reduced-motion: reduce) {
+  :root[data-theme] *,
+  :root[data-theme] *::before,
+  :root[data-theme] *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
