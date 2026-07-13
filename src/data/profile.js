@@ -1,6 +1,7 @@
 export const profile = {
   name: "Apramit Pradhan",
   monogram: "AP",
+  avatar: "/assets/apramit-head-cutout-v2.webp",
   role: "AI Product Designer",
   title: "Lead Product Designer",
   location: "Bhubaneswar, India",

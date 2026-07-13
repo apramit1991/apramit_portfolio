@@ -12,6 +12,7 @@ import {
 import { profile } from "@/data/profile";
 import { SIDEBAR_PROMPTS } from "@/data/prompts";
 import { cn } from "@/lib/utils";
+import { Avatar } from "./avatar";
 
 const focusRing =
   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-surface";
@@ -28,12 +29,7 @@ export function Sidebar({ onPrompt, onReset, recruiterMode, onRecruiterToggle, d
   return (
     <div className="flex h-full min-h-0 flex-col">
       <div className="flex items-center gap-3 px-5 pb-4 pt-6">
-        <div
-          aria-hidden="true"
-          className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent font-display text-sm font-bold text-[#0b1626]"
-        >
-          {profile.monogram}
-        </div>
+        <Avatar className="h-10 w-10" monogramClass="text-sm" />
         <div>
           <p className="font-display text-[15px] font-semibold leading-tight text-ink-1">
             {profile.name}
@@ -124,7 +120,7 @@ export function Sidebar({ onPrompt, onReset, recruiterMode, onRecruiterToggle, d
         </div>
       </div>
 
-      <div className="flex items-center justify-between gap-2 px-5 py-4">
+      <div className="flex items-center gap-2 px-5 py-4">
         <div className="flex gap-2">
           <a
             aria-label="LinkedIn profile"
@@ -160,15 +156,6 @@ export function Sidebar({ onPrompt, onReset, recruiterMode, onRecruiterToggle, d
             <Download className="h-4 w-4" aria-hidden="true" />
           </a>
         </div>
-        <a
-          href={profile.classicUrl}
-          className={cn(
-            "rounded-lg font-mono text-[11px] text-ink-3 underline-offset-2 transition-colors hover:text-ink-1 hover:underline",
-            focusRing
-          )}
-        >
-          Classic portfolio ↗
-        </a>
       </div>
     </div>
   );

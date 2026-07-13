@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from "motion/react";
 
 import { getProject } from "@/data/projects";
+import { Avatar } from "./avatar";
 import { CaseStudyCard } from "./case-study-card";
 import { GalleryCard } from "./gallery-card";
 import { MetricsRow } from "./metrics-row";
@@ -10,17 +11,6 @@ import {
   ResumeCard,
   TestimonialsCard,
 } from "./info-cards";
-
-export function Monogram() {
-  return (
-    <div
-      aria-hidden="true"
-      className="flex h-8 w-8 shrink-0 select-none items-center justify-center rounded-full bg-accent font-display text-xs font-bold text-[#0b1626]"
-    >
-      AP
-    </div>
-  );
-}
 
 function RichContent({ msg }) {
   switch (msg.type) {
@@ -78,7 +68,7 @@ export function ChatMessage({ msg }) {
 
   return (
     <motion.div {...anim} className="flex gap-3">
-      <Monogram />
+      <Avatar className="h-8 w-8" />
       <div className="min-w-0 flex-1 space-y-3">
         <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-ink-3">
           Apramit AI

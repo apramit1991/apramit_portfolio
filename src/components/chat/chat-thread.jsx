@@ -2,13 +2,14 @@ import { useEffect, useRef } from "react";
 
 import { profile } from "@/data/profile";
 import { PRIMARY_PROMPTS } from "@/data/prompts";
-import { ChatMessage, Monogram } from "./chat-message";
+import { Avatar } from "./avatar";
+import { ChatMessage } from "./chat-message";
 import { PromptChips } from "./suggested-prompts";
 
 function TypingIndicator() {
   return (
     <div className="flex items-center gap-3">
-      <Monogram />
+      <Avatar className="h-8 w-8" />
       <div
         aria-hidden="true"
         className="flex items-center gap-1.5 rounded-2xl border border-line bg-elevated px-4 py-3.5"

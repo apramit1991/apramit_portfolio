@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { MetricsRow } from "./metrics-row";
@@ -35,10 +35,13 @@ export function CaseStudyCard({ project, compact = false }) {
         <MetricsRow metrics={project.metrics} />
         <a
           href={project.url}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`${project.ctaLabel} (opens in a new tab)`}
           className="mt-1 inline-flex min-h-[44px] items-center gap-1.5 rounded-xl bg-accent px-4 py-2.5 text-sm font-semibold text-[#0b1626] transition-colors hover:bg-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-elevated"
         >
           {project.ctaLabel}
-          <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
         </a>
       </div>
       {/* subtle navy/purple gradient stage behind the mockup (per spec) */}
