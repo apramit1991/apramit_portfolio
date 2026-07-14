@@ -12,7 +12,9 @@ export function ConversationRail({ data, chat, prompts, onPrompt }) {
   return (
     <aside
       aria-label="Conversation"
-      className="sticky top-14 hidden h-[calc(100dvh-3.5rem)] w-[300px] shrink-0 flex-col border-r border-line bg-surface-2 lg:flex"
+      // xl: (1280px), not lg: (1024px) — below ~1180-1280px, rail + section
+      // nav + content together leave the reading column under 500px wide
+      className="sticky top-14 hidden h-[calc(100dvh-3.5rem)] w-[300px] shrink-0 flex-col border-r border-line bg-surface-2 xl:flex"
     >
       <div className="flex items-center gap-3 px-5 pb-3 pt-5">
         <Avatar className="h-9 w-9" />

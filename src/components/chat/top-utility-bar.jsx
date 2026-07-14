@@ -13,14 +13,24 @@ export function TopUtilityBar({ theme, onThemeToggle, onMenu }) {
         type="button"
         onClick={onMenu}
         aria-label="Open menu"
-        className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-line text-ink-2 transition-colors hover:bg-surface-hover hover:text-ink-1 md:hidden ${focusRing}`}
+        className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-line text-ink-2 transition-colors hover:bg-surface-hover hover:text-ink-1 lg:hidden ${focusRing}`}
       >
         <Menu className="h-5 w-5" aria-hidden="true" />
       </button>
 
       <p className="flex min-w-0 items-center gap-2 text-[13px] text-ink-2">
         <span className="h-2 w-2 shrink-0 rounded-full bg-success" aria-hidden="true" />
-        <span className="truncate">{profile.availability}</span>
+        {/* full text truncates on real phones (measured: doesn't fit under
+            ~480px) — show a short label there and the full line from sm: up.
+            sr-only text keeps the complete status available to screen readers
+            regardless of viewport. */}
+        <span className="truncate sm:hidden" aria-hidden="true">
+          Open to work
+        </span>
+        <span className="hidden truncate sm:inline" aria-hidden="true">
+          {profile.availability}
+        </span>
+        <span className="sr-only">{profile.availability}</span>
       </p>
 
       <div className="ml-auto flex shrink-0 items-center gap-2">

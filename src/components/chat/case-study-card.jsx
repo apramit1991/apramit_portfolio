@@ -44,7 +44,8 @@ export function CaseStudyCard({ project, compact = false }) {
         </a>
       </div>
       {/* subtle navy/purple gradient stage behind the mockup (per spec) */}
-      <div className="flex items-center justify-center bg-gradient-to-br from-[#eef0f8] to-[#e4e7f2] p-4 max-md:order-first md:p-6 dark:from-[#101b30] dark:to-[#0c1526]">
+      {/* aspect-[4/3] reserves the box before the image decodes to avoid CLS */}
+      <div className="flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-[#eef0f8] to-[#e4e7f2] p-4 max-md:order-first md:p-6 dark:from-[#101b30] dark:to-[#0c1526]">
         <img
           src={encodeURI(project.image)}
           alt={project.imageAlt}

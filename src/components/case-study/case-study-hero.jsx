@@ -48,9 +48,11 @@ export function CaseStudyHero({ data, onSkipToSolution }) {
           </button>
         )}
       </div>
-      {/* soft radial glow behind the hero visual only (per spec) */}
+      {/* soft radial glow behind the hero visual only (per spec).
+          aspect-[4/3] reserves the box before the image decodes, so it
+          doesn't collapse to 0 height and cause a layout shift on load. */}
       <div
-        className="relative flex items-center justify-center rounded-3xl border border-line p-6 lg:p-8"
+        className="relative flex aspect-[4/3] items-center justify-center rounded-3xl border border-line p-6 lg:p-8"
         style={{
           background:
             "radial-gradient(60% 60% at 50% 40%, rgba(244,205,143,0.10), transparent 75%), var(--bg-secondary)",

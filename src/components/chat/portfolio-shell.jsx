@@ -17,7 +17,10 @@ export function PortfolioShell({ renderSidebar, renderTopBar, children }) {
         Skip to conversation
       </a>
 
-      <aside className="hidden w-[300px] shrink-0 border-r border-line bg-surface-2 md:flex md:flex-col">
+      {/* full sidebar only from lg: (1024px) — below that (tablet portrait,
+          768-1023px) it would squeeze content to <500px, so those widths get
+          the on-demand drawer instead, same as mobile */}
+      <aside className="hidden w-[300px] shrink-0 border-r border-line bg-surface-2 lg:flex lg:flex-col">
         {renderSidebar(() => {})}
       </aside>
 
@@ -28,7 +31,7 @@ export function PortfolioShell({ renderSidebar, renderTopBar, children }) {
         </main>
       </div>
 
-      <dialog ref={dialogRef} className="chat-drawer md:hidden" aria-label="Menu">
+      <dialog ref={dialogRef} className="chat-drawer lg:hidden" aria-label="Menu">
         <div className="flex h-full flex-col font-sans">
           <div className="flex justify-end p-2">
             <button

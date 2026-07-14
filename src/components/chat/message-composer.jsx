@@ -1,11 +1,25 @@
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { ArrowUp } from "lucide-react";
 
 import { profile } from "@/data/profile";
 
+// keep in sync with the textarea's min-h-[44px] / max-h-32 (128px) classes
+const MIN_HEIGHT = 44;
+const MAX_HEIGHT = 128;
+
 export function MessageComposer({ onSend, disabled = false }) {
   const [value, setValue] = useState("");
+  const textareaRef = useRef(null);
   const canSend = value.trim().length > 0 && !disabled;
+
+  // Auto-grow so wrapped text (2+ lines) is never clipped inside the fixed
+  // single-line box — recalculates on every keystroke and on mount/resize.
+  useLayoutEffect(() => {
+    const el = textareaRef.current;
+    if (!el) return;
+    el.style.height = "auto";
+    el.style.height = `${Math.min(Math.max(el.scrollHeight, MIN_HEIGHT), MAX_HEIGHT)}px`;
+  }, [value]);
 
   const submit = () => {
     if (!canSend) return;
@@ -30,13 +44,14 @@ export function MessageComposer({ onSend, disabled = false }) {
         className="mx-auto flex w-full max-w-[860px] items-end gap-2 rounded-2xl border border-line-strong bg-elevated p-2 shadow-card focus-within:ring-2 focus-within:ring-[var(--ring)]"
       >
         <textarea
+          ref={textareaRef}
           rows={1}
           value={value}
           onChange={(event) => setValue(event.target.value)}
           onKeyDown={onKeyDown}
           placeholder={profile.ui.composerPlaceholder}
           aria-label={profile.ui.composerPlaceholder}
-          className="max-h-32 min-h-[44px] flex-1 resize-none bg-transparent px-3 py-2.5 text-[15px] leading-6 text-ink-1 placeholder:text-ink-3 focus:outline-none"
+          className="max-h-32 min-h-[44px] flex-1 resize-none overflow-y-auto bg-transparent px-3 py-2.5 text-[15px] leading-6 text-ink-1 placeholder:text-ink-3 focus:outline-none"
         />
         <button
           type="submit"
