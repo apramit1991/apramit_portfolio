@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      try {
+        var t = localStorage.getItem("theme");
+        document.documentElement.dataset.theme = t === "dark" ? "dark" : "light";
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Trade Up Case Study — Apramit Pradhan, AI Product Designer</title>
+    <meta
+      name="description"
+      content="How Apramit Pradhan designed Trade Up, an action-driven mobile trading experience — 1M+ downloads, 4.2/5 Play Store rating, 35% faster onboarding, live across 150+ brokerages."
+    />
+    <meta name="author" content="Apramit Pradhan" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href="https://apramit.in/case-studies/tradeup" />
+    <meta property="og:title" content="Trade Up Case Study — Apramit Pradhan, AI Product Designer" />
+    <meta
+      property="og:description"
+      content="An action-driven mobile trading experience: 1M+ downloads, 4.2/5 rating, 35% faster onboarding."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="/assets/tradeup-case/hero-trade-desk.webp" />
+    <meta property="og:url" content="https://apramit.in/case-studies/tradeup" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/entry-chat.jsx"></script>
+  </body>
+</html>

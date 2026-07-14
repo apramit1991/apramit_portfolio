@@ -67,6 +67,40 @@
 .typing-dot:nth-child(2) { animation-delay: 0.15s; }
 .typing-dot:nth-child(3) { animation-delay: 0.3s; }
 
+/* ---- Ask-about-this-project drawer (native <dialog>) ----
+   Desktop: right-side panel. Mobile: bottom sheet. */
+dialog.ask-drawer {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+@media (min-width: 768px) {
+  dialog.ask-drawer {
+    inset: 0 0 0 auto;
+    height: 100dvh;
+    max-height: none;
+    width: min(420px, 92vw);
+    border-left: 1px solid var(--border-subtle);
+  }
+}
+@media (max-width: 767px) {
+  dialog.ask-drawer {
+    inset: auto 0 0 0;
+    width: 100%;
+    max-width: none;
+    height: 88dvh;
+    max-height: 88dvh;
+    border-top: 1px solid var(--border-strong);
+    border-radius: 20px 20px 0 0;
+  }
+}
+dialog.ask-drawer::backdrop {
+  background: rgba(7, 17, 31, 0.45);
+}
+
 /* ---- mobile drawer (native <dialog>) ---- */
 dialog.chat-drawer {
   position: fixed;

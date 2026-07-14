@@ -25,6 +25,9 @@ export default defineConfig({
       input: {
         main: path.resolve(__dirname, "index.html"),
         classic: path.resolve(__dirname, "classic.html"),
+        csFitlyn: path.resolve(__dirname, "case-studies/fitlyn/index.html"),
+        csTradeup: path.resolve(__dirname, "case-studies/tradeup/index.html"),
+        csLogile: path.resolve(__dirname, "case-studies/logile/index.html"),
         tradeup: path.resolve(__dirname, "tradeup-case-study.html"),
         fitlyn: path.resolve(__dirname, "case-study/fitlyn/index.html"),
         logile: path.resolve(__dirname, "case-study/logile/index.html"),

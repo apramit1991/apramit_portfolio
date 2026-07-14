@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      try {
+        var t = localStorage.getItem("theme");
+        document.documentElement.dataset.theme = t === "dark" ? "dark" : "light";
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Fitlyn Case Study — Apramit Pradhan, AI Product Designer</title>
+    <meta
+      name="description"
+      content="How Apramit Pradhan designed Fitlyn, an action-first gym ERP that simplified dues, renewals, communication, and reporting — 40% less manual work, 25% more renewals, 60% faster reporting."
+    />
+    <meta name="author" content="Apramit Pradhan" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href="https://apramit.in/case-studies/fitlyn" />
+    <meta property="og:title" content="Fitlyn Case Study — Apramit Pradhan, AI Product Designer" />
+    <meta
+      property="og:description"
+      content="An action-first gym ERP: 40% less manual work, 25% increase in renewals, 60% faster reporting."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="/assets/fitlyn/desktop-mock.png" />
+    <meta property="og:url" content="https://apramit.in/case-studies/fitlyn" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/entry-chat.jsx"></script>
+  </body>
+</html>

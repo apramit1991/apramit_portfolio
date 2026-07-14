@@ -23,21 +23,37 @@ function TypingIndicator() {
   );
 }
 
-export function ChatThread({ messages, isTyping, onPrompt }) {
+export function ChatThread({ messages, isTyping, onPrompt, scrollBoxRef, initialScrollTop }) {
   const endRef = useRef(null);
+  const boxRef = useRef(null);
+  const restoredRef = useRef(false);
   const hasActivity = messages.length > 0 || isTyping;
 
+  // expose the scroll container so the router can save its position
   useEffect(() => {
+    if (scrollBoxRef) scrollBoxRef.current = boxRef.current;
+  });
+
+  useEffect(() => {
+    if (!restoredRef.current) {
+      restoredRef.current = true;
+      // returning from a case study: restore the saved spot instead of
+      // auto-scrolling to the latest message
+      if (initialScrollTop != null && boxRef.current) {
+        boxRef.current.scrollTop = initialScrollTop;
+        return;
+      }
+    }
     if (!hasActivity) return;
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     endRef.current?.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "end" });
-  }, [messages, isTyping, hasActivity]);
+  }, [messages, isTyping, hasActivity, initialScrollTop]);
 
   const last = messages[messages.length - 1];
   const followUps = !isTyping && last?.role === "assistant" ? last.prompts : null;
 
   return (
-    <div className="min-h-0 flex-1 overflow-y-auto px-4 sm:px-6">
+    <div ref={boxRef} className="min-h-0 flex-1 overflow-y-auto px-4 sm:px-6">
       <div className="mx-auto w-full max-w-[860px] py-8">
         <header className="mb-8">
           <p className="text-3xl" aria-hidden="true">

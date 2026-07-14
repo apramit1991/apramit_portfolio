@@ -1,4 +1,4 @@
-import { useCallback, useReducer, useRef } from "react";
+import { useCallback, useEffect, useReducer, useRef } from "react";
 
 import { getResponder } from "@/lib/conversation-engine";
 import { responseMap, fallback } from "@/data/responses";
@@ -8,6 +8,22 @@ const initialState = {
   isTyping: false,
   recruiterMode: false,
 };
+
+// Conversation survives route changes in memory; sessionStorage covers hard
+// refreshes and case-study deep links, so "Back to conversation" never resets.
+const STORAGE_KEY = "portfolio-chat-v1";
+
+function initState() {
+  try {
+    const saved = JSON.parse(sessionStorage.getItem(STORAGE_KEY) || "null");
+    if (saved?.messages?.length) {
+      return { ...initialState, messages: saved.messages, recruiterMode: !!saved.recruiterMode };
+    }
+  } catch {
+    // corrupted/blocked storage — start fresh
+  }
+  return initialState;
+}
 
 function reducer(state, action) {
   switch (action.type) {
@@ -31,7 +47,18 @@ function assistantMessage(spec) {
 }
 
 export function usePortfolioChat() {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, undefined, initState);
+
+  useEffect(() => {
+    try {
+      sessionStorage.setItem(
+        STORAGE_KEY,
+        JSON.stringify({ messages: state.messages.slice(-40), recruiterMode: state.recruiterMode })
+      );
+    } catch {
+      // storage full/blocked — conversation still lives in memory
+    }
+  }, [state.messages, state.recruiterMode]);
   // Typing flow lives in this event handler (never a mount effect) so
   // StrictMode's double-invoke can't double-post messages.
   const busyRef = useRef(false);

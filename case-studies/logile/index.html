@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      try {
+        var t = localStorage.getItem("theme");
+        document.documentElement.dataset.theme = t === "dark" ? "dark" : "light";
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Logile Workforce AI Case Study — Apramit Pradhan, AI Product Designer</title>
+    <meta
+      name="description"
+      content="How Apramit Pradhan redesigned shift changes into risk-ranked, AI-assisted workforce decisions — 40%+ auto-resolved requests, 25% fewer payroll errors, decisions in under 90 seconds."
+    />
+    <meta name="author" content="Apramit Pradhan" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href="https://apramit.in/case-studies/logile" />
+    <meta
+      property="og:title"
+      content="Logile Workforce AI Case Study — Apramit Pradhan, AI Product Designer"
+    />
+    <meta
+      property="og:description"
+      content="Shift changes as risk-ranked, AI-assisted decisions: 40%+ auto-resolved, −25% payroll errors, <90s decisions."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="/assets/apramit-head-cutout-v2.webp" />
+    <meta property="og:url" content="https://apramit.in/case-studies/logile" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/entry-chat.jsx"></script>
+  </body>
+</html>
