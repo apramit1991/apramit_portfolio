@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+  Social / Open Graph card generator — 1200x630.
+  This is a source file for exporting assets/og-card.png (see README note).
+  Not part of the app build; open /og-card.html, screenshot the .card at
+  exactly 1200x630, save as assets/og-card.png.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { background: #05070d; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+      .card {
+        width: 1200px;
+        height: 630px;
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(120% 90% at 82% -10%, rgba(244, 205, 143, 0.16), transparent 55%),
+          radial-gradient(90% 80% at 6% 110%, rgba(63, 224, 255, 0.12), transparent 55%),
+          linear-gradient(160deg, #0a0f1a 0%, #05070d 100%);
+        font-family: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+        color: #eef2f8;
+        padding: 76px 84px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      /* faint technical grid, faded toward center */
+      .card::before {
+        content: "";
+        position: absolute; inset: 0;
+        background-image:
+          repeating-linear-gradient(0deg, transparent 0 47px, rgba(150,178,235,.05) 47px 48px),
+          repeating-linear-gradient(90deg, transparent 0 47px, rgba(150,178,235,.05) 47px 48px);
+        -webkit-mask-image: radial-gradient(circle at 30% 40%, #000, transparent 78%);
+        mask-image: radial-gradient(circle at 30% 40%, #000, transparent 78%);
+      }
+      .row { position: relative; z-index: 1; }
+      .top { display: flex; align-items: center; gap: 16px; }
+      .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+      .status { display: flex; align-items: center; gap: 10px; font-size: 20px; letter-spacing: .04em; color: #aab4c3; }
+      .dot { width: 11px; height: 11px; border-radius: 50%; background: #34c98a; box-shadow: 0 0 14px rgba(52,201,138,.8); }
+      .name {
+        font-size: 92px; font-weight: 700; letter-spacing: -.03em; line-height: 1.0;
+        background: linear-gradient(180deg, #ffffff 35%, #f4cd8f 125%);
+        -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
+      }
+      .role { font-size: 30px; font-weight: 500; color: #c2ccdf; margin-top: 18px; letter-spacing: -.005em; }
+      .prompt {
+        margin-top: 30px;
+        display: inline-flex; align-items: center; gap: 14px;
+        border: 1px solid rgba(150,178,235,.22); background: rgba(19,26,46,.55);
+        border-radius: 16px; padding: 18px 24px; font-size: 22px; color: #93a0bd;
+        max-width: 640px;
+      }
+      .prompt .cursor { width: 2px; height: 24px; background: #f4cd8f; display: inline-block; }
+      .bottom { display: flex; align-items: flex-end; justify-content: space-between; }
+      .metrics { display: flex; gap: 46px; }
+      .metric .v { font-size: 46px; font-weight: 700; letter-spacing: -.02em; }
+      .metric .l { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: #7a8593; margin-top: 4px; }
+      .url { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 22px; color: #f4cd8f; letter-spacing: .02em; }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="row top">
+        <div class="status"><span class="dot"></span> <span class="mono">Open to senior product roles</span></div>
+      </div>
+      <div class="row">
+        <div class="name">Apramit Pradhan</div>
+        <div class="role">Lead Product Designer — AI products, enterprise SaaS &amp; dashboards</div>
+        <div class="prompt mono">Ask me anything about my work…<span class="cursor"></span></div>
+      </div>
+      <div class="row bottom">
+        <div class="metrics">
+          <div class="metric"><div class="v">11+</div><div class="l">Years</div></div>
+          <div class="metric"><div class="v">1M+</div><div class="l">Downloads</div></div>
+          <div class="metric"><div class="v">4.2/5</div><div class="l">Play Store</div></div>
+        </div>
+        <div class="url">apramit.in</div>
+      </div>
+    </div>
+  </body>
+</html>

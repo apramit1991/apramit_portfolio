@@ -4,6 +4,7 @@ import { profile } from "@/data/profile";
 import { PRIMARY_PROMPTS } from "@/data/prompts";
 import { Avatar } from "./avatar";
 import { ChatMessage } from "./chat-message";
+import { FeaturedWork } from "./featured-work";
 import { PromptChips } from "./suggested-prompts";
 
 function TypingIndicator() {
@@ -72,6 +73,10 @@ export function ChatThread({ messages, isTyping, onPrompt, scrollBoxRef, initial
             disabled={isTyping}
             label="Suggested prompts"
           />
+          {/* On the empty landing, show real work so the first frame is never
+              a blank canvas (the top gallery-thumbnail critique). Hidden once
+              a conversation starts so the thread stays clean. */}
+          {!hasActivity && <FeaturedWork />}
         </header>
 
         <div role="log" aria-live="polite" className="space-y-6">
