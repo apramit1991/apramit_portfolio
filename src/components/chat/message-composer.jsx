@@ -17,7 +17,14 @@ export function MessageComposer({ onSend, disabled = false, thinking = disabled 
   useLayoutEffect(() => {
     const el = textareaRef.current;
     if (!el) return;
-    el.style.height = "auto";
+    // Empty field → pin to one line. Measuring scrollHeight when empty picks up
+    // the wrapping placeholder (2 lines at narrow widths), which made the box
+    // render too tall. Only measure real content.
+    if (!value) {
+      el.style.height = `${MIN_HEIGHT}px`;
+      return;
+    }
+    el.style.height = "0px";
     el.style.height = `${Math.min(Math.max(el.scrollHeight, MIN_HEIGHT), MAX_HEIGHT)}px`;
   }, [value]);
 
@@ -35,8 +42,8 @@ export function MessageComposer({ onSend, disabled = false, thinking = disabled 
   };
 
   return (
-    <div className="border-t border-line bg-surface px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pt-3 sm:px-6">
-      <div className={`composer-panel mx-auto w-full max-w-[860px]${thinking ? " is-thinking" : ""}`}>
+    <div className="border-t border-line bg-surface px-4 pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-1 sm:px-6">
+      <div className={`composer-zone mx-auto w-full max-w-[860px]${thinking ? " is-thinking" : ""}`}>
         {thinking && (
           <span className="composer-thinking" aria-hidden="true">
             Thinking<span className="composer-dots" />
@@ -47,7 +54,7 @@ export function MessageComposer({ onSend, disabled = false, thinking = disabled 
             event.preventDefault();
             submit();
           }}
-          className="relative z-[1] flex w-full items-end gap-2 rounded-2xl border border-line-strong bg-elevated p-2 shadow-card focus-within:ring-2 focus-within:ring-[var(--ring)]"
+          className="relative z-[1] flex w-full items-center gap-2 rounded-2xl border border-line-strong bg-elevated p-2 shadow-card focus-within:ring-2 focus-within:ring-[var(--ring)]"
         >
           <textarea
           ref={textareaRef}
@@ -69,9 +76,6 @@ export function MessageComposer({ onSend, disabled = false, thinking = disabled 
         </button>
         </form>
       </div>
-      <p className="mx-auto mt-2 w-full max-w-[860px] text-center font-mono text-[11px] text-ink-3">
-        Scripted answers from real case studies — no hallucinations, just receipts.
-      </p>
     </div>
   );
 }
