@@ -7,7 +7,7 @@ import { profile } from "@/data/profile";
 const MIN_HEIGHT = 44;
 const MAX_HEIGHT = 128;
 
-export function MessageComposer({ onSend, disabled = false }) {
+export function MessageComposer({ onSend, disabled = false, thinking = disabled }) {
   const [value, setValue] = useState("");
   const textareaRef = useRef(null);
   const canSend = value.trim().length > 0 && !disabled;
@@ -36,14 +36,20 @@ export function MessageComposer({ onSend, disabled = false }) {
 
   return (
     <div className="border-t border-line bg-surface px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pt-3 sm:px-6">
-      <form
-        onSubmit={(event) => {
-          event.preventDefault();
-          submit();
-        }}
-        className="mx-auto flex w-full max-w-[860px] items-end gap-2 rounded-2xl border border-line-strong bg-elevated p-2 shadow-card focus-within:ring-2 focus-within:ring-[var(--ring)]"
-      >
-        <textarea
+      <div className={`composer-panel mx-auto w-full max-w-[860px]${thinking ? " is-thinking" : ""}`}>
+        {thinking && (
+          <span className="composer-thinking" aria-hidden="true">
+            Thinking<span className="composer-dots" />
+          </span>
+        )}
+        <form
+          onSubmit={(event) => {
+            event.preventDefault();
+            submit();
+          }}
+          className="relative z-[1] flex w-full items-end gap-2 rounded-2xl border border-line-strong bg-elevated p-2 shadow-card focus-within:ring-2 focus-within:ring-[var(--ring)]"
+        >
+          <textarea
           ref={textareaRef}
           rows={1}
           value={value}
@@ -61,7 +67,8 @@ export function MessageComposer({ onSend, disabled = false }) {
         >
           <ArrowUp className="h-5 w-5" aria-hidden="true" />
         </button>
-      </form>
+        </form>
+      </div>
       <p className="mx-auto mt-2 w-full max-w-[860px] text-center font-mono text-[11px] text-ink-3">
         Scripted answers from real case studies — no hallucinations, just receipts.
       </p>

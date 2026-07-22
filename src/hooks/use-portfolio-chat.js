@@ -83,7 +83,9 @@ export function usePortfolioChat() {
     }
 
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const delay = reduced ? 150 : Math.min(500 + clean.split(/\s+/).length * 40, 1400);
+    // ~2–3s so the composer's "thinking" gradient is visible before the reply
+    // lands (reduced-motion stays short — the morph is frozen for them anyway)
+    const delay = reduced ? 800 : Math.min(2200 + clean.split(/\s+/).length * 40, 3000);
     await sleep(delay);
 
     dispatch({ type: "RECEIVE", message: assistantMessage(spec) });

@@ -101,6 +101,93 @@ dialog.ask-drawer::backdrop {
   background: rgba(7, 17, 31, 0.45);
 }
 
+/* ---- composer "thinking" gradient panel ----
+   While a reply generates, the input card floats inside a padded panel that
+   fills with a soft, slowly hue-morphing gradient and a "Thinking…." label —
+   matching the reference motion. Idle = flush, no frame. */
+.composer-panel {
+  position: relative;
+  border-radius: 24px;
+  padding: 2px; /* idle: card sits ~flush */
+  transition: padding 420ms cubic-bezier(0.22, 1, 0.36, 1);
+  /* on-palette blobs (blue · lilac · pink · peach) — panning the oversized
+     canvas sweeps through the reference's color journey, never through green */
+  --tp-1: #aec4ff; /* blue */
+  --tp-2: #e7ddff; /* lilac */
+  --tp-3: #ffc6de; /* pink */
+  --tp-4: #ffd9b3; /* peach */
+  --tp-base: #f5f2fb;
+}
+.composer-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 500ms ease;
+  background:
+    radial-gradient(45% 60% at 22% 28%, var(--tp-1), transparent 55%),
+    radial-gradient(45% 60% at 82% 22%, var(--tp-2), transparent 55%),
+    radial-gradient(52% 66% at 28% 88%, var(--tp-3), transparent 60%),
+    radial-gradient(58% 72% at 92% 92%, var(--tp-4), transparent 60%),
+    var(--tp-base);
+  background-size: 200% 200%;
+  animation: composer-morph 8s ease-in-out infinite alternate;
+}
+.composer-panel.is-thinking { padding: 30px 26px 24px; }
+.composer-panel.is-thinking::before { opacity: 1; }
+@keyframes composer-morph {
+  from { background-position: 0% 0%; }
+  to { background-position: 100% 100%; }
+}
+
+.composer-thinking {
+  position: absolute;
+  top: 9px;
+  left: 20px;
+  z-index: 1;
+  font-family: var(--font-mono, ui-monospace, "SF Mono", Menlo, monospace);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--text-primary);
+}
+.composer-dots::after {
+  content: ".";
+  animation: composer-ellipsis 1.4s steps(1) infinite;
+}
+@keyframes composer-ellipsis {
+  0% { content: "."; }
+  25% { content: ".."; }
+  50% { content: "..."; }
+  75% { content: "…."; }
+}
+
+:root[data-theme="dark"] .composer-panel {
+  --tp-1: #5b7cff; /* blue */
+  --tp-2: #9b7cff; /* lilac */
+  --tp-3: #e46ba8; /* pink */
+  --tp-4: #f0a86a; /* peach */
+  --tp-base: #1c1840;
+}
+@media (prefers-color-scheme: dark) {
+  .composer-panel {
+    --tp-1: #5b7cff;
+    --tp-2: #9b7cff;
+    --tp-3: #e46ba8;
+    --tp-4: #f0a86a;
+    --tp-base: #1c1840;
+  }
+}
+:root[data-theme="light"] .composer-panel {
+  --tp-1: #aec4ff;
+  --tp-2: #e7ddff;
+  --tp-3: #ffc6de;
+  --tp-4: #ffd9b3;
+  --tp-base: #f5f2fb;
+}
+
 /* ---- mobile drawer (native <dialog>) ---- */
 dialog.chat-drawer {
   position: fixed;
