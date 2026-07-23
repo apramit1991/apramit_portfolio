@@ -40,7 +40,13 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         systemInstruction: { parts: [{ text: `${SYSTEM}\n\n# CONTEXT\n${buildContext()}` }] },
         contents: [{ role: "user", parts: [{ text }] }],
-        generationConfig: { maxOutputTokens: 300, temperature: 0.4 },
+        // Newer flash models "think" first; budget must cover reasoning + reply,
+        // and thinkingBudget:0 keeps answers fast (no reasoning tokens spent).
+        generationConfig: {
+          maxOutputTokens: 800,
+          temperature: 0.4,
+          thinkingConfig: { thinkingBudget: 0 },
+        },
       }),
     });
     if (!r.ok) {
@@ -49,6 +55,7 @@ export default async function handler(req, res) {
     }
     const data = await r.json();
     const answer = (data?.candidates?.[0]?.content?.parts || [])
+      .filter((p) => !p.thought) // drop reasoning parts, keep the reply
       .map((p) => p.text || "")
       .join("")
       .trim();
