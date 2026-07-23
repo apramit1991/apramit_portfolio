@@ -76,6 +76,7 @@ export function usePortfolioChat() {
 
     if (!responderRef.current) responderRef.current = getResponder();
     let spec;
+    const started = performance.now();
     try {
       spec = await responderRef.current.respond({ text: clean, promptKey });
     } catch {
@@ -84,9 +85,11 @@ export function usePortfolioChat() {
 
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     // ~2–3s so the composer's "thinking" gradient is visible before the reply
-    // lands (reduced-motion stays short — the morph is frozen for them anyway)
-    const delay = reduced ? 800 : Math.min(2200 + clean.split(/\s+/).length * 40, 3000);
-    await sleep(delay);
+    // lands (reduced-motion stays short — the morph is frozen for them anyway).
+    // Subtract time already spent so a real LLM call (which has its own latency)
+    // isn't double-delayed — scripted answers still get the full morph.
+    const target = reduced ? 800 : Math.min(2200 + clean.split(/\s+/).length * 40, 3000);
+    await sleep(Math.max(0, target - (performance.now() - started)));
 
     dispatch({ type: "RECEIVE", message: assistantMessage(spec) });
     busyRef.current = false;
