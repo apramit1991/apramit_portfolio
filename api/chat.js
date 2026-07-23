@@ -3,7 +3,7 @@
 // the portfolio data (api/_context.js) so it can't invent facts.
 import { buildContext } from "./_context.js";
 
-const MODEL = "gemini-flash-latest"; // alias tracks current free flash model (won't deprecate)
+const MODEL = "gemini-2.0-flash"; // free tier, fast, no "thinking" tokens to truncate replies
 const ENDPOINT = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
 
 const SYSTEM = `You are the portfolio assistant for Apramit Pradhan, a Lead Product Designer, answering recruiters and hiring managers on his personal site. Speak as his representative — warm, confident, concise.
@@ -40,13 +40,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         systemInstruction: { parts: [{ text: `${SYSTEM}\n\n# CONTEXT\n${buildContext()}` }] },
         contents: [{ role: "user", parts: [{ text }] }],
-        // Newer flash models "think" first; budget must cover reasoning + reply,
-        // and thinkingBudget:0 keeps answers fast (no reasoning tokens spent).
-        generationConfig: {
-          maxOutputTokens: 800,
-          temperature: 0.4,
-          thinkingConfig: { thinkingBudget: 0 },
-        },
+        generationConfig: { maxOutputTokens: 500, temperature: 0.4 },
       }),
     });
     if (!r.ok) {
