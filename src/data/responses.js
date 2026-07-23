@@ -263,6 +263,56 @@ export const responseMap = {
       { label: "Why hire you?", key: "why-hire" },
     ],
   },
+  availability: {
+    type: "text",
+    text: "Happy to get logistics out of the way. I'm open to senior product roles and work remote-first from Bhubaneswar, India (IST) — I've collaborated across time zones for years. I'm also open to contract or freelance engagements, not just full-time. Notice period is roughly 60–90 days. Fastest way forward is a quick email — I usually reply within 24 hours.",
+    prompts: [
+      { label: "Why hire you?", key: "why-hire" },
+      { label: "Download resume", key: "resume" },
+      { label: "Contact", key: "contact" },
+      { label: "Experience timeline", key: "experience-timeline" },
+    ],
+  },
+  "team-leadership": {
+    type: "text",
+    text: "I've led and mentored teams of 5+, most formally as Technical Lead at Birlasoft — where I kept multiple product teams (banking, insurance, logistics) shipping consistently through shared design systems. Day to day that means partnering tightly with PMs and engineers, aligning stakeholders around the user problem before pixels, and coaching designers on turning complex workflows into something usable. My engineering background lets me meet developers where they are, which makes that alignment far less lossy.",
+    prompts: [
+      { label: "Design systems", key: "design-systems" },
+      { label: "Why hire you?", key: "why-hire" },
+      { label: "Experience timeline", key: "experience-timeline" },
+      { label: "Testimonials", key: "testimonials" },
+    ],
+  },
+  failures: {
+    type: "text",
+    text: "The honest version of this is about tradeoffs, not disasters. On Logile's workforce AI, my hardest call was where to draw the automation line: auto-resolving more would have been faster, but would have quietly eroded manager trust the first time a bad shift slipped through. I kept AI as a decision-support layer with visible rationale instead of full automation — trading some speed for trust. If I redid it, I'd invest even earlier in the explainability of edge cases, since that's where confidence is won or lost. My rule when speed and trust conflict in a decision-heavy product: protect trust.",
+    prompts: [
+      { label: "Logile case study", key: "logile" },
+      { label: "Your AI design POV", key: "ai-experience" },
+      { label: "Your process", key: "design-process" },
+      { label: "Why hire you?", key: "why-hire" },
+    ],
+  },
+  "career-story": {
+    type: "text",
+    text: "I started as a software engineer — Capgemini, then 63 moons, where I helped build the Wave 2 trading app (1M+ downloads). Writing front-end code, I kept gravitating to the \"why is this confusing?\" questions more than the \"how do I build it?\" ones, so I moved into design deliberately: an independent product-design consultancy, then design roles at Birlasoft, Paramount, and IGT. That engineering foundation is now my edge — I design systems developers actually adopt, and I speak fluent engineer in every handoff. Working style: start with what the user needs to act on, validate with real iteration, and stay involved through build.",
+    prompts: [
+      { label: "Experience timeline", key: "experience-timeline" },
+      { label: "Why hire you?", key: "why-hire" },
+      { label: "Your process", key: "design-process" },
+      { label: "About you", key: "about-me" },
+    ],
+  },
+  tools: {
+    type: "text",
+    text: "Figma is home base — design, prototyping, and dev handoff — with Adobe XD in the mix from earlier work. I lean on an AI workflow toolkit (ChatGPT, Claude, UX Pilot, Lovable) where it genuinely accelerates, and I'm deliberate about where product judgment has to lead instead. Underneath it all is a front-end background (HTML/CSS/JS) that keeps my prototypes realistic and my handoffs buildable. Methods-wise: workflow mapping, persona and IA work, iteration studies, and validation/UAT — all visible in the case studies.",
+    prompts: [
+      { label: "How you use AI", key: "ai-experience" },
+      { label: "Your process", key: "design-process" },
+      { label: "Design systems", key: "design-systems" },
+      { label: "Fitlyn research", key: "fitlyn-research" },
+    ],
+  },
   greeting: {
     type: "text",
     text: "Hi! Good to have you here. This portfolio works like a conversation — ask me about my projects, process, or experience, or tap one of the prompts below. If you're in a hurry, try Recruiter mode for the 90-second version.",
@@ -294,21 +344,28 @@ export const responseMap = {
 };
 
 // Ordered — specific before generic, first match wins. Case-insensitive.
+// New topics (availability/team/failures/career/tools) sit above the generic
+// project/experience catch-alls so their synonyms win before broader rules.
 export const keywordRules = [
   { match: /^\s*(hi|hello|hey|namaste|yo)\b/i, responseKey: "greeting" },
-  { match: /salar|compensation|ctc|\bpay\b|\brate\b/i, responseKey: "salary-redirect" },
+  { match: /salar|compensation|\bctc\b|\bpay\b|\brate\b|budget|package|expectation/i, responseKey: "salary-redirect" },
+  { match: /remote|relocat|on.?site|hybrid|notice period|freelance|contract|availab|start date|when can you (start|join)|work authoriz|visa|\bwfh\b|time.?zone/i, responseKey: "availability" },
+  { match: /\bfail|failure|mistake|went wrong|didn.?t work|regret|\bredo\b|trade.?off|tough(est)? (call|decision)|hard(est)? (call|decision)|weakness/i, responseKey: "failures" },
+  { match: /\bteam\b|\blead(er|ing|ership)?\b|mentor|manag(e|ing|ement)|report to|\breports\b|stakeholder|cross.?functional|collaborat|work(ed|ing)? with (pm|engineer|dev|product)/i, responseKey: "team-leadership" },
   { match: /fitlyn|gym|erp/i, responseKey: "best-project" },
   { match: /trade|trading|fintech|stock|invest/i, responseKey: "tradeup" },
   { match: /logile|shift|workforce|schedul/i, responseKey: "logile" },
   { match: /dashboard|analytic|data.?viz/i, responseKey: "dashboards" },
   { match: /testimonial|reference|recommend/i, responseKey: "testimonials" },
   { match: /cert|credential|award|education|degree/i, responseKey: "credentials" },
-  { match: /\bai\b|artificial intelligence|machine learning|llm/i, responseKey: "ai-experience" },
+  { match: /\bai\b|artificial intelligence|machine learning|\bllm\b/i, responseKey: "ai-experience" },
+  { match: /\btool|figma|adobe|\bxd\b|prototyp|hand.?off|accessib|\ba11y\b|software (do you|you use)|tech stack|methodolog/i, responseKey: "tools" },
   { match: /design system/i, responseKey: "design-systems" },
+  { match: /why design|why did you (switch|move|transition)|switch(ed)? (to|from)|transition|journey|became? a designer|get into design|from engineering|engineer.*design|design.*engineer|working style|your story/i, responseKey: "career-story" },
   { match: /process|method|research|approach/i, responseKey: "design-process" },
   { match: /resume|\bcv\b|download/i, responseKey: "resume" },
   { match: /experience|career|timeline|background|history|worked/i, responseKey: "experience-timeline" },
-  { match: /hire|why you|value|strength|\bfit\b/i, responseKey: "why-hire" },
+  { match: /hire|why you|value|strength|superpower|\bfit\b/i, responseKey: "why-hire" },
   { match: /contact|email|interview|reach|call|linkedin|touch/i, responseKey: "contact" },
   { match: /industr|domain|sector/i, responseKey: "industries" },
   { match: /all projects|portfolio|everything|other project/i, responseKey: "all-projects" },
@@ -319,11 +376,12 @@ export const keywordRules = [
 
 export const fallback = {
   type: "text",
-  text: "Good question — but I don't have a scripted answer for that one. This portfolio runs on curated responses, so I can't improvise (yet). Here's what I can dig into:",
+  text: "Great question — and one I don't have a scripted answer for yet. This portfolio runs on curated, receipts-backed responses rather than improvised ones. If it's about my work, availability, or background, one of these will get you there — or just email me and ask directly:",
   prompts: [
-    { label: "Best project", key: "best-project" },
+    { label: "About you", key: "about-me" },
     { label: "All projects", key: "all-projects" },
     { label: "Why hire you?", key: "why-hire" },
+    { label: "Recruiter mode ⚡", key: "recruiter-summary" },
     { label: "Contact", key: "contact" },
   ],
 };

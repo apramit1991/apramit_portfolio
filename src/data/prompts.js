@@ -7,6 +7,8 @@ export const SIDEBAR_PROMPTS = [
   { key: "design-process", label: "Walk me through your design process" },
   { key: "why-hire", label: "Why should we hire you?" },
   { key: "experience-timeline", label: "Give me your experience timeline" },
+  { key: "availability", label: "Are you open to remote?" },
+  { key: "career-story", label: "Why the switch from engineering?" },
 ];
 
 export const PRIMARY_PROMPTS = [
