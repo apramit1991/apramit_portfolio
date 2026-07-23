@@ -43,7 +43,10 @@ export default async function handler(req, res) {
         generationConfig: { maxOutputTokens: 300, temperature: 0.4 },
       }),
     });
-    if (!r.ok) return res.status(502).json({ error: "upstream" });
+    if (!r.ok) {
+      const detail = await r.text().catch(() => "");
+      return res.status(502).json({ error: "upstream", status: r.status, detail: detail.slice(0, 300) });
+    }
     const data = await r.json();
     const answer = (data?.candidates?.[0]?.content?.parts || [])
       .map((p) => p.text || "")
