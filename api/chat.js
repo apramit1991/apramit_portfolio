@@ -33,6 +33,16 @@ export default async function handler(req, res) {
   const text = (req.body?.text ?? "").toString().trim();
   if (!text || text.length > 500) return res.status(400).json({ error: "bad input" });
 
+  // TEMP debug: list models this key can use (remove after picking a model).
+  if (text === "__models__") {
+    const lr = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${key}`);
+    const ld = await lr.json();
+    const names = (ld.models || [])
+      .filter((m) => (m.supportedGenerationMethods || []).includes("generateContent"))
+      .map((m) => m.name);
+    return res.status(200).json({ models: names });
+  }
+
   try {
     const r = await fetch(`${ENDPOINT}?key=${key}`, {
       method: "POST",
