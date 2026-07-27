@@ -1,4 +1,4 @@
-import { useCallback, useRef } from "react";
+import { useCallback, useRef, useState } from "react";
 
 import { ChatThread } from "@/components/chat/chat-thread";
 import { MessageComposer } from "@/components/chat/message-composer";
@@ -28,6 +28,29 @@ export function ChatPage() {
 
   const { messages, isTyping, recruiterMode, send, setRecruiterMode, reset } = chat;
   const handlePrompt = (item) => send(item.label, item.key);
+
+  // "New conversation" micro-interaction: erase the thread (fade+blur+drift up)
+  // and smooth-scroll to the top before clearing state. reset() clears messages
+  // synchronously, so the animation has to run first.
+  const [erasing, setErasing] = useState(false);
+  const handleReset = useCallback(() => {
+    if (erasing) return; // ignore re-clicks mid-animation
+    const box = threadBoxRef.current;
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // reset() no-ops while a reply is in flight (busyRef); skip the animation
+    // then too, so messages can't get stuck faded-out.
+    if (reduced || isTyping || messages.length === 0) {
+      box?.scrollTo({ top: 0 });
+      reset();
+      return;
+    }
+    setErasing(true);
+    box?.scrollTo({ top: 0, behavior: "smooth" });
+    window.setTimeout(() => {
+      reset();
+      setErasing(false);
+    }, 650);
+  }, [erasing, isTyping, messages.length, reset]);
 
   if (route.view === "case-study") {
     return (
@@ -60,7 +83,7 @@ export function ChatPage() {
           }}
           onReset={() => {
             close();
-            reset();
+            handleReset();
           }}
         />
       )}
@@ -74,6 +97,7 @@ export function ChatPage() {
         onPrompt={handlePrompt}
         scrollBoxRef={threadBoxRef}
         initialScrollTop={savedScrollRef.current}
+        erasing={erasing}
       />
       <MessageComposer onSend={(text) => send(text)} disabled={isTyping} />
     </PortfolioShell>

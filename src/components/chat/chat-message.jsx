@@ -46,14 +46,20 @@ function RichContent({ msg }) {
   }
 }
 
-export function ChatMessage({ msg }) {
+export function ChatMessage({ msg, erasing = false, index = 0 }) {
   const reduce = useReducedMotion();
   const anim = reduce
     ? {}
     : {
         initial: { opacity: 0, y: 8 },
-        animate: { opacity: 1, y: 0 },
-        transition: { duration: 0.25, ease: "easeOut" },
+        // erasing: fade + blur + drift up, lightly staggered so the thread
+        // reads as being progressively wiped before "New conversation" clears it
+        animate: erasing
+          ? { opacity: 0, y: -14, filter: "blur(6px)" }
+          : { opacity: 1, y: 0, filter: "blur(0px)" },
+        transition: erasing
+          ? { duration: 0.35, ease: "easeIn", delay: Math.min(index, 8) * 0.05 }
+          : { duration: 0.25, ease: "easeOut" },
       };
 
   if (msg.role === "user") {

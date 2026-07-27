@@ -24,7 +24,7 @@ function TypingIndicator() {
   );
 }
 
-export function ChatThread({ messages, isTyping, onPrompt, scrollBoxRef, initialScrollTop }) {
+export function ChatThread({ messages, isTyping, onPrompt, scrollBoxRef, initialScrollTop, erasing = false }) {
   const endRef = useRef(null);
   const boxRef = useRef(null);
   const restoredRef = useRef(false);
@@ -80,8 +80,8 @@ export function ChatThread({ messages, isTyping, onPrompt, scrollBoxRef, initial
         </header>
 
         <div role="log" aria-live="polite" className="space-y-6">
-          {messages.map((msg) => (
-            <ChatMessage key={msg.id} msg={msg} />
+          {messages.map((msg, i) => (
+            <ChatMessage key={msg.id} msg={msg} erasing={erasing} index={i} />
           ))}
           {isTyping && <TypingIndicator />}
         </div>
