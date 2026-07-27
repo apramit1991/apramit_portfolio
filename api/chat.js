@@ -3,7 +3,7 @@
 // the portfolio data (api/_context.js) so it can't invent facts.
 import { buildContext } from "./_context.js";
 
-const MODEL = "gemini-2.0-flash-lite"; // free tier, fast, no thinking; higher daily quota than 2.0-flash
+const MODEL = "gemini-3.1-flash-lite"; // 2.0-flash-lite shut down 2026-06-01; this is Google's named replacement
 const ENDPOINT = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
 
 const SYSTEM = `You are the portfolio assistant for Apramit Pradhan, a Lead Product Designer, answering recruiters and hiring managers on his personal site. Speak as his representative — warm, confident, concise.
